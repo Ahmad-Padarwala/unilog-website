@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
     <title>Unilog Homepage</title>
 </head>
@@ -62,10 +63,31 @@
     <!-- hero section -->
     <section class="home-hero-section">
         <div class="hero-content">
-            <div class="hero-card hero-main">
+            <div class="hero-card active">
                 <div class="hero-left">
                     <div class="badge"><i class="fas fa-award"></i> FDA Approved Technology</div>
-                    <h1>India’s Most Advanced <span>PicoSecond Laser</span> is Here</h1>
+                    <h1 class="title">India’s Most Advanced <br> <span class="highlight">PicoSecond Laser</span> is Here
+                    </h1>
+                    <div>
+                        <p class="subtitle">Faster. Safer. More Effective.</p>
+                        <p class="desc">
+                            Boost your clinic's results with cutting-edge laser technology trusted by global
+                            dermatologists.
+                        </p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn primary"><i class="fas fa-calendar"></i> Book a Free Demo</a>
+                        <a href="#" class="btn secondary"><i class="fas fa-download"></i> Download Brochure</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="./image/hero-machine-1.png" alt="Machine" class="machine">
+                </div>
+            </div>
+            <div class="hero-card ">
+                <div class="hero-left">
+                    <div class="badge"><i class="fas fa-award"></i> FDA Approved Technology</div>
+                    <h1 class="title">India’s Most Advanced <span class="highlight">PicoSecond Laser</span> is Here</h1>
                     <p class="subtitle">Faster. Safer. More Effective.</p>
                     <p class="desc">
                         Boost your clinic's results with cutting-edge laser technology trusted by global dermatologists.
@@ -76,21 +98,398 @@
                     </div>
                 </div>
                 <div class="hero-right">
-                    <img src="./image/machine.png" alt="Machine">
+                    <img src="./image/hero-machine-2.png" alt="Machine" class="machine">
                 </div>
             </div>
             <div class="hero-card">
-                <span>HOVER ME</span>
+                <div class="hero-left">
+                    <div class="badge"><i class="fas fa-award"></i> FDA Approved Technology</div>
+                    <h1 class="title">India’s Most Advanced <span class="highlight">PicoSecond Laser</span> is Here</h1>
+                    <p class="subtitle">Faster. Safer. More Effective.</p>
+                    <p class="desc">
+                        Boost your clinic's results with cutting-edge laser technology trusted by global dermatologists.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn primary"><i class="fas fa-calendar"></i> Book a Free Demo</a>
+                        <a href="#" class="btn secondary"><i class="fas fa-download"></i> Download Brochure</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="./image/hero-machine-3.png" alt="Machine" class="machine">
+                </div>
             </div>
             <div class="hero-card">
-                <span>HOVER ME</span>
-            </div>
-            <div class="hero-card">
-                <span>HOVER ME</span>
+                <div class="hero-left">
+                    <div class="badge"><i class="fas fa-award"></i> FDA Approved Technology</div>
+                    <h1 class="title">India’s Most Advanced <span class="highlight">PicoSecond Laser</span> is Here</h1>
+                    <p class="subtitle">Faster. Safer. More Effective.</p>
+                    <p class="desc">
+                        Boost your clinic's results with cutting-edge laser technology trusted by global dermatologists.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn primary"><i class="fas fa-calendar"></i> Book a Free Demo</a>
+                        <a href="#" class="btn secondary"><i class="fas fa-download"></i> Download Brochure</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="./image/hero-machine-4.png" alt="Machine" class="machine">
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- about section -->
+    <section class="container">
+        <div class="about-section">
+            <h2 class="section-title">About Us</h2>
+            <h1 class="title">Lorem ipsum <span>dolor sit amet consectetur.</span> In maecenas tincidunt sed risus arcu
+                scelerisque </h1>
+            <p class="description">Lorem ipsum dolor sit amet consectetur. In maecenas tincidunt sed risus arcu
+                scelerisque,Lorem
+                ipsum dolor
+                sit amet consectetur. In maecenas tincidunt sed risus arcu scelerisque,Lorem ipsum dolor sit amet
+                consectetur.</p>
+            <a href="#" class="about-section-btn">Schedule a 30-min Call</a>
+            <div class="about-grid">
+                <div class="about-grid-card">
+                    <img src="./image/about-grid-card-1.png" alt="About">
+                    <h3 class="numbers">30+</h3>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="about-grid-card">
+                    <img src="./image/about-grid-card-1.png" alt="About">
+                    <h3 class="numbers">30+</h3>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="about-grid-card">
+                    <img src="./image/about-grid-card-1.png" alt="About">
+                    <h3 class="numbers">30+</h3>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="about-grid-card">
+                    <img src="./image/about-grid-card-1.png" alt="About">
+                    <h3 class="numbers">30+</h3>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <h2 class="section-title">OUR PRODUCT</h2>
+            <div class="tabs">
+                <button class="tab active">Machine Product</button>
+                <button class="tab">Product</button>
+            </div>
+
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides will be injected by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog section -->
+    <section class="container">
+        <div class="blog-section">
+            <h2 class="section-title">Technology Insights</h2>
+
+            <div class="news-list-wrap">
+                <div class="news-list">
+                    <article class="news-item">
+                        <img src="https://www.qubainfotech.com/hubfs/quba-web-2025/home/quba-infotech-application-development.png"
+                            alt="Custom Application Development" class="news-image" />
+                        <div class="news-type-wrap">Machine</div>
+                        <div class="content">
+                            <div class="news-info">
+                                <div class="news-title-block">
+                                    <h3 class="news-title">
+                                        Lorem ipsum dolor sit amet consectetur,dolor sit.
+                                    </h3>
+                                    <div class="author-block">
+                                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000"
+                                            alt="App Development Expert" class="author-photo" />
+                                        <div class="author-info">
+                                            <span class="author-name">Development Team</span>
+                                            <span class="author-position">Software Engineers</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="view-article-block">
+                                    <a href="#">View article</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blank-container"></div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://www.qubainfotech.com/hubfs/quba-web-2025/home/quba-infotech-application-development.png"
+                            alt="Custom Application Development" class="news-image" />
+                        <div class="news-type-wrap">Machine</div>
+                        <div class="content">
+                            <div class="news-info">
+                                <div class="news-title-block">
+                                    <h3 class="news-title">
+                                        Lorem ipsum dolor sit amet consectetur,dolor sit.
+                                    </h3>
+                                    <div class="author-block">
+                                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000"
+                                            alt="App Development Expert" class="author-photo" />
+                                        <div class="author-info">
+                                            <span class="author-name">Development Team</span>
+                                            <span class="author-position">Software Engineers</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="view-article-block">
+                                    <a href="#">View article</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blank-container"></div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://www.qubainfotech.com/hubfs/quba-web-2025/home/quba-infotech-application-development.png"
+                            alt="Custom Application Development" class="news-image" />
+                        <div class="news-type-wrap">Machine</div>
+                        <div class="content">
+                            <div class="news-info">
+                                <div class="news-title-block">
+                                    <h3 class="news-title">
+                                        Lorem ipsum dolor sit amet consectetur,dolor sit.
+                                    </h3>
+                                    <div class="author-block">
+                                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000"
+                                            alt="App Development Expert" class="author-photo" />
+                                        <div class="author-info">
+                                            <span class="author-name">Development Team</span>
+                                            <span class="author-position">Software Engineers</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="view-article-block">
+                                    <a href="#">View article</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blank-container"></div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://www.qubainfotech.com/hubfs/quba-web-2025/home/quba-infotech-application-development.png"
+                            alt="Custom Application Development" class="news-image" />
+                        <div class="news-type-wrap">Machine</div>
+                        <div class="content">
+                            <div class="news-info">
+                                <div class="news-title-block">
+                                    <h3 class="news-title">
+                                        Lorem ipsum dolor sit amet consectetur,dolor sit.
+                                    </h3>
+                                    <div class="author-block">
+                                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000"
+                                            alt="App Development Expert" class="author-photo" />
+                                        <div class="author-info">
+                                            <span class="author-name">Development Team</span>
+                                            <span class="author-position">Software Engineers</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="view-article-block">
+                                    <a href="#">View article</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blank-container"></div>
+                    </article>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <a href="#" class="view-all-blog-btn">View More Blog <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+
+                <!-- Left Contact Form -->
+                <div class="contact-form">
+                    <h2>Stay Updated with Latest Innovations</h2>
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full name *</label>
+                                <input type="text" placeholder="John Doe" />
+                            </div>
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" placeholder="info123@mail.com" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="text" placeholder="1231455865" />
+                            </div>
+                            <div class="form-group">
+                                <label>Country *</label>
+                                <input type="text" placeholder="India" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Company *</label>
+                                <input type="text" placeholder="Your Company" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label>Message *</label>
+                                <textarea placeholder="Write your message"></textarea>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur. In maecenas tincidunt maecenas tincidunt.</p>
+                        <button type="submit" class="btn">CONTACT US <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+                <!-- Right Testimonial Swiper -->
+                <div class="testimonial-slider">
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Testimonial 1 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div>
+                                        <span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
+                                        <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Suspendisse varius enim
+                                            in eros elementum tristique."</p>
+                                    </div>
+                                    <div class="author">
+                                        <img src="https://i.pravatar.cc/50?img=1" alt="user" />
+                                        <div>
+                                            <h4>Tanish Thakker</h4>
+                                            <span>Mahesana, Gujarat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div>
+                                        <span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
+                                        <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Suspendisse varius enim
+                                            in eros elementum tristique."</p>
+                                    </div>
+                                    <div class="author">
+                                        <img src="https://i.pravatar.cc/50?img=1" alt="user" />
+                                        <div>
+                                            <h4>Tanish Thakker</h4>
+                                            <span>Mahesana, Gujarat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div>
+                                        <span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
+                                        <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Suspendisse varius enim
+                                            in eros elementum tristique."</p>
+                                    </div>
+                                    <div class="author">
+                                        <img src="https://i.pravatar.cc/50?img=1" alt="user" />
+                                        <div>
+                                            <h4>Tanish Thakker</h4>
+                                            <span>Mahesana, Gujarat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer-section">
+        <section class="container">
+            <div class="footer-grid">
+                <div class="grid-card first-grid">
+                    <img src="./image/footer-logo.png" alt="logo">
+                    <p class="desc">Leading provider of advanced laser technology for dermatological and aesthetic
+                        treatments. </p>
+                    <div class="social-media">
+                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="content"><a href="tel:1234567890">+91 1234567890</a></div>
+                    </div>
+                    <div class="social-media">
+                        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="content"><a href="mailto:infounilog@gmail.com">infounilog@gmail.com</a></div>
+                    </div>
+                    <div class="social-media">
+                        <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="content"><a href="#">Mon-Sat, 9:00 AM - 6:00 PM</a></div>
+                    </div>
+                </div>
+                <div class="grid-card">
+                    <h2 class="title">Company</h2>
+                    <ul class="links">
+                        <li><a href="#">About Unilog</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Clinical Result</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Training</a></li>
+                    </ul>
+                </div>
+                <div class="grid-card">
+                    <h2 class="title">Product</h2>
+                    <ul class="links">
+                        <li><a href="#">Diode Laser</a></li>
+                        <li><a href="#">Picosecond Laser</a></li>
+                        <li><a href="#">Picosecond Laser</a></li>
+                        <li><a href="#">Picosecond Laser</a></li>
+                        <li><a href="#">Picosecond Laser</a></li>
+                    </ul>
+                </div>
+                <div class="grid-card">
+                    <h2 class="title">Support</h2>
+                    <ul class="links">
+                        <li><a href="#">Technical Problem</a></li>
+                        <li><a href="#">Training Programs</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Parts & Services</a></li>
+                        <li><a href="#">User Manuals</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/navbar.js"></script>
+    <script src="./js/homepage.js"></script>
 </body>
 
 </html>

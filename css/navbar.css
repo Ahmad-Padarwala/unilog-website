@@ -14,10 +14,6 @@
     font-family: var(--font1);
 }
 
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-}
 
 header .top-bar {
     background: var(--primary);
@@ -165,7 +161,6 @@ header nav#navbar .menu-toggle {
     color: #3b004d;
 }
 
-
 @media (max-width: 1025px) {
     header nav#navbar {
         padding: 15px 15px;
@@ -201,5 +196,67 @@ header nav#navbar .menu-toggle {
 @media screen and (max-width: 576px) {
     header .top-bar {
         padding: 15px 15px;
+    }
+}
+
+
+/* container css */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    /* Large desktops */
+    margin: 0 auto;
+    padding: 0 1rem;
+    /* Add breathing room on small screens */
+    box-sizing: border-box;
+}
+
+/* 📱 Small devices (phones, portrait < 640px) */
+@media (max-width: 639px) {
+    .container {
+        max-width: 100%;
+        padding: 0 1rem;
+        /* 16px padding */
+    }
+}
+
+/* 📱 Tablets (640px – 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+    .container {
+        max-width: 640px;
+        padding: 0 1.25rem;
+        /* 20px padding */
+    }
+}
+
+/* 💻 Small laptops (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 768px;
+        padding: 0 1.5rem;
+        /* 24px padding */
+    }
+}
+
+/* 💻 Medium laptops (1024px – 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        max-width: 1024px;
+        padding: 0 2rem;
+        /* 32px padding */
+    }
+}
+
+/* 🖥️ Large desktops (1280px – 1399px) */
+@media (min-width: 1280px) and (max-width: 1399px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* 🖥️ Extra large desktops (≥1400px) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
     }
 }
