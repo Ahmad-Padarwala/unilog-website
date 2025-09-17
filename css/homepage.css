@@ -48,6 +48,13 @@
     display: none;
 }
 
+.home-hero-section .hero-content .hero-card:not(.active) .hero-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .home-hero-section .hero-content .hero-card .badge {
     display: inline-block;
     background: var(--white);
@@ -879,6 +886,16 @@
         gap: 7px;
     }
 
+    .home-hero-section .hero-content .hero-card:not(.active) .hero-left {
+        height: -webkit-fill-available;
+    }
+
+    .home-hero-section .hero-content .hero-card .badge {
+        min-width: 230px;
+        /* adjust as needed */
+        text-align: center;
+    }
+
     .home-hero-section .hero-content .hero-card.active .hero-right {
         margin-top: 20px;
         justify-content: center;
@@ -945,5 +962,9 @@
         filter: blur(2px);
         opacity: 0.5;
         transform: scale(0.9) rotate(-5deg);
+    }
+
+    .home-hero-section .hero-content .hero-card:not(.active) .badge {
+        background-color: transparent;
     }
 }
