@@ -952,6 +952,10 @@
         flex-direction: column;
     }
 
+    .home-hero-section .hero-content .hero-card.active .hero-right img.machine {
+        max-width: 250px;
+    }
+
     .contact-section .contact-wrapper .swiper-slide {
         width: 90% !important;
         height: 400px !important;
@@ -964,7 +968,35 @@
         transform: scale(0.9) rotate(-5deg);
     }
 
+    .home-hero-section .hero-content .hero-card.active .badge {
+        font-size: 8px;
+    }
+
     .home-hero-section .hero-content .hero-card:not(.active) .badge {
         background-color: transparent;
+    }
+
+    .home-hero-section .hero-content .hero-card.active .title {
+        font-size: 20px;
+    }
+
+    .home-hero-section .hero-content .hero-card.active .subtitle {
+        font-size: 14px;
+    }
+
+    .home-hero-section .hero-content .hero-card.active .desc {
+        font-size: 12px;
+    }
+
+    .home-hero-section .hero-content .hero-card.active .btn {
+        font-size: 12px;
+    }
+
+    .contact-section .contact-wrapper .form-row {
+        flex-direction: column;
+    }
+
+    .footer-section .footer-grid .grid-card.first-grid {
+        width: 100%;
     }
 }
