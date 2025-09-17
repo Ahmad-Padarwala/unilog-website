@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #35004E;
+    --white: #ffffff;
+    --black: #000000;
+    --font1: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header .top-bar {
+    background: var(--primary);
+    padding: 15px 30px;
+}
+
+header .top-bar .top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header .top-bar .top-bar-container a.email-link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .top-bar .top-bar-container .social-icons a {
+    margin-left: 15px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Navbar */
+header nav#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav#navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+header nav#navbar .logo img {
+    width: 130px;
+    height: auto;
+}
+
+header nav#navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header nav#navbar .nav-links li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav#navbar .nav-links li a:hover {
+    color: var(--primary);
+}
+
+header .contact-btn {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header .contact-btn:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+/* Mobile styles */
+header .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 30px;
+    background: white;
+    border-top: 0 solid var(--black);
+    box-shadow: none;
+    transition:
+        max-height 0.4s ease-in-out,
+        opacity 0.4s ease-in-out,
+        padding 0.4s ease-in-out,
+        border-top 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out;
+    opacity: 0;
+}
+
+header .mobile-menu.active {
+    max-height: 400px;
+    padding: 30px;
+    border-top: 2px solid var(--black);
+    opacity: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .mobile-menu .mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+}
+
+header .mobile-menu .mobile-menu-list li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header .mobile-menu .mobile-menu-list li a:hover {
+    color: var(--primary);
+}
+
+header .mobile-menu .mobile-menu-list .contact-btn {
+    width: fit-content;
+    margin-top: 10px;
+    display: block !important;
+}
+
+header nav#navbar .menu-toggle i {
+    transition: transform 0.3s ease;
+}
+
+header nav#navbar .menu-toggle i.fa-times {
+    transform: rotate(90deg);
+}
+
+header nav#navbar .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #3b004d;
+}
+
+
+@media (max-width: 1025px) {
+    header nav#navbar {
+        padding: 15px 15px;
+    }
+
+    header nav#navbar .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    header nav#navbar .nav-links li a {
+        font-size: 14px;
+    }
+
+    header .contact-btn {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    header nav#navbar .nav-links,
+    header .contact-btn {
+        display: none;
+    }
+
+    header nav#navbar .menu-toggle {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header .top-bar {
+        padding: 15px 15px;
+    }
+}
