@@ -266,25 +266,70 @@
 }
 
 .product-section .tabs {
+    display: inline-flex;
+    background: #D9D9D9;
+    border-radius: 50px;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.product-section .product-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+    background: #fff;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease;
+}
+
+.product-section .product-card:hover .product-description {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .product-section .tab {
-    background: none;
+    flex: 1;
     border: none;
+    background: transparent;
     font-size: 1rem;
     font-weight: 600;
-    padding: 20px 30px;
+    padding: 12px 10px;
+    width: 175px;
     cursor: pointer;
-    color: var(--black);
-    border-radius: 8px 8px 0 0;
-    transition: all 0.3s;
+    color: white;
+    border-radius: 50px;
+    z-index: 2;
+    transition: color 0.3s ease;
 }
 
 .product-section .tab.active {
-    background-color: white;
-    color: #9F51AF;
+    color: #2b2b2b;
 }
+
+.product-section .tab-indicator {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    background: white;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
 
 .product-section .product-swiper {
     background-color: var(--white);
@@ -301,22 +346,19 @@
 }
 
 .product-section .product-card {
+    position: relative;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
     background: #fff;
-}
-
-.product-section .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
 }
 
 .product-section .product-image {
     background: #D9D9D9;
     padding: 20px 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .product-section .product-image img {
@@ -326,12 +368,15 @@
 
 .product-section .product-info {
     padding: 15px;
+    position: relative;
+    z-index: 2;
 }
 
 .product-section .product-info h3 {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 8px;
+    color: #333;
 }
 
 .product-section .product-info p {
@@ -339,6 +384,10 @@
     color: #666;
 }
 
+.product-section .product-card:hover .product-image {
+    opacity: 0;
+    transform: translateY(-100%);
+}
 
 /* blog section */
 .blog-section {
@@ -570,6 +619,150 @@
 }
 
 /* for blog */
+
+/* reels section */
+.reels-section {
+    background-color: #F3E8FF;
+    padding: 50px 0;
+}
+
+.reels-section .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.reels-section .video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.reels-section .video-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 9 / 16;
+    cursor: pointer;
+}
+
+.reels-section .video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.reels-section .video-item:hover video {
+    transform: scale(1.05);
+}
+
+
+/* review section */
+.review-section {
+    padding: 50px 0;
+}
+
+.review-section .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.review-section .review-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-section .review-container .text-review {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #F1CDE9;
+    border-radius: 10px;
+    width: 65%;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.review-section .review-container .text-review .text-review-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.review-section .review-container .text-review .text-review-card .quote-icon {
+    color: #165197;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.review-section .review-container .text-review .text-review-card .review-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.review-section .review-container .text-review .text-review-card .author-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-section .review-container .text-review .text-review-card .author-block p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #165197;
+}
+
+.review-section .review-container .text-review .text-review-card .author-block i {
+    color: #FF9D00;
+}
+
+.review-section .review-container .video-review {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #F1CDE9;
+    border-radius: 10px;
+    width: 33%;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.review-section .review-container .video-review .video-review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.review-section .review-container .video-review .video-review-card iframe {
+    border-radius: 10px;
+    aspect-ratio: 8 / 4;
+}
+
+.review-section .review-container .video-review .video-review-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.review-section .review-container .text-review::-webkit-scrollbar,
+.review-section .review-container .video-review::-webkit-scrollbar {
+    width: 0;
+}
+
 /* contact section */
 
 .contact-section {
@@ -654,84 +847,17 @@
     color: #fff;
 }
 
-/* Testimonial Slider */
-.contact-section .contact-wrapper .testimonial-slider {
+.contact-section .contact-wrapper .image-section {
     width: 50%;
-}
-
-.contact-section .contact-wrapper .swiper-slide {
-    width: 400px !important;
-    height: 400px !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
-    filter: blur(2px);
-    opacity: 0.5;
-    transform: scale(0.9) rotate(-5deg);
 }
 
-.contact-section .contact-wrapper .swiper-slide.swiper-slide-active {
-    z-index: 10;
-    filter: blur(0);
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-}
-
-.contact-section .contact-wrapper .swiper-slide.swiper-slide-next {
-    filter: blur(2px);
-    opacity: 0.5;
-    transform: scale(0.9) rotate(5deg);
-}
-
-.contact-section .contact-wrapper .testimonial-card {
-    background: #fff;
-    color: #333;
-    padding: 25px;
-    border-radius: 12px;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    user-select: none;
-}
-
-.contact-section .contact-wrapper .testimonial-card .quote-icon i {
-    color: #165197;
-    font-weight: 700;
-    font-size: 3.5rem;
-}
-
-.contact-section .contact-wrapper .testimonial-card .review-text {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
-
-.contact-section .contact-wrapper .author {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 30px;
-    border-top: 2px solid #B2B2B2;
-}
-
-.contact-section .contact-wrapper .author img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.contact-section .contact-wrapper .author h4 {
-    margin: 0;
-    font-size: 16px;
-}
-
-.contact-section .contact-wrapper .author span {
-    font-size: 13px;
-    color: gray;
+.contact-section .contact-wrapper .image-section img {
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px 0px #35004E;
 }
 
 @media screen and (max-width: 1280px) {
@@ -762,8 +888,7 @@
         flex-direction: column;
     }
 
-    .contact-section .contact-wrapper .contact-form,
-    .contact-section .contact-wrapper .testimonial-slider {
+    .contact-section .contact-wrapper .contact-form {
         width: 70%;
     }
 
@@ -804,13 +929,32 @@
 
     .home-hero-section .hero-content .hero-card .badge {
         min-width: 230px;
-        /* adjust as needed */
         text-align: center;
     }
 
     .home-hero-section .hero-content .hero-card.active .hero-right {
         margin-top: 20px;
         justify-content: center;
+    }
+
+    .reels-section .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-section .review-container {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .review-section .review-container .text-review,
+    .review-section .review-container .video-review {
+        width: 100%;
+    }
+
+    .review-section .review-container .video-review {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 }
 
@@ -821,6 +965,8 @@
     }
 
     .blog-section,
+    .reels-section,
+    .review-section,
     .contact-section {
         padding: 30px 0;
     }
@@ -844,9 +990,28 @@
         padding: 15px 20px;
     }
 
-    .contact-section .contact-wrapper .contact-form,
-    .contact-section .contact-wrapper .testimonial-slider {
+    .contact-section .contact-wrapper .contact-form {
         width: 100%;
+    }
+
+    .review-section .title {
+        font-size: 1.5rem;
+    }
+
+    .review-section .review-container .text-review .text-review-card .quote-icon {
+        font-size: 2rem;
+    }
+
+    .review-section .review-container .text-review .text-review-card .author-block p {
+        font-size: 1.2rem;
+    }
+
+    .review-section .review-container .text-review .text-review-card .author-block i {
+        font-size: 0.8rem;
+    }
+
+    .contact-section .contact-wrapper .image-section {
+        display: none;
     }
 }
 
@@ -861,18 +1026,6 @@
 
     .home-hero-section .hero-content .hero-card.active .hero-right img.machine {
         max-width: 250px;
-    }
-
-    .contact-section .contact-wrapper .swiper-slide {
-        width: 90% !important;
-        height: 400px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s ease-in-out;
-        filter: blur(2px);
-        opacity: 0.5;
-        transform: scale(0.9) rotate(-5deg);
     }
 
     .home-hero-section .hero-content .hero-card.active .badge {
@@ -901,5 +1054,17 @@
 
     .contact-section .contact-wrapper .form-row {
         flex-direction: column;
+    }
+
+    .reels-section .video-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .reels-section .video-item {
+        aspect-ratio: 9 / 12;
+    }
+
+    .review-section .review-container .video-review {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
