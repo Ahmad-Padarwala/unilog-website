@@ -1,0 +1,661 @@
+/* hero section */
+.about-hero-section {
+    position: relative;
+    background-image: url('../image/about-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 130px;
+    height: 400px;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.about-hero-section h1 {
+    position: relative;
+    letter-spacing: 1.5px;
+    z-index: 2;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* welcome section */
+
+.welcome-section {
+    background-image: url('../image/about-welcome-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    max-width: 1280px;
+    margin: 50px auto 100px auto;
+    border-radius: 0 20px 0 20px;
+    position: relative;
+}
+
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 120px;
+    background: #fff;
+    border-bottom-right-radius: 30px;
+    z-index: 1;
+}
+
+
+.welcome-section .welcome-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.welcome-content h2 {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+.welcome-section .welcome-content .welcome-card {
+    position: absolute;
+    bottom: -60px;
+    right: 0px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px 0 15px 15px;
+    max-width: 400px;
+    box-shadow: 4px 4px 4px 0px #00000066;
+}
+
+.welcome-section .welcome-content .welcome-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #9F51AF;
+}
+
+/* stand for Section */
+.stand-for-section {
+    background-color: #F5F5F5;
+    padding: 50px 0;
+}
+
+.stand-for-section .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.stand-for-section .container .stand-for-images {
+    display: flex;
+    gap: 15px;
+}
+
+.stand-for-section .container .stand-for-images img {
+    width: 48%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.stand-for-section .container .stand-for-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stand-for-section .container .stand-for-content .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 10px;
+}
+
+.stand-for-section .container .stand-for-content .tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.stand-for-section .container .stand-for-content .tab-link {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.stand-for-section .container .stand-for-content .tab-link.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.stand-for-section .container .stand-for-content .tab-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    border-radius: 2px;
+}
+
+.stand-for-section .container .stand-for-content .tab-content {
+    display: none;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 15px 0;
+}
+
+.stand-for-section .container .stand-for-content .tab-content.active {
+    display: block;
+}
+
+.stand-for-section .container .stand-for-content .tab-content blockquote {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    border-left: 3px solid #000;
+    padding-left: 12px;
+    font-style: italic;
+}
+
+.stand-for-section .container .stand-for-content .tab-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.stand-for-section .container .stand-for-content .tab-content .author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stand-for-section .container .stand-for-content .tab-content .author img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.stand-for-section .container .stand-for-content .tab-content .author h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.stand-for-section .container .stand-for-content .tab-content .author span {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+/* number section */
+.number-section {
+    position: relative;
+    background-image: url('../image/number-section-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    z-index: 0;
+}
+
+.number-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(53, 0, 78, 0.7);
+    z-index: 1;
+}
+
+.number-section .number-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    z-index: 2;
+}
+
+.number-section .number-content .number-item {
+    text-align: center;
+}
+
+.number-section .number-content .number-item h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.number-section .number-content .number-item p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* our history section */
+
+.history-section {
+    position: relative;
+    padding: 50px 0;
+    background-color: #FBF4FE;
+    overflow: hidden;
+}
+
+.history-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../image/our-history-bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+
+.history-section .title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-wrap {
+    position: relative;
+    width: min(980px, 92%);
+    margin: 0 auto;
+    height: 600px;
+    /* you can adjust or make it dynamic */
+    z-index: 1;
+}
+
+.timeline-wrap .center-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #707070;
+    opacity: 0.6;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.history-section .timeline-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 10px 0 30px;
+    z-index: 2;
+
+}
+
+.history-section .timeline-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.history-section .timeline-container .timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+    margin: 45px 0;
+}
+
+.history-section .timeline-container .timeline-item:nth-child(even) {
+    direction: rtl;
+}
+
+
+.history-section .timeline-container .timeline-item .timeline-col {
+    padding: 0 30px;
+}
+
+.history-section .timeline-container .timeline-item .icon-col {
+    display: flex;
+    grid-column: 1;
+    justify-content: flex-end;
+}
+
+.history-section .timeline-container .timeline-item .content-col {
+    grid-column: 2 / 3;
+    text-align: left;
+}
+
+.history-section .timeline-container .timeline-item:nth-child(even) .content-col {
+    text-align: right;
+}
+
+.history-section .timeline-container .timeline-item:nth-child(even) .points {
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.history-section .timeline-container .timeline-item .tl-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-section .timeline-container .timeline-item .tl-icon img {
+    width: 42px;
+    height: auto;
+}
+
+.history-section .timeline-container .timeline-item .dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid #CC43AB;
+    padding: 5px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.history-section .timeline-container .timeline-item:nth-child(1) .dot {
+    background: #CC43AB;
+}
+
+.history-section .timeline-container .timeline-item .year {
+    margin: 0 0 6px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.history-section .timeline-container .timeline-item:nth-child(1) .year {
+    color: #C448B7;
+}
+
+
+.history-section .timeline-container .timeline-item .points li {
+    color: var(--black);
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/* map section */
+
+
+.map-section {
+    position: relative;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.map-section .title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.map-section img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1280px) {
+    .welcome-section {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-hero-section {
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-hero-section {
+        height: 250px;
+    }
+
+    .welcome-section {
+        margin: 30px auto 100px auto;
+    }
+
+    .stand-for-section {
+        padding: 30px 0;
+    }
+
+    .about-hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-section .welcome-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100px;
+        background: #fff;
+        border-bottom-right-radius: 30px;
+        z-index: 1;
+    }
+
+    .welcome-section .welcome-content h2 {
+        font-size: 1.7rem;
+        top: 10px;
+    }
+
+    .stand-for-section .container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .stand-for-section .container .stand-for-images img {
+        width: 200px;
+    }
+
+    .stand-for-section .container .stand-for-content .title {
+        font-size: 1.6rem;
+    }
+
+    .number-section .number-content {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+    }
+
+    .history-section .title {
+        font-size: 1.8rem;
+    }
+
+    .history-section .timeline-container .timeline-item {
+        margin: 20px 0;
+    }
+
+    .history-section .timeline-container .timeline-item .year {
+        font-size: 1.2rem;
+    }
+
+    .history-section .timeline-container .timeline-item .points li {
+        font-size: 0.8rem;
+    }
+
+    .map-section .title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* move the axis to the left like a traditional mobile timeline */
+    .timeline-wrap .center-line {
+        left: 20px;
+        transform: none;
+    }
+
+    .history-section .timeline-container {
+        padding: 8px 0 20px;
+    }
+
+    /* collapse items to 2 narrow columns: axis/icon column + content */
+    .history-section .timeline-container .timeline-item {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+        margin: 18px 0;
+        direction: ltr;
+        /* normalize */
+    }
+
+    /* cancel alternating effect on mobile */
+    .history-section .timeline-container .timeline-item:nth-child(even) {
+        direction: ltr;
+    }
+
+    .history-section .timeline-container .timeline-item .icon-col {
+        grid-column: 1 / 2;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .history-section .timeline-container .timeline-item .content-col {
+        grid-column: 2 / 3;
+        text-align: left;
+        padding: 0 8px 0 0;
+    }
+
+    .history-section .timeline-container .timeline-item:nth-child(even) .content-col {
+        text-align: left;
+    }
+
+    .history-section .timeline-container .timeline-item:nth-child(even) .points {
+        align-items: flex-start;
+    }
+
+    /* dot aligns with left axis */
+    .history-section .timeline-container .timeline-item .dot {
+        display: none;
+    }
+
+    /* smaller icon and type */
+    .history-section .timeline-container .timeline-item .tl-icon img {
+        width: 30px;
+    }
+
+    .history-section .timeline-container .timeline-item .year {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+    }
+
+    .history-section .timeline-container .timeline-item .points {
+        list-style: none;
+    }
+
+    .history-section .timeline-container .timeline-item .points li {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-wrap {
+        height: 460px;
+    }
+
+    .history-section .title {
+        font-size: 1.6rem;
+    }
+
+    .history-section .timeline-container .timeline-item {
+        grid-template-columns: 34px 1fr;
+        gap: 10px;
+        margin: 16px 0;
+    }
+
+    .timeline-wrap .center-line {
+        left: 18px;
+    }
+
+    .history-section .timeline-container .timeline-item .dot {
+        left: 18px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .history-section .timeline-container .timeline-item .tl-icon img {
+        width: 26px;
+    }
+
+    .history-section .timeline-container .timeline-item .year {
+        font-size: 0.98rem;
+    }
+
+    .history-section .timeline-container .timeline-item .points li {
+        font-size: 0.82rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .welcome-section {
+        margin: 30px auto 50px auto;
+    }
+
+    .stand-for-section .container .stand-for-images img {
+        width: 150px;
+    }
+
+    .number-section .number-content .number-item h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .map-section .title {
+        font-size: 1.4rem;
+    }
+}
