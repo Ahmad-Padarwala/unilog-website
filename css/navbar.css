@@ -53,7 +53,7 @@ header nav#navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 0px 30px;
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -74,12 +74,97 @@ header nav#navbar .nav-links {
     list-style: none;
 }
 
+header nav#navbar .nav-links li {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+
 header nav#navbar .nav-links li a {
     text-decoration: none;
     color: var(--black);
     font-size: 15px;
     font-weight: 500;
     transition: color 0.3s;
+}
+
+/* Dropdown base */
+header nav#navbar .dropdown {
+    position: relative;
+}
+
+header nav#navbar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 30px;
+    min-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid var(--primary);
+    border-radius: 0 0 10px 10px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+header nav#navbar .dropdown:hover a {
+    color: var(--primary);
+}
+
+header nav#navbar .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Column styling */
+header nav#navbar .dropdown-menu .dropdown-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    padding-right: 20px;
+    border-right: 2px solid rgb(99, 97, 97);
+}
+
+header nav#navbar .dropdown-menu .dropdown-column:last-child {
+    border-right: none;
+}
+
+header nav#navbar .dropdown-menu .dropdown-column h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+header nav#navbar .dropdown-menu .dropdown-column a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #eee;
+}
+
+header nav#navbar .dropdown-menu .dropdown-column a img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+header nav#navbar .dropdown-menu .dropdown-column a:hover {
+    background: #f8f8f8;
+    color: var(--primary);
 }
 
 header nav#navbar .nav-links li a.active {
