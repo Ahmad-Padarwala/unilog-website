@@ -308,14 +308,14 @@
     padding: 12px 10px;
     width: 175px;
     cursor: pointer;
-    color: white;
+    color: var(--black);
     border-radius: 50px;
     z-index: 2;
     transition: color 0.3s ease;
 }
 
 .product-section .tab.active {
-    color: #2b2b2b;
+    color: var(--primary);
 }
 
 .product-section .tab-indicator {

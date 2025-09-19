@@ -99,8 +99,8 @@ header nav#navbar .dropdown-menu {
     top: 100%;
     left: 0;
     background: #fff;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px 30px;
     min-width: 800px;
