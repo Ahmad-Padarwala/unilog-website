@@ -1,7 +1,7 @@
 /* hero section */
 .about-hero-section {
     position: relative;
-    background-image: url('../image/about-hero-bg.jpg');
+    background-image: url('../image/about-hero-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@
 /* welcome section */
 
 .welcome-section {
-    background-image: url('../image/about-welcome-bg.jpg');
+    background-image: url('../image/about-welcome-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -224,7 +224,7 @@
 /* number section */
 .number-section {
     position: relative;
-    background-image: url('../image/number-section-bg.jpg');
+    background-image: url('../image/number-section-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -281,7 +281,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('../image/our-history-bg.png');
+    background-image: url('../image/our-history-bg.webp');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

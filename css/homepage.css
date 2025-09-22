@@ -252,7 +252,7 @@
 /* product section */
 .product-section {
     padding: 50px 0;
-    background-image: url('../image/home-product-bg.jpg');
+    background-image: url('../image/home-product-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

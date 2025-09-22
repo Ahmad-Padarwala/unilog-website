@@ -1,6 +1,6 @@
 .why-product-section {
     padding: 60px 0;
-    background-image: url("../image/product-why-bg.jpg");
+    background-image: url("../image/product-why-bg.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,7 +108,7 @@
 /* meet the unilog */
 .meet-unilog-section {
     padding: 30px 0;
-    background-image: url('../image/meet-section-image.jpg');
+    background-image: url('../image/meet-section-image.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
