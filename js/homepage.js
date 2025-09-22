@@ -1,25 +1,68 @@
-// hero section
+// only hovered hero section
+// document.addEventListener("DOMContentLoaded", () => {
+//     const cards = document.querySelectorAll(".hero-card");
+//     cards.forEach((card, index) => {
+//         if (index === 0) {
+//             card.classList.add("active");
+//         } else {
+//             card.classList.remove("active");
+//         }
+
+//         card.addEventListener("mouseenter", () => {
+//             cards.forEach(c => c.classList.remove("active"));
+//             card.classList.add("active");
+//         });
+
+//         // Handle click
+//         card.addEventListener("click", () => {
+//             cards.forEach(c => c.classList.remove("active"));
+//             card.classList.add("active");
+//         });
+//     });
+// });
+
+// slider hero section
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".hero-card");
-    cards.forEach((card, index) => {
-        if (index === 0) {
-            card.classList.add("active");
-        } else {
-            card.classList.remove("active");
-        }
+    let activeIndex = 0;
+    let slideInterval;
 
+    function setActiveCard(index) {
+        cards.forEach(c => c.classList.remove("active"));
+        cards[index].classList.add("active");
+        activeIndex = index;
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(() => {
+            let nextIndex = (activeIndex + 1) % cards.length;
+            setActiveCard(nextIndex);
+        }, 5000); // 5 seconds
+    }
+
+    function resetAutoSlide() {
+        clearInterval(slideInterval);
+        startAutoSlide();
+    }
+
+    // Initialize
+    setActiveCard(0);
+    startAutoSlide();
+
+    // Handle manual hover/click
+    cards.forEach((card, index) => {
         card.addEventListener("mouseenter", () => {
-            cards.forEach(c => c.classList.remove("active"));
-            card.classList.add("active");
+            setActiveCard(index);
+            resetAutoSlide();
         });
 
-        // Handle click
         card.addEventListener("click", () => {
-            cards.forEach(c => c.classList.remove("active"));
-            card.classList.add("active");
+            setActiveCard(index);
+            resetAutoSlide();
         });
     });
 });
+
 
 // product section
 const tabs = document.querySelectorAll(".tab");
