@@ -14,3 +14,20 @@ menuToggle.addEventListener('click', () => {
         toggleIcon.classList.add("fa-bars");
     }
 });
+
+
+// navbar mega menu
+document.querySelectorAll('.dropdown-sidebar .sidebar-card').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        // Remove active class from all sidebar items
+        document.querySelectorAll('.dropdown-sidebar .sidebar-card').forEach(card => card.classList.remove('active'));
+        item.classList.add('active');
+
+        // Hide all contents
+        document.querySelectorAll('.dropdown-content').forEach(content => content.classList.remove('active'));
+
+        // Show the matched one
+        const target = item.getAttribute('data-target');
+        document.getElementById(target).classList.add('active');
+    });
+});

@@ -52,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle manual hover/click
     cards.forEach((card, index) => {
         card.addEventListener("mouseenter", () => {
+            if (index === activeIndex) {
+                return;
+            }
             setActiveCard(index);
             resetAutoSlide();
         });
