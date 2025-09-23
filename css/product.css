@@ -158,7 +158,6 @@
     gap: 10px;
     width: 500px;
     align-items: center;
-
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -207,7 +206,16 @@
     grid-column: span 2;
 }
 
+@media screen and (max-width: 1440px) {
+    .meet-unilog-section .meet-unilog-wrapper .card-layout {
+        margin-left: -15%;
+        margin-right: -18%;
+    }
 
+    .meet-unilog-section .meet-unilog-wrapper .card-layout .card {
+        width: 400px;
+    }
+}
 
 @media (max-width: 1024px) {
     .meet-unilog-section .meet-unilog-wrapper {

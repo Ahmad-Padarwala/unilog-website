@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function startAutoSlide() {
         slideInterval = setInterval(() => {
             let nextIndex = (activeIndex + 1) % cards.length;
-            setActiveCard(nextIndex);
+            // setActiveCard(nextIndex);
         }, 5000); // 5 seconds
     }
 
@@ -51,6 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle manual hover/click
     cards.forEach((card, index) => {
+        console.log(card)
+        console.log(index)
         card.addEventListener("mouseenter", () => {
             if (index === activeIndex) {
                 return;
