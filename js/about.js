@@ -16,3 +16,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// number section
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".number-item h2");
+  let started = false; // to run animation only once
+
+  function animateCounter(el, target) {
+    let current = 0;
+    const increment = target / 200; // adjust speed
+    const interval = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(interval);
+      }
+      el.textContent = Math.floor(current) + (el.dataset.suffix || "");
+    }, 20); // speed of counting
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      if (entries[0].isIntersecting && !started) {
+        started = true;
+        counters.forEach(counter => {
+          const target = parseInt(counter.dataset.target);
+          animateCounter(counter, target);
+        });
+      }
+    },
+    { threshold: 0.5 } // trigger when 50% visible
+  );
+
+  observer.observe(document.querySelector(".number-section"));
+});

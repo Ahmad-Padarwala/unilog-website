@@ -126,6 +126,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 15px;
 }
 
@@ -140,6 +141,7 @@
     display: flex;
     gap: 20px;
     border-bottom: 1px solid #ccc;
+    position: relative;
 }
 
 .stand-for-section .container .stand-for-content .tab-link {
@@ -159,19 +161,31 @@
     font-weight: 600;
 }
 
-.stand-for-section .container .stand-for-content .tab-link.active::after {
+.stand-for-section .container .stand-for-content .tab-link::after {
     content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 2px;
     background: #000;
     border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.stand-for-section .container .stand-for-content .tab-link.active::after {
+    width: 100%;
 }
 
 .stand-for-section .container .stand-for-content .tab-content {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #444;
@@ -179,7 +193,10 @@
 }
 
 .stand-for-section .container .stand-for-content .tab-content.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    position: relative;
 }
 
 .stand-for-section .container .stand-for-content .tab-content blockquote {
@@ -304,7 +321,6 @@
     width: min(980px, 92%);
     margin: 0 auto;
     height: 600px;
-    /* you can adjust or make it dynamic */
     z-index: 1;
 }
 
