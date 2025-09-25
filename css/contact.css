@@ -150,15 +150,15 @@
 .contact-section .section-content .contact-form form .form-group textarea {
     background: transparent;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--black);
     padding: 8px;
-    color: black;
+    color: var(--black);
     font-size: 14px;
     outline: none;
 }
 
 .contact-section .section-content .contact-form form .form-group input::placeholder {
-    color: black;
+    color: var(--black);
 }
 
 .contact-section .section-content .contact-form form .form-group textarea {
@@ -174,8 +174,8 @@
 
 .contact-section .section-content .contact-form form .btn {
     margin-top: 20px;
-    background: #35004E;
-    border: 2px solid #35004E;
+    background: var(--primary);
+    border: 2px solid var(--primary);
     color: var(--white);
     font-size: 12px;
     padding: 10px 25px;
@@ -187,7 +187,7 @@
 
 .contact-section .section-content .contact-form form .btn:hover {
     background: transparent;
-    color: #35004E;
+    color: var(--primary);
 }
 
 /* map section */

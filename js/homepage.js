@@ -155,10 +155,10 @@ tabs.forEach((tab, index) => {
 
 
 const Contactswiper = new Swiper(".testimonial-swiper", {
-    slidesPerView: "auto",     // let CSS width decide (400px fixed)
+    slidesPerView: "auto",
     spaceBetween: 10,
-    centeredSlides: true,      // keeps active centered
+    centeredSlides: true,
     loop: true,
     grabCursor: true,
-    pagination: false,
+    loopedSlides: 3
 });

@@ -54,7 +54,7 @@
     left: 0;
     width: 290px;
     height: 120px;
-    background: #fff;
+    background: var(--white);
     border-bottom-right-radius: 30px;
     z-index: 1;
 }
@@ -68,7 +68,7 @@
 }
 
 .welcome-content h2 {
-    color: #000;
+    color: var(--black);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -83,7 +83,7 @@
     position: absolute;
     bottom: -60px;
     right: 0px;
-    background: #fff;
+    background: var(--white);
     padding: 20px;
     border-radius: 15px 0 15px 15px;
     max-width: 400px;
@@ -95,7 +95,7 @@
     font-size: 0.95rem;
     font-weight: 500;
     line-height: 1.5;
-    color: #9F51AF;
+    color: var(--secondary);
 }
 
 /* stand for Section */
@@ -133,7 +133,7 @@
 .stand-for-section .container .stand-for-content .title {
     font-size: 2rem;
     font-weight: 700;
-    color: #000;
+    color: var(--black);
     margin: 0 0 10px;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .stand-for-section .container .stand-for-content .tab-link.active {
-    color: #000;
+    color: var(--black);
     font-weight: 600;
 }
 
@@ -168,7 +168,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #000;
+    background: var(--black);
     border-radius: 2px;
     transition: width 0.3s ease;
 }
@@ -203,8 +203,8 @@
     margin: 20px 0;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #000;
-    border-left: 3px solid #000;
+    color: var(--black);
+    border-left: 3px solid var(--black);
     padding-left: 12px;
     font-style: italic;
 }
@@ -275,14 +275,14 @@
 .number-section .number-content .number-item h2 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--white);
     margin-bottom: 20px;
 }
 
 .number-section .number-content .number-item p {
     font-size: 1rem;
     font-weight: 500;
-    color: #fff;
+    color: var(--white);
 }
 
 /* our history section */
@@ -410,26 +410,26 @@
     top: 50%;
     width: 16px;
     height: 16px;
-    background: #fff;
-    border: 2px solid #CC43AB;
+    background: var(--white);
+    border: 2px solid var(--secondary);
     padding: 5px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
 
 .history-section .timeline-container .timeline-item:nth-child(1) .dot {
-    background: #CC43AB;
+    background: var(--secondary);
 }
 
 .history-section .timeline-container .timeline-item .year {
     margin: 0 0 6px;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #111;
+    color: var(--black);
 }
 
 .history-section .timeline-container .timeline-item:nth-child(1) .year {
-    color: #C448B7;
+    color: var(--secondary);
 }
 
 
@@ -498,7 +498,7 @@
         left: 0;
         width: 250px;
         height: 100px;
-        background: #fff;
+        background: var(--white);
         border-bottom-right-radius: 30px;
         z-index: 1;
     }

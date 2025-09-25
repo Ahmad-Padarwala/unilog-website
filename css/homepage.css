@@ -184,7 +184,7 @@
 }
 
 .about-section .title span {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .about-section .description {
@@ -195,8 +195,8 @@
 }
 
 .about-section .about-section-btn {
-    background-color: var(--secondary);
-    border: 2px solid var(--secondary);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
     padding: 10px 20px;
     cursor: pointer;
     color: var(--white);
@@ -211,7 +211,7 @@
 
 .about-section .about-section-btn:hover {
     background-color: transparent;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .about-section .about-grid {
@@ -268,7 +268,7 @@
 
 .product-section .tabs {
     display: inline-flex;
-    background: var(--primary);
+    background: var(--secondary);
     border-radius: 50px;
     padding: 5px;
     position: relative;
@@ -316,7 +316,7 @@
 }
 
 .product-section .tab.active {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .product-section .tab-indicator {
@@ -333,7 +333,7 @@
 
 
 .product-section .product-swiper {
-    background-color: var(--white);
+    background-color: var(--secondary);
     padding: 20px;
     border-radius: 10px;
 }
@@ -564,12 +564,12 @@
 
 
 .blog-section .view-all-blog-btn {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--primary);
     padding: 10px 20px;
     cursor: pointer;
     color: var(--white);
@@ -595,7 +595,7 @@
 
 .blog-section .view-all-blog-btn:hover {
     background-color: transparent;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 @media (max-width: 640px) {
@@ -680,55 +680,93 @@
 .review-section .review-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.review-section .review-container .text-review {
+.review-section .review-container .testimonial-slider {
+    width: 60%;
+}
+
+.review-section .review-container .testimonial-slider .swiper {
+    overflow: visible;
+    overflow-x: clip;
+}
+
+.review-section .review-container .testimonial-slider .swiper-slide {
+    width: 400px !important;
+    height: 400px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    filter: blur(2px);
+    opacity: 0.5;
+    transform: scale(0.9) rotate(-5deg);
+}
+
+.review-section .review-container .testimonial-slider .swiper-slide.swiper-slide-active {
+    z-index: 10;
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.review-section .review-container .testimonial-slider .swiper-slide.swiper-slide-next {
+    filter: blur(2px);
+    opacity: 0.5;
+    transform: scale(0.9) rotate(5deg);
+}
+
+.review-section .review-container .testimonial-slider .testimonial-card {
+    background: var(--white);
+    color: var(--black);
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    background-color: var(--secondary);
-    border-radius: 10px;
-    width: 65%;
-    max-height: 600px;
-    overflow-y: scroll;
+    justify-content: space-between;
+    user-select: none;
 }
 
-.review-section .review-container .text-review .text-review-card {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
-    border-radius: 10px;
-    padding: 10px 20px;
-}
-
-.review-section .review-container .text-review .text-review-card .quote-icon {
-    color: var(--primary);
+.review-section .review-container .testimonial-slider .testimonial-card .quote-icon i {
+    color: var(--secondary);
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
-.review-section .review-container .text-review .text-review-card .review-text {
-    font-size: 1rem;
+.review-section .review-container .testimonial-slider .testimonial-card .review-text {
+    font-size: 1.2rem;
     margin-bottom: 15px;
     line-height: 1.4;
 }
 
-.review-section .review-container .text-review .text-review-card .author-block {
+.review-section .review-container .testimonial-slider .author {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 10px;
+    padding-top: 20px;
+    border-top: 2px solid var(--secondary);
 }
 
-.review-section .review-container .text-review .text-review-card .author-block p {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--primary);
+.review-section .review-container .testimonial-slider .author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-.review-section .review-container .text-review .text-review-card .author-block i {
-    color: #FF9D00;
+.review-section .review-container .testimonial-slider .author h4 {
+    margin: 0;
+    font-size: 16px;
 }
+
+.review-section .review-container .testimonial-slider .author span {
+    font-size: 13px;
+    color: gray;
+}
+
 
 .review-section .review-container .video-review {
     display: flex;
@@ -761,7 +799,6 @@
     line-height: 1.4;
 }
 
-.review-section .review-container .text-review::-webkit-scrollbar,
 .review-section .review-container .video-review::-webkit-scrollbar {
     width: 0;
 }
@@ -950,7 +987,7 @@
         row-gap: 20px;
     }
 
-    .review-section .review-container .text-review,
+    .review-section .review-container .testimonial-slider,
     .review-section .review-container .video-review {
         width: 100%;
     }
@@ -1000,18 +1037,6 @@
 
     .review-section .title {
         font-size: 1.5rem;
-    }
-
-    .review-section .review-container .text-review .text-review-card .quote-icon {
-        font-size: 2rem;
-    }
-
-    .review-section .review-container .text-review .text-review-card .author-block p {
-        font-size: 1.2rem;
-    }
-
-    .review-section .review-container .text-review .text-review-card .author-block i {
-        font-size: 0.8rem;
     }
 
     .contact-section .contact-wrapper .image-section {
@@ -1077,5 +1102,10 @@
     .product-section .tab {
         width: 145px;
         padding: 15px 0;
+    }
+
+    .review-section .review-container .testimonial-slider .testimonial-card {
+        width: 84%;
+        margin-left: 0%;
     }
 }
