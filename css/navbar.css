@@ -411,16 +411,31 @@ header nav#navbar .menu-toggle {
 }
 
 .footer-section .footer-grid .grid-card .links li a {
+    position: relative;
     font-size: 16px;
-    transition: all 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
     text-decoration: none;
     color: var(--white);
+    padding-bottom: 6px;
 }
 
-.footer-section .footer-grid .grid-card .links li a:hover,
-.footer-section .footer-grid .grid-card .social-media .content a:hover {
-    color: var(--secondary);
+/* underline effect */
+.footer-section .footer-grid .grid-card .links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--white);
+    transition: width 0.3s ease-in-out;
 }
+
+
+.footer-section .footer-grid .grid-card .links li a:hover::after {
+    width: 100%;
+}
+
 
 @media screen and (max-width: 1024px) {
     .footer-section .footer-grid {

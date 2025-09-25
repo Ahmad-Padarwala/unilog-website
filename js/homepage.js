@@ -51,8 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle manual hover/click
     cards.forEach((card, index) => {
-        console.log(card)
-        console.log(index)
         card.addEventListener("mouseenter", () => {
             if (index === activeIndex) {
                 return;
