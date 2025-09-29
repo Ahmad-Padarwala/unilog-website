@@ -156,7 +156,7 @@ const Contactswiper = new Swiper(".testimonial-swiper", {
     slidesPerView: "auto",
     spaceBetween: 10,
     centeredSlides: true,
-    loop: true,
+    loop: false,
     grabCursor: true,
     loopedSlides: 3
 });
