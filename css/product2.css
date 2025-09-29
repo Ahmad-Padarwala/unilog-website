@@ -440,6 +440,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .power-section .section-header {
@@ -971,6 +972,29 @@ main {
     font-size: 4rem;
     font-weight: 400;
   }
+
+  .power-section .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .power-section .section-header p,
+  .power-section .stat-label {
+    font-size: 1rem;
+  }
+
+  .power-section .stat-icon i {
+    font-size: 1.2rem;
+  }
+
+  .power-section .stat-icon {
+    height: 40px;
+    width: 40px;
+    margin: 0 auto 0.3rem;
+  }
+
+  .power-section .stat-number {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1008,5 +1032,25 @@ main {
   .ab-project-content h2 {
     font-size: 3.5rem;
     font-weight: 400;
+  }
+
+  .updates-section .content-container .col-1 .feature-card,
+  .updates-section .content-container .col-2 .feature-card {
+    max-width: 90%;
+  }
+
+  .product-container {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .updates-section .content-container {
+    gap: 1rem;
+  }
+
+  .updates-section .content-container .col-1,
+  .updates-section .content-container .col-2 {
+    gap: 1rem;
+    align-items: center;
   }
 }
