@@ -353,6 +353,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     text-align: center;
     background: var(--white);
+    min-height: 377px;
     cursor: pointer;
 }
 

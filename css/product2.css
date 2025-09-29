@@ -346,15 +346,16 @@ main {
 }
 
 .hero-section .hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--primary-blue-100);
-  color: var(--primary-blue);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  background: var(--white);
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+  text-align: center;
+  width: max-content;
+  text-transform: uppercase;
+  letter-spacing: .1em;
   margin-bottom: 2rem;
 }
 
@@ -367,7 +368,7 @@ main {
 }
 
 .hero-section .text-primary {
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 .hero-section .hero-subtitle {
@@ -385,38 +386,37 @@ main {
 }
 
 .hero-section .btn {
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
+  padding: 12px 20px;
+  border-radius: 7px;
+  font-weight: 600;
   text-decoration: none;
-  border: none;
+  font-size: 14px;
+  transition: all .3s;
 }
 
 .hero-section .btn-primary {
-  background: var(--primary-blue);
-  color: var(--bg-primary);
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--white);
 }
 
 .hero-section .btn-primary:hover {
-  background: var(--primary-blue-dark);
-  transform: translateY(-2px);
+  background: none;
+  color: var(--primary);
 }
 
 .hero-section .btn-outline {
-  background: transparent;
-  color: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: none;
 }
 
 .hero-section .btn-outline:hover {
-  background: var(--primary-blue);
-  color: var(--bg-primary);
+  background: var(--primary);
+  color: var(--white);
 }
 
 /* Section - 2 */
@@ -469,15 +469,14 @@ main {
   align-items: center;
   gap: var(--spacing-xs);
   background: linear-gradient(135deg,
-      var(--primary-blue-100),
-      var(--primary-blue-200));
-  color: var(--primary-blue);
+      var(--primary),
+      var(--secondary));
+  color: var(--white);
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: 25px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: var(--spacing-md);
-  border: 1px solid var(--primary-blue-200);
 }
 
 .power-section .power-content {
@@ -715,9 +714,7 @@ main {
   gap: 1rem;
   border: 2px solid var(--border-light);
   backdrop-filter: blur(20px);
-  background: linear-gradient(30deg,
-      rgba(255, 178, 152, 0.266),
-      rgba(174, 247, 255, 0.179));
+  background: white;
 }
 
 .updates-section .content-container .col-1 .feature-card .feature-content,

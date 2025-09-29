@@ -73,11 +73,42 @@ const productWrapper = document.querySelector(".product-swiper .swiper-wrapper")
 const indicator = document.querySelector(".tab-indicator");
 const productsData = {
     machine: [
-        { img: "./image/hero-machine-1.webp", title: "Machine 1", desc: "High quality machine 1.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-        { img: "./image/hero-machine-2.webp", title: "Machine 2", desc: "High quality machine 2.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-        { img: "./image/hero-machine-3.webp", title: "Machine 3", desc: "High quality machine 3.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-        { img: "./image/hero-machine-4.webp", title: "Machine 4", desc: "High quality machine 4.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-        { img: "./image/hero-machine-4.webp", title: "Machine 5", desc: "High quality machine 5.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }
+        {
+            img: "./image/hero-machine-1.webp",
+            title: "Hydraluxe Aquastar",
+            desc: "Premium Hydrafacial device",
+            imageDesc: "Best premium HydraFacial device. Ultimate anti-aging treatment, superior exfoliation, and advanced skin brightening. Experience a truly results-oriented facial machine."
+        },
+        {
+            img: "./image/hero-machine-2.webp",
+            title: "Epiglow",
+            desc: "Premium Diode & Pico combination laser platform",
+            imageDesc: "Best Pico + diode laser, Pico + diode supplier, best combination laser device, pico + diode machine with best results, best tattoo removal, carbon facial, hair removal device."
+        },
+        {
+            img: "./image/hero-machine-3.webp",
+            title: "Revive",
+            desc: "True Q switch Nd:Yag laser device",
+            imageDesc: "Best Q switch Nd:Yag laser, best FDA approved Q switch Nd:Yag, premium Q switch Nd:Yag laser for pigmentation removal, best laser for tattoo removal."
+        },
+        {
+            img: "./image/hero-machine-4.webp",
+            title: "Ice1200",
+            desc: "Painless, comfortable four wavelength diode laser",
+            imageDesc: "Best 4 wavelength diode laser device, best FDA approved laser device, best 1200W diode laser, best laser for hair removal treatment, painless device for hair removal treatment."
+        },
+        {
+            img: "./image/hero-machine-4.webp",
+            title: "Cool 360",
+            desc: "Freeze away stubborn fat",
+            imageDesc: "Best Cryolipolysis device, safest cryolipolysis device, fastest cryolipolysis device, best cooling cryolipolysis device, premium result oriented cryolipolysis device, best fat reduction device."
+        },
+        {
+            img: "./image/hero-machine-4.webp",
+            title: "Ultraflaxe",
+            desc: "Fast and effective CO2 laser device",
+            imageDesc: "Best 60W CO2 fractional laser, best laser for acne scars, best laser for vaginal tightening, best CO2 fractional laser, high quality CO2 fractional laser."
+        }
     ],
     product: [
         { img: "./image/hero-machine-1.webp", title: "Product 1", desc: "Best selling product 1.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
