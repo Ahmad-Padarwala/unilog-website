@@ -123,18 +123,22 @@ function renderProducts(items) {
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
         slide.innerHTML = `
-        <div class="product-card">
-            <div class="product-image">
-                <img src="${item.img}" alt="${item.title}">
-            </div>
-            <div class="product-description">
-                <p>${item.imageDesc}</p>
-            </div>
-            <div class="product-info">
-                <h3>${item.title}</h3>
+            <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                <div class="product-image">
+                <img src="${item.img}" 
+                    alt="${item.title} - ${item.desc}" 
+                    width="300" height="300"
+                    loading="lazy"
+                    itemprop="image">
+                </div>
+                <div class="product-description">
+                <p itemprop="description">${item.imageDesc}</p>
+                </div>
+                <div class="product-info">
+                <h3 itemprop="name">${item.title}</h3>
                 <p>${item.desc}</p>
-            </div>
-        </div>
+                </div>
+            </article>
         `;
         productWrapper.appendChild(slide);
     });

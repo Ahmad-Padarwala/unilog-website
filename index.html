@@ -333,7 +333,7 @@
     </section>
 
     <!-- about section -->
-    <section class="container">
+    <section class="container" id="about">
         <div class="about-section">
             <h2 class="section-title">About Us</h2>
             <h1 class="title">
@@ -348,28 +348,35 @@
                     excellent service</strong> and <strong>unrivaled
                     after-sales support,</strong> ensuring your complete clinic success and patient satisfaction.
             </p>
-            <a href="#" class="about-section-btn">Schedule a 30-min Call</a>
+            <a href="#contact" class="about-section-btn"
+                aria-label="Schedule a 30-minute call with Unilog Derma Solutions">
+                Schedule a 30-min Call
+            </a>
             <div class="about-grid">
-                <div class="about-grid-card">
-                    <img src="./image/about-grid-card-1.webp" alt="About">
+                <article class="about-grid-card">
+                    <img src="./image/about-grid-card-1.webp" alt="30+ successful dermatology projects" width="200"
+                        height="200" loading="lazy">
                     <h3 class="numbers">30+</h3>
                     <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-                <div class="about-grid-card">
-                    <img src="./image/about-grid-card-1.webp" alt="About">
+                </article>
+                <article class="about-grid-card">
+                    <img src="./image/about-grid-card-1.webp" alt="30+ happy dermatology clients" width="200"
+                        height="200" loading="lazy">
                     <h3 class="numbers">30+</h3>
                     <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-                <div class="about-grid-card">
-                    <img src="./image/about-grid-card-1.webp" alt="About">
+                </article>
+                <article class="about-grid-card">
+                    <img src="./image/about-grid-card-1.webp" alt="30+ years of industry experience" width="200"
+                        height="200" loading="lazy">
                     <h3 class="numbers">30+</h3>
                     <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-                <div class="about-grid-card">
-                    <img src="./image/about-grid-card-1.webp" alt="About">
+                </article>
+                <article class="about-grid-card">
+                    <img src="./image/about-grid-card-1.webp" alt="30+ advanced equipment solutions" width="200"
+                        height="200" loading="lazy">
                     <h3 class="numbers">30+</h3>
                     <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -378,11 +385,11 @@
     <section class="product-section">
         <div class="container">
             <h2 class="section-title">OUR PRODUCT</h2>
-            <div class="tabs">
+            <nav class="tabs" role="tablist">
                 <div class="tab-indicator"></div>
-                <button class="tab active">Machine Product</button>
-                <button class="tab">Product</button>
-            </div>
+                <button class="tab active" role="tab" aria-selected="true">Machine Product</button>
+                <button class="tab" role="tab" aria-selected="false">Product</button>
+            </nav>
 
 
             <div class="swiper product-swiper">
@@ -401,8 +408,8 @@
             <div class="news-list-wrap">
                 <div class="news-list">
                     <article class="news-item">
-                        <img src="https://www.qubainfotech.com/hubfs/quba-web-2025/home/quba-infotech-application-development.png"
-                            alt="Custom Application Development" class="news-image" />
+                        <img src="./image/contact-hero-bg.webp" alt="Custom Application Development"
+                            class="news-image" />
                         <div class="news-type-wrap">Machine</div>
                         <div class="content">
                             <div class="news-info">
@@ -428,8 +435,8 @@
                         <div class="blank-container"></div>
                     </article>
                     <article class="news-item">
-                        <img src="https://www.qubainfotech.com/hubfs/quba-web-2025/home/quba-infotech-application-development.png"
-                            alt="Custom Application Development" class="news-image" />
+                        <img src="./image/contact-hero-bg.webp" alt="Custom Application Development"
+                            class="news-image" />
                         <div class="news-type-wrap">Machine</div>
                         <div class="content">
                             <div class="news-info">
@@ -455,8 +462,8 @@
                         <div class="blank-container"></div>
                     </article>
                     <article class="news-item">
-                        <img src="https://www.qubainfotech.com/hubfs/quba-web-2025/home/quba-infotech-application-development.png"
-                            alt="Custom Application Development" class="news-image" />
+                        <img src="./image/contact-hero-bg.webp" alt="Custom Application Development"
+                            class="news-image" />
                         <div class="news-type-wrap">Machine</div>
                         <div class="content">
                             <div class="news-info">
@@ -482,8 +489,8 @@
                         <div class="blank-container"></div>
                     </article>
                     <article class="news-item">
-                        <img src="https://www.qubainfotech.com/hubfs/quba-web-2025/home/quba-infotech-application-development.png"
-                            alt="Custom Application Development" class="news-image" />
+                        <img src="./image/contact-hero-bg.webp" alt="Custom Application Development"
+                            class="news-image" />
                         <div class="news-type-wrap">Machine</div>
                         <div class="content">
                             <div class="news-info">
@@ -517,26 +524,41 @@
     </section>
 
     <!-- reels section -->
-    <section class="reels-section">
+    <section class="reels-section" id="product-story">
         <div class="container">
             <h2 class="title">Product Story</h2>
             <div class="video-grid">
-                <div class="video-item">
-                    <video src="./video/instagram-reels-1.mp4" type="video/mp4" controls loop autoplay muted
-                        preload="auto" playsinline></video>
-                </div>
-                <div class="video-item">
-                    <video src="./video/instagram-reels-2.mp4" type="video/mp4" controls loop autoplay muted
-                        preload="auto" playsinline></video>
-                </div>
-                <div class="video-item">
-                    <video src="./video/instagram-reels-3.mp4" type="video/mp4" controls loop autoplay muted
-                        preload="auto" playsinline></video>
-                </div>
-                <div class="video-item">
-                    <video src="./video/instagram-reels-4.mp4" type="video/mp4" controls loop autoplay muted
-                        preload="auto" playsinline></video>
-                </div>
+                <figure class="video-item">
+                    <video src="./video/instagram-reels-1.mp4" type="video/mp4" controls muted autoplay
+                        preload="metadata" playsinline poster="./image/reels-thumb-1.webp"
+                        aria-label="Hydraluxe Aquastar Product Story">
+                    </video>
+                    <figcaption class="sr-only">Hydraluxe Aquastar demonstration</figcaption>
+                </figure>
+
+                <figure class="video-item">
+                    <video src="./video/instagram-reels-2.mp4" type="video/mp4" controls muted autoplay
+                        preload="metadata" playsinline poster="./image/reels-thumb-2.webp"
+                        aria-label="Epiglow Product Story">
+                    </video>
+                    <figcaption class="sr-only">Epiglow laser platform demo</figcaption>
+                </figure>
+
+                <figure class="video-item">
+                    <video src="./video/instagram-reels-3.mp4" type="video/mp4" controls muted autoplay
+                        preload="metadata" playsinline poster="./image/reels-thumb-3.webp"
+                        aria-label="Revive Product Story">
+                    </video>
+                    <figcaption class="sr-only">Revive Nd:Yag laser demo</figcaption>
+                </figure>
+
+                <figure class="video-item">
+                    <video src="./video/instagram-reels-4.mp4" type="video/mp4" controls muted autoplay
+                        preload="metadata" playsinline poster="./image/reels-thumb-4.webp"
+                        aria-label="Ice1200 Product Story">
+                    </video>
+                    <figcaption class="sr-only">Ice1200 diode laser demo</figcaption>
+                </figure>
             </div>
         </div>
     </section>
