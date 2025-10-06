@@ -1,26 +1,3 @@
-// only hovered hero section
-// document.addEventListener("DOMContentLoaded", () => {
-//     const cards = document.querySelectorAll(".hero-card");
-//     cards.forEach((card, index) => {
-//         if (index === 0) {
-//             card.classList.add("active");
-//         } else {
-//             card.classList.remove("active");
-//         }
-
-//         card.addEventListener("mouseenter", () => {
-//             cards.forEach(c => c.classList.remove("active"));
-//             card.classList.add("active");
-//         });
-
-//         // Handle click
-//         card.addEventListener("click", () => {
-//             cards.forEach(c => c.classList.remove("active"));
-//             card.classList.add("active");
-//         });
-//     });
-// });
-
 // slider hero section
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".hero-card");
@@ -36,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function startAutoSlide() {
         slideInterval = setInterval(() => {
             let nextIndex = (activeIndex + 1) % cards.length;
-            // setActiveCard(nextIndex);
+            setActiveCard(nextIndex);
         }, 5000); // 5 seconds
     }
 
@@ -175,17 +152,6 @@ tabs.forEach((tab, index) => {
         }
     });
 });
-
-
-//reels section
-// document.querySelectorAll(".video-item video").forEach(video => {
-//     video.addEventListener("mouseenter", () => video.play());
-//     video.addEventListener("mouseleave", () => {
-//         video.pause();
-//         video.currentTime = 0;
-//     });
-// });
-
 
 const Contactswiper = new Swiper(".testimonial-swiper", {
     slidesPerView: "auto",
