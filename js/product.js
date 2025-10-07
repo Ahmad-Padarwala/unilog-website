@@ -151,58 +151,26 @@ window.addEventListener("load", () => {
         }
     );
 
-    // 5th section images
-    const animOne = gsap.fromTo(
-        ".container-5 .one",
-        { opacity: 0, x: -300 },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 3,
-            ease: "power2.out",
-            paused: true, // important: prevent auto run
-        }
-    );
-
-    const animTwo = gsap.fromTo(
-        ".container-5 .two",
-        { opacity: 0, x: 300 },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 3,
-            ease: "power2.out",
-            paused: true,
-        }
-    );
-
-    // ScrollTrigger
-    ScrollTrigger.create({
-        trigger: ".container-5",
-        start: "top 15%",
-        onEnter: () => {
-            animOne.restart();
-            animTwo.restart();
-        },
-        onEnterBack: () => {
-            animOne.restart();
-            animTwo.restart();
-        },
-        onLeave: () => {
-            animOne.pause(0); // reset to start
-            animTwo.pause(0);
-        },
-        onLeaveBack: () => {
-            animOne.pause(0);
-            animTwo.pause(0);
-        },
-    });
-
     gsap.registerPlugin();
 
     window.scrollBy(0, 1);
     ScrollTrigger.refresh();
 });
+
+
+// Instantly set image max-height when section 3 is visible (no animation)
+ScrollTrigger.create({
+    trigger: ".container-3",
+    start: "top center",
+    onEnter: () => {
+        document.querySelector(".image-container img").style.maxHeight = "600px";
+    },
+    onLeaveBack: () => {
+        document.querySelector(".image-container img").style.maxHeight = "none";
+    },
+});
+
+
 
 window.addEventListener("resize", ScrollTrigger.refresh);
 
@@ -223,4 +191,111 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Create a ripple every 1 second
     setInterval(createRipple, 1000);
+
+
+    //for send the broucher email
+    const openModalBtn = document.getElementById("openBrochureModal");
+    const modal = document.getElementById("brochureModal");
+    const closeModalBtn = document.getElementById("closeBrochureModal");
+    const form = document.getElementById("brochureForm");
+    const toastContainer = document.getElementById("toastContainer");
+
+    // Initialize EmailJS
+    (function () {
+        emailjs.init("IY_g9yid_NrS6B3EZ");
+    })();
+
+    // === Helper: Show Toast ===
+    function showToast(message, type = "success") {
+        const toast = document.createElement("div");
+        toast.classList.add("toast", type);
+        toast.textContent = message;
+
+        toastContainer.appendChild(toast);
+        setTimeout(() => toast.classList.add("show"), 50);
+
+        // Auto remove after 3s
+        setTimeout(() => {
+            toast.classList.remove("show");
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
+    // === Open Modal ===
+    openModalBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    // === Close Modal ===
+    closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
+    });
+
+    // === Form Submit ===
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const fullName = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const contact = document.getElementById("contact").value.trim();
+        const submitBtn = form.querySelector("button[type='submit']");
+
+        // Basic Validation
+        if (!fullName || !email || !contact) {
+            showToast("Please fill all the required fields.", "error");
+            return;
+        }
+
+        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        const phonePattern = /^[0-9]{10}$/;
+
+        if (!emailPattern.test(email)) {
+            showToast("Please enter a valid email address.", "error");
+            return;
+        }
+
+        if (!phonePattern.test(contact)) {
+            showToast("Please enter a valid 10-digit contact number.", "error");
+            return;
+        }
+
+        // Add Loading
+        submitBtn.classList.add("loading");
+
+        try {
+            await emailjs.send("service_s7bcy9g", "template_obru7jb", {
+                fullName,
+                email,
+                contact,
+            });
+
+            showToast("Form submitted successfully! Download will start shortly.", "success");
+
+            // Close modal & reset form
+            modal.style.display = "none";
+            form.reset();
+
+            // Trigger brochure download
+            const link = document.createElement("a");
+            link.href = "assets/brochure.pdf"; // 👈 Replace with your actual PDF path
+            link.download = "Product_Brochure.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+        } catch (error) {
+            console.error("Error sending email:", error);
+            showToast("Something went wrong while sending. Try again.", "error");
+        } finally {
+            submitBtn.classList.remove("loading");
+        }
+    });
+
+    (function () {
+        emailjs.init("IY_g9yid_NrS6B3EZ");
+    })();
+    
 });
