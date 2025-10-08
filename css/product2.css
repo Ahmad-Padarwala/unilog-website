@@ -989,7 +989,6 @@ main {
   margin-top: 0;
   font-style: italic;
   font-weight: 500;
-  size: 18px;
   margin-bottom: 0;
   line-height: 1.55;
 }
@@ -1019,6 +1018,15 @@ main {
 
   .brochure-section .bg-text {
     font-size: 2.5rem;
+  }
+
+  .brochure-section .bg-text {
+    top: 20px;
+    font-size: 40px;
+  }
+
+  .brochure-section .brochure-text2 {
+    font-size: 1.5rem;
   }
 }
 
