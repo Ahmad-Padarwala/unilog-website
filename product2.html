@@ -387,13 +387,29 @@
     <h2 class="before-after-title">Before And After</h2>
     <div class="before-after-wrapper">
       <!-- Before After Slider (70%) -->
-      <div class="comparison-wrapper">
-        <div id="comparison">
-          <figure>
-            <div id="handle"></div>
-            <div id="divisor"></div>
-          </figure>
-          <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+      <div class="slider-container">
+        <div class="before-image">
+          <img
+            src="https://imgs.search.brave.com/0fkMw3PpBU6aDin2COAi9eYycIYy7iyvEC45BVfq1x8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/Nzg3NTk1Mi9waG90/by9mZW1hbGUtZm9y/ZWhlYWQtd2l0aC13/cmlua2xlcy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9TWd6/UVJSc2FfWXhCN3dD/WXhPMXZCMFBvdmtK/WEoyRjNDbFVYQzct/MGF6ND0"
+            alt="Before Image">
+        </div>
+        <div class="after-image">
+          <img
+            src="https://imgs.search.brave.com/hXWbHiTIg6__xJodmdYtl28RNUnpg_R5mqoR7D4OYF4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2Fybmllci5pbi8t/L21lZGlhL3Byb2pl/Y3QvbG9yZWFsL2Jy/YW5kLXNpdGVzL2dh/cm5pZXIvYXBhYy9p/bi9hbGwtYXJ0aWNs/ZS1wYWdlcy9za2lu/LWNhcmUtdGlwcy83/LWZvcmVoZWFkLXBp/bXBsZS1jYXVzZXMt/dGhhdC15b3UtcHJv/YmFibHktZGlkbnQt/a25vdy8xNy10aHVt/Ym5haWwuanBnP3Jl/dj1lYWU5OTc4ODll/OGY0N2QzYjEyNDRj/YmI4MzE2YWI5OCZo/PTMzNCZ3PTYwMCZs/YT1lbi1JTiZoYXNo/PUE2NTg4MUQ5NDgx/MkM3NDMyM0E5OEE2/NkNGNUYxNTk2"
+            alt="After Image">
+        </div>
+        <div class="slider-handle" id="sliderHandle"></div>
+        <div class="slider-line">
+          <div class="pulse-container">
+            <svg role="presentation" focusable="false" fill="none" width="50" height="50" viewBox="0 0 50 50">
+              <g>
+                <rect width="50" height="50" rx="25" fill="#ffffff"></rect>
+                <path d="m19.25 19-6 6 6 6m11.5 0 6-6-6-6" stroke="#000000" stroke-width=".75" stroke-linecap="square">
+                </path>
+              </g>
+            </svg>
+          </div>
+
         </div>
       </div>
 
