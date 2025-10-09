@@ -1,46 +1,46 @@
 // slider hero section
 document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".hero-card");
-    let activeIndex = 0;
-    let slideInterval;
+  const cards = document.querySelectorAll(".hero-card");
+  let activeIndex = 0;
+  let slideInterval;
 
-    function setActiveCard(index) {
-        cards.forEach(c => c.classList.remove("active"));
-        cards[index].classList.add("active");
-        activeIndex = index;
-    }
+  function setActiveCard(index) {
+    cards.forEach(c => c.classList.remove("active"));
+    cards[index].classList.add("active");
+    activeIndex = index;
+  }
 
-    function startAutoSlide() {
-        slideInterval = setInterval(() => {
-            let nextIndex = (activeIndex + 1) % cards.length;
-            setActiveCard(nextIndex);
-        }, 5000); // 5 seconds
-    }
+  function startAutoSlide() {
+    slideInterval = setInterval(() => {
+      let nextIndex = (activeIndex + 1) % cards.length;
+      setActiveCard(nextIndex);
+    }, 5000); // 5 seconds
+  }
 
-    function resetAutoSlide() {
-        clearInterval(slideInterval);
-        startAutoSlide();
-    }
-
-    // Initialize
-    setActiveCard(0);
+  function resetAutoSlide() {
+    clearInterval(slideInterval);
     startAutoSlide();
+  }
 
-    // Handle manual hover/click
-    cards.forEach((card, index) => {
-        card.addEventListener("mouseenter", () => {
-            if (index === activeIndex) {
-                return;
-            }
-            setActiveCard(index);
-            resetAutoSlide();
-        });
+  // Initialize
+  setActiveCard(0);
+  startAutoSlide();
 
-        card.addEventListener("click", () => {
-            setActiveCard(index);
-            resetAutoSlide();
-        });
+  // Handle manual hover/click
+  cards.forEach((card, index) => {
+    card.addEventListener("mouseenter", () => {
+      if (index === activeIndex) {
+        return;
+      }
+      setActiveCard(index);
+      resetAutoSlide();
     });
+
+    card.addEventListener("click", () => {
+      setActiveCard(index);
+      resetAutoSlide();
+    });
+  });
 });
 
 
@@ -49,57 +49,57 @@ const tabs = document.querySelectorAll(".tab");
 const productWrapper = document.querySelector(".product-swiper .swiper-wrapper");
 const indicator = document.querySelector(".tab-indicator");
 const productsData = {
-    machine: [
-        {
-            img: "./image/hero-machine-1.webp",
-            title: "Hydraluxe Aquastar",
-            desc: "Premium Hydrafacial device",
-            imageDesc: "Best premium HydraFacial device. Ultimate anti-aging treatment, superior exfoliation, and advanced skin brightening. Experience a truly results-oriented facial machine."
-        },
-        {
-            img: "./image/hero-machine-2.webp",
-            title: "Epiglow",
-            desc: "Premium Diode & Pico combination laser platform",
-            imageDesc: "Best Pico + diode laser, Pico + diode supplier, best combination laser device, pico + diode machine with best results, best tattoo removal, carbon facial, hair removal device."
-        },
-        {
-            img: "./image/hero-machine-3.webp",
-            title: "Revive",
-            desc: "True Q switch Nd:Yag laser device",
-            imageDesc: "Best Q switch Nd:Yag laser, best FDA approved Q switch Nd:Yag, premium Q switch Nd:Yag laser for pigmentation removal, best laser for tattoo removal."
-        },
-        {
-            img: "./image/hero-machine-4.webp",
-            title: "Ice1200",
-            desc: "Painless, comfortable four wavelength diode laser",
-            imageDesc: "Best 4 wavelength diode laser device, best FDA approved laser device, best 1200W diode laser, best laser for hair removal treatment, painless device for hair removal treatment."
-        },
-        {
-            img: "./image/hero-machine-4.webp",
-            title: "Cool 360",
-            desc: "Freeze away stubborn fat",
-            imageDesc: "Best Cryolipolysis device, safest cryolipolysis device, fastest cryolipolysis device, best cooling cryolipolysis device, premium result oriented cryolipolysis device, best fat reduction device."
-        },
-        {
-            img: "./image/hero-machine-4.webp",
-            title: "Ultraflaxe",
-            desc: "Fast and effective CO2 laser device",
-            imageDesc: "Best 60W CO2 fractional laser, best laser for acne scars, best laser for vaginal tightening, best CO2 fractional laser, high quality CO2 fractional laser."
-        }
-    ],
-    product: [
-        { img: "./image/hero-machine-1.webp", title: "Product 1", desc: "Best selling product 1.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-        { img: "./image/hero-machine-2.webp", title: "Product 2", desc: "Best selling product 2.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-        { img: "./image/hero-machine-3.webp", title: "Product 3", desc: "Best selling product 3.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-        { img: "./image/hero-machine-4.webp", title: "Product 4", desc: "Best selling product 4.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }
-    ]
+  machine: [
+    {
+      img: "./image/hero-machine-1.webp",
+      title: "Hydraluxe Aquastar",
+      desc: "Premium Hydrafacial device",
+      imageDesc: "Best premium HydraFacial device. Ultimate anti-aging treatment, superior exfoliation, and advanced skin brightening. Experience a truly results-oriented facial machine."
+    },
+    {
+      img: "./image/hero-machine-2.webp",
+      title: "Epiglow",
+      desc: "Premium Diode & Pico combination laser platform",
+      imageDesc: "Best Pico + diode laser, Pico + diode supplier, best combination laser device, pico + diode machine with best results, best tattoo removal, carbon facial, hair removal device."
+    },
+    {
+      img: "./image/hero-machine-3.webp",
+      title: "Revive",
+      desc: "True Q switch Nd:Yag laser device",
+      imageDesc: "Best Q switch Nd:Yag laser, best FDA approved Q switch Nd:Yag, premium Q switch Nd:Yag laser for pigmentation removal, best laser for tattoo removal."
+    },
+    {
+      img: "./image/hero-machine-4.webp",
+      title: "Ice1200",
+      desc: "Painless, comfortable four wavelength diode laser",
+      imageDesc: "Best 4 wavelength diode laser device, best FDA approved laser device, best 1200W diode laser, best laser for hair removal treatment, painless device for hair removal treatment."
+    },
+    {
+      img: "./image/hero-machine-4.webp",
+      title: "Cool 360",
+      desc: "Freeze away stubborn fat",
+      imageDesc: "Best Cryolipolysis device, safest cryolipolysis device, fastest cryolipolysis device, best cooling cryolipolysis device, premium result oriented cryolipolysis device, best fat reduction device."
+    },
+    {
+      img: "./image/hero-machine-4.webp",
+      title: "Ultraflaxe",
+      desc: "Fast and effective CO2 laser device",
+      imageDesc: "Best 60W CO2 fractional laser, best laser for acne scars, best laser for vaginal tightening, best CO2 fractional laser, high quality CO2 fractional laser."
+    }
+  ],
+  product: [
+    { img: "./image/hero-machine-1.webp", title: "Product 1", desc: "Best selling product 1.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
+    { img: "./image/hero-machine-2.webp", title: "Product 2", desc: "Best selling product 2.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
+    { img: "./image/hero-machine-3.webp", title: "Product 3", desc: "Best selling product 3.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
+    { img: "./image/hero-machine-4.webp", title: "Product 4", desc: "Best selling product 4.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }
+  ]
 };
 function renderProducts(items) {
-    productWrapper.innerHTML = "";
-    items.forEach(item => {
-        const slide = document.createElement("div");
-        slide.className = "swiper-slide";
-        slide.innerHTML = `
+  productWrapper.innerHTML = "";
+  items.forEach(item => {
+    const slide = document.createElement("div");
+    slide.className = "swiper-slide";
+    slide.innerHTML = `
             <article class="product-card" itemscope itemtype="https://schema.org/Product">
                 <div class="product-image">
                 <img src="${item.img}" 
@@ -117,75 +117,140 @@ function renderProducts(items) {
                 </div>
             </article>
         `;
-        productWrapper.appendChild(slide);
-    });
+    productWrapper.appendChild(slide);
+  });
 
-    swiper.update();
+  swiper.update();
 }
 
 const swiper = new Swiper(".product-swiper", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    loop: false,
-    grabCursor: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        320: { slidesPerView: 1 },
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 4 }
-    }
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: false,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 4 }
+  }
 });
 renderProducts(productsData.machine);
 
 tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-        document.querySelector(".tab.active")?.classList.remove("active");
-        tab.classList.add("active");
-        indicator.style.transform = `translateX(${index * 100}%)`;
-        if (index === 0) {
-            renderProducts(productsData.machine);
-        } else {
-            renderProducts(productsData.product);
-        }
-    });
+  tab.addEventListener("click", () => {
+    document.querySelector(".tab.active")?.classList.remove("active");
+    tab.classList.add("active");
+    indicator.style.transform = `translateX(${index * 100}%)`;
+    if (index === 0) {
+      renderProducts(productsData.machine);
+    } else {
+      renderProducts(productsData.product);
+    }
+  });
 });
 
 const Contactswiper = new Swiper(".testimonial-swiper", {
-    slidesPerView: "auto",
-    spaceBetween: 10,
-    centeredSlides: true,
-    loop: false,
-    grabCursor: true,
-    loopedSlides: 3
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: false,
+  grabCursor: true,
+  loopedSlides: 3
 });
 
 // faq section
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach(item => {
-    const btn = item.querySelector(".faq-question");
+  const btn = item.querySelector(".faq-question");
 
-    btn.addEventListener("click", () => {
-        // close other items
-        faqItems.forEach(i => {
-            if (i !== item) {
-                i.classList.remove("active");
-                i.querySelector(".icon").textContent = "+";
-            }
-        });
-
-        // toggle current item
-        item.classList.toggle("active");
-
-        const icon = item.querySelector(".icon");
-        icon.textContent = item.classList.contains("active") ? "–" : "+";
+  btn.addEventListener("click", () => {
+    // close other items
+    faqItems.forEach(i => {
+      if (i !== item) {
+        i.classList.remove("active");
+        i.querySelector(".icon").textContent = "+";
+      }
     });
+
+    // toggle current item
+    item.classList.toggle("active");
+
+    const icon = item.querySelector(".icon");
+    icon.textContent = item.classList.contains("active") ? "–" : "+";
+  });
 });
 
 // Interactive Product Circle JavaScript
+
+const particlesContainer = document.getElementById('particles-container');
+const particleCount = 80;
+
+for (let i = 0; i < particleCount; i++) {
+  createParticle();
+}
+
+function createParticle() {
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  const size = Math.random() * 3 + 1;
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+  resetParticle(particle);
+  particlesContainer.appendChild(particle);
+  animateParticle(particle);
+}
+
+function resetParticle(particle) {
+  const posX = Math.random() * 100;
+  const posY = Math.random() * 100;
+  particle.style.left = `${posX}%`;
+  particle.style.top = `${posY}%`;
+  particle.style.opacity = '0';
+  return { x: posX, y: posY };
+}
+
+function animateParticle(particle) {
+  const pos = resetParticle(particle);
+  const duration = Math.random() * 10 + 10;
+  const delay = Math.random() * 5;
+  setTimeout(() => {
+    particle.style.transition = `all ${duration}s linear`;
+    particle.style.opacity = Math.random() * 0.3 + 0.1;
+    const moveX = pos.x + (Math.random() * 20 - 10);
+    const moveY = pos.y - Math.random() * 30;
+    particle.style.left = `${moveX}%`;
+    particle.style.top = `${moveY}%`;
+    setTimeout(() => animateParticle(particle), duration * 1000);
+  }, delay * 1000);
+}
+
+document.addEventListener('mousemove', (e) => {
+  const mouseX = (e.clientX / window.innerWidth) * 100;
+  const mouseY = (e.clientY / window.innerHeight) * 100;
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  const size = Math.random() * 4 + 2;
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+  particle.style.left = `${mouseX}%`;
+  particle.style.top = `${mouseY}%`;
+  particle.style.opacity = '0.6';
+  particlesContainer.appendChild(particle);
+  setTimeout(() => {
+    particle.style.transition = 'all 2s ease-out';
+    particle.style.left = `${mouseX + (Math.random() * 10 - 5)}%`;
+    particle.style.top = `${mouseY + (Math.random() * 10 - 5)}%`;
+    particle.style.opacity = '0';
+    setTimeout(() => particle.remove(), 2000);
+  }, 10);
+});
+
+
 class InteractiveCircle {
   constructor() {
     this.circleContainer = document.querySelector(".circle-container");
