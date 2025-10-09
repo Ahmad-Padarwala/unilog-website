@@ -513,7 +513,7 @@ main {
 }
 
 .power-section .stat-2 {
-  top: 10%;
+  top: 0%;
   right: 25%;
   background-color: var(--green-100);
 }
@@ -525,9 +525,15 @@ main {
 }
 
 .power-section .stat-4 {
-  bottom: 10%;
-  right: 15%;
+  bottom: 34%;
+  right: 13%;
   background-color: var(--orange-100);
+}
+
+.power-section .stat-5 {
+  bottom: 2%;
+  right: 25%;
+  background-color: var(--blue-100);
 }
 
 .power-section .stat-card.stat-1:hover {
@@ -828,13 +834,34 @@ main {
     gap: 1rem;
   }
 
+  .power-section .stat-card {
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .power-section .stat-card .stat-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  .power-section .stat-card .stat-icon i {
+    font-size: 1.6rem;
+  }
+
+  .power-section .stat-number {
+    font-size: 1.9rem;
+  }
+
   .power-section .stat-1,
   .power-section .stat-3 {
     left: 5%;
   }
 
   .power-section .stat-2,
-  .power-section .stat-4 {
+  .power-section .stat-4,
+  .power-section .stat-5   {
     right: 5%;
   }
 
