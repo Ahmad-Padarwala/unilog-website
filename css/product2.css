@@ -810,6 +810,71 @@ main {
   grid-row: 1 / 2;
 }
 
+/* Tablet Landscape */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .power-section .section-header h2 {
+    font-size: 2.1rem;
+  }
+
+  .power-section .section-header p {
+    font-size: 1rem;
+    max-width: 450px;
+  }
+
+  .power-section .power-content {
+    height: 450px;
+  }
+
+  .power-section .stat-card {
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+  }
+
+  .power-section .stat-card .stat-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 0.6rem;
+  }
+
+  .power-section .stat-card .stat-icon i {
+    font-size: 1.2rem;
+  }
+
+  .power-section .stat-number {
+    font-size: 2rem;
+  }
+
+  .power-section .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .power-section .stat-1 {
+    top: 10%;
+    left: 12%;
+  }
+
+  .power-section .stat-2 {
+    top: 8%;
+    right: 12%;
+  }
+
+  .power-section .stat-3 {
+    bottom: 18%;
+    left: 8%;
+  }
+
+  .power-section .stat-4 {
+    bottom: 28%;
+    right: 10%;
+  }
+
+  .power-section .stat-5 {
+    bottom: 8%;
+    right: 18%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .hero-section .hero-title {
     font-size: 2.4rem;
@@ -834,37 +899,69 @@ main {
     gap: 1rem;
   }
 
+  /* Power Section Tablet Responsive */
+  .power-section .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .power-section .section-header p {
+    font-size: 1rem;
+    max-width: 500px;
+  }
+
+  .power-section .power-content {
+    height: 500px;
+  }
+
   .power-section .stat-card {
-    padding: 5px;
-    width: 150px;
-    height: 150px;
+    padding: 8px;
+    width: 160px;
+    height: 160px;
   }
 
   .power-section .stat-card .stat-icon {
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 0.8rem;
   }
 
   .power-section .stat-card .stat-icon i {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .power-section .stat-number {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
   }
 
-  .power-section .stat-1,
+  .power-section .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .power-section .stat-1 {
+    top: 8%;
+    left: 15%;
+  }
+
+  .power-section .stat-2 {
+    top: 5%;
+    right: 15%;
+  }
+
   .power-section .stat-3 {
-    left: 5%;
+    bottom: 15%;
+    left: 10%;
   }
 
-  .power-section .stat-2,
-  .power-section .stat-4,
+  .power-section .stat-4 {
+    bottom: 25%;
+    right: 8%;
+  }
+
   .power-section .stat-5 {
-    right: 5%;
+    bottom: 5%;
+    right: 20%;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -895,27 +992,116 @@ main {
     grid-row: 2 / 3;
   }
 
-  .power-section .section-header h2 {
-    font-size: 2rem;
+  /* Power Section Mobile Responsive */
+  .power-section {
+    padding: 20px 0;
+    min-height: auto;
   }
 
-  .power-section .section-header p,
-  .power-section .stat-label {
+  .power-section .power-container {
+    padding: 0 15px;
+  }
+
+  .power-section .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .power-section .section-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .power-section .section-header p {
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .power-section .section-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    margin-bottom: 1rem;
+  }
+
+  .power-section .power-content {
+    height: 400px;
+    margin-top: 1rem;
+  }
+
+  .power-section .stats-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    padding: 20px;
+    height: auto;
+  }
+
+  .power-section .stat-card {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 120px;
+    padding: 15px 10px;
+    margin: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .power-section .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .power-section .stat-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .power-section .stat-2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .power-section .stat-3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .power-section .stat-4 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .power-section .stat-5 {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .power-section .stat-card .stat-icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 0.5rem;
+  }
+
+  .power-section .stat-card .stat-icon i {
     font-size: 1rem;
   }
 
-  .power-section .stat-icon i {
-    font-size: 1.2rem;
-  }
-
-  .power-section .stat-icon {
-    height: 40px;
-    width: 40px;
-    margin: 0 auto 0.3rem;
-  }
-
   .power-section .stat-number {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .power-section .stat-label {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .ripple-container {
+    display: none;
   }
 }
 
@@ -965,6 +1151,85 @@ main {
   .updates-section .content-container .col-2 {
     gap: 1rem;
     align-items: center;
+  }
+
+  /* Power Section Small Mobile Responsive */
+  .power-section .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .power-section .section-header p {
+    font-size: 0.9rem;
+    padding: 0 5px;
+  }
+
+  .power-section .section-badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .power-section .power-content {
+    height: 350px;
+  }
+
+  .power-section .stats-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    padding: 10px 5px;
+  }
+
+  .power-section .stat-card {
+    min-height: 100px;
+    padding: 12px 8px;
+  }
+
+  .power-section .stat-1,
+  .power-section .stat-2,
+  .power-section .stat-3,
+  .power-section .stat-4,
+  .power-section .stat-5 {
+    grid-column: 1;
+  }
+
+  .power-section .stat-1 {
+    grid-row: 1;
+  }
+
+  .power-section .stat-2 {
+    grid-row: 2;
+  }
+
+  .power-section .stat-3 {
+    grid-row: 3;
+  }
+
+  .power-section .stat-4 {
+    grid-row: 4;
+  }
+
+  .power-section .stat-5 {
+    grid-row: 5;
+    max-width: 100%;
+  }
+
+  .power-section .stat-card .stat-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 0.4rem;
+  }
+
+  .power-section .stat-card .stat-icon i {
+    font-size: 0.9rem;
+  }
+
+  .power-section .stat-number {
+    font-size: 1.4rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .power-section .stat-label {
+    font-size: 0.8rem;
   }
 }
 
@@ -1212,33 +1477,33 @@ main {
 }
 
 
-.video-wrapper {
+.before-after .before-after-wrapper .video-wrapper {
   flex: 0 0 30%;
   display: flex;
+  /* max-height: 500px; */
   align-items: stretch;
 }
 
-.video-wrapper iframe {
+.before-after .before-after-wrapper .video-wrapper iframe {
   width: 100%;
   height: 100%;
   border-radius: 12px;
   object-fit: cover;
 }
 
-.slider-container {
+.before-after .before-after-wrapper .slider-container {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 800px;
+  /* max-width: 800px; */
   aspect-ratio: 2 / 1;
-  /* Maintain nice proportion */
   border-radius: 0.7rem;
   overflow: hidden;
   margin: 0 auto;
 }
 
-.before-image,
-.after-image {
+.before-after .before-after-wrapper .before-image,
+.before-after .before-after-wrapper .after-image {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1246,20 +1511,19 @@ main {
   overflow: hidden;
 }
 
-.before-image img,
-.after-image img {
+.before-after .before-after-wrapper .before-image img,
+.before-after .before-after-wrapper .after-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* keeps same proportion while filling the container */
   display: block;
 }
 
-.after-image {
+.before-after .before-after-wrapper .after-image {
   clip-path: inset(0 50% 0 0);
 }
 
-.slider-handle {
+.before-after .before-after-wrapper .slider-handle {
   position: absolute;
   top: 0;
   left: 50%;
@@ -1270,7 +1534,7 @@ main {
   z-index: 3;
 }
 
-.slider-line {
+.before-after .before-after-wrapper .slider-line {
   position: absolute;
   top: 0;
   left: 50%;
@@ -1283,22 +1547,20 @@ main {
   z-index: 2;
 }
 
-.pulse-container {
+.before-after .before-after-wrapper .pulse-container {
   position: relative;
   display: inline-block;
 }
 
-.pulse-container::before {
+.before-after .before-after-wrapper .pulse-container::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 70px;
-  /* Larger than the SVG */
   height: 70px;
   border-radius: 50%;
   background-color: #ffffff;
-  /* Color of the pulse */
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
   animation: pulse 1.5s infinite;
@@ -1316,31 +1578,26 @@ main {
   }
 }
 
-.slider-line svg {
+.before-after .before-after-wrapper .slider-line svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  cursor: pointer;
+  cursor: e-resize;
 }
 
-/* Prevent text/image selection while dragging */
-.slider-container,
-.before-image img,
-.after-image img {
+.before-after .before-after-wrapper .slider-container,
+.before-after .before-after-wrapper .before-image img,
+.before-after .before-after-wrapper .after-image img {
   user-select: none;
-  /* Disable selection on most browsers */
   -webkit-user-select: none;
-  /* Safari */
   -moz-user-select: none;
-  /* Firefox */
   -ms-user-select: none;
-  /* IE10+ */
 }
 
-.slider-handle,
-.slider-line {
+.before-after .before-after-wrapper .slider-handle,
+.before-after .before-after-wrapper .slider-line {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;

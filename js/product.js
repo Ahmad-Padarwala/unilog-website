@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
         },
     ];
     const imgStates = [
-        { width: 700 },
+        { width: 600 },
         { width: 400 },
         { width: 250 },
         // { width: 300 },
@@ -386,4 +386,3 @@ window.addEventListener("touchend", stopDragging);
 
 // Initialize the slider on page load
 window.addEventListener("load", initializeSlider);
-

@@ -31,3 +31,17 @@ document.querySelectorAll('.dropdown-sidebar .sidebar-card').forEach(item => {
         document.getElementById(target).classList.add('active');
     });
 });
+
+// smooth scrolling effect
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
+});
