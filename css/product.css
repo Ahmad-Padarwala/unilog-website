@@ -776,8 +776,6 @@ main {
 }
 
 .ab-project-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -794,40 +792,6 @@ main {
   height: 100%;
   display: block;
   object-fit: cover;
-}
-
-.ab-project-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  padding: 4rem;
-  /* border: 2px solid red; */
-}
-
-.ab-project-content.image {
-  padding: 0 !important;
-  display: block;
-  height: 100%;
-}
-
-.ab-project-content img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* margin-bottom: 2rem; */
-}
-
-.ab-project-layout.ab-reverse .ab-project-image {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-.ab-project-layout.ab-reverse .ab-project-content {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
 }
 
 /* Tablet Landscape */
@@ -991,25 +955,25 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .before-after .before-after-wrapper {
+    flex-direction: column;
+  }
+
+  .before-after .before-after-wrapper .video-wrapper {
+    aspect-ratio: 2 / 1;
+  }
+
+  .before-after .before-after-wrapper .video-wrapper iframe {
+    height: auto !important;
+  }
+
   .ab-project-image {
-    height: 50vh;
+    height: auto;
   }
 
-  .ab-project-content {
-    padding: 2rem;
-  }
-
-  .ab-project-layout.ab-reverse .ab-project-image,
-  .ab-project-layout.ab-reverse .ab-project-content {
-    grid-column: 1 / 2;
-  }
-
-  .ab-project-layout.ab-reverse .ab-project-image {
-    grid-row: 1 / 2;
-  }
-
-  .ab-project-layout.ab-reverse .ab-project-content {
-    grid-row: 2 / 3;
+  .ab-project-page {
+    height: auto;
+    width: 100%;
   }
 
   /* Power Section Mobile Responsive */
@@ -1132,26 +1096,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .ab-project-image {
-    height: 50vh;
-  }
-
-  .ab-project-content {
-    padding: 2rem;
-  }
-
-  .ab-project-layout.ab-reverse .ab-project-image,
-  .ab-project-layout.ab-reverse .ab-project-content {
-    grid-column: 1 / 2;
-  }
-
-  .ab-project-layout.ab-reverse .ab-project-image {
-    grid-row: 1 / 2;
-  }
-
-  .ab-project-layout.ab-reverse .ab-project-content {
-    grid-row: 2 / 3;
-  }
 
   .updates-section .content-container .col-1 .feature-card,
   .updates-section .content-container .col-2 .feature-card {
