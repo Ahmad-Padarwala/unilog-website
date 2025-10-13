@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll Showcase Demo</title>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="./css/product.css" />
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 1) GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <div class="top-bar">
+      <div class="top-bar-container">
+        <a class="email-link" href="mailto:info@unilog.com.cn">info@unilog.com.cn</a>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./image/logo.webp" alt="Logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="./about.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="./product.html">PRODUCT</a>
+          <div class="dropdown-menu">
+
+            <!-- Sidebar -->
+            <div class="dropdown-sidebar">
+              <div class="sidebar-card active" data-target="content-1">
+                <h3>Medi facial series</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div class="sidebar-card" data-target="content-2">
+                <h3>Laser Hair Reduction</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div class="sidebar-card" data-target="content-3">
+                <h3>Products 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div class="sidebar-card" data-target="content-4">
+                <h3>Products 4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="dropdown-right">
+              <div class="dropdown-content active" id="content-1">
+                <a href="./Alicesuperbubblemax.html" class="content-card">
+                  <img src="./image/hero-machine-1.webp" alt="machine">
+                  <h3 class="title">Alice super bubble max</h3>
+                  <p class="description">Get deep into the pores and take away dirt with shiny and
+                    beautiful results..</p>
+                </a>
+                <a href="./HydraluxeAquastar.html" class="content-card">
+                  <img src="./image/hero-machine-1.webp" alt="machine">
+                  <h3 class="title">Hydraluxe Aquastar</h3>
+                  <p class="description">Featuring an advanced analyzer for real-time results,
+                    high-quality probes for anti-aging...</p>
+                </a>
+                <a href="./OxyrichPDT.html" class="content-card">
+                  <img src="./image/hero-machine-1.webp" alt="machine">
+                  <h3 class="title">Oxyrich PDT+</h3>
+                  <p class="description"> Oxyrich PDT+ is multifunctional platform which helps to
+                    solve more than 7 skin concerns.</p>
+                </a>
+              </div>
+              <div class="dropdown-content" id="content-2">
+                <a href="./4Dteclaserdevice.html" class="content-card">
+                  <img src="./image/hero-machine-2.webp" alt="machine">
+                  <h3 class="title">4Dteclaser device</h3>
+                  <p class="description"> The most advanced diode laser hair reduction system that
+                    combines 4 wavelengths that works on every skin and
+                    hair types.</p>
+                </a>
+                <a href="./Ice1200diodelaserdevice.html" class="content-card">
+                  <img src="./image/hero-machine-2.webp" alt="machine">
+                  <h3 class="title">Ice 1200 diode laser device</h3>
+                  <p class="description">The premium USFDA approved diode laser device with
+                    combination...</p>
+                </a>
+                <a href="./EpiliteHP.html" class="content-card">
+                  <img src="./image/hero-machine-2.webp" alt="machine">
+                  <h3 class="title">Epilite HP</h3>
+                  <p class="description">The premium USFDA approved diode laser device with
+                    combination...</p>
+                </a>
+              </div>
+              <div class="dropdown-content" id="content-3">
+                <a href="#" class="content-card">
+                  <img src="./image/hero-machine-3.webp" alt="machine">
+                  <h3 class="title">Product 3A</h3>
+                  <p class="description">Description for product 3A.</p>
+                </a>
+              </div>
+              <div class="dropdown-content" id="content-4">
+                <a href="#" class="content-card">
+                  <img src="./image/hero-machine-4.webp" alt="machine">
+                  <h3 class="title">Product 4A</h3>
+                  <p class="description">Description for product 4A.</p>
+                </a>
+                <a href="#" class="content-card">
+                  <img src="./image/hero-machine-4.webp" alt="machine">
+                  <h3 class="title">Product 4B</h3>
+                  <p class="description">Description for product 4B.</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </li>
+        <li><a href="#">MACHINE PRODUCT</a></li>
+        <li><a href="#">TREATMENTS</a></li>
+        <li><a href="#">MEDIA & EVENTS</a></li>
+        <li><a href="#">CLINICAL</a></li>
+      </ul>
+      <a href="./contact.html" class="contact-btn">CONTACT US</a>
+      <span class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></span>
+
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <ul class="mobile-menu-list">
+        <li><a href="./about.html">ABOUT US</a></li>
+        <li><a href="./product.html">PRODUCT</a></li>
+        <li><a href="#">MACHINE PRODUCT</a></li>
+        <li><a href="#">TREATMENTS</a></li>
+        <li><a href="#">MEDIA & EVENTS</a></li>
+        <li><a href="#">CLINICAL</a></li>
+        <a href="./contact.html" class="contact-btn">CONTACT US</a>
+      </ul>
+    </div>
+  </header>
+
+  <main class="showcase-section">
+    <!-- Image to animate -->
+    <div class="image-container">
+      <img src="./image/8 in 1.png" alt="Machine" />
+    </div>
+
+    <!-- Hero Section -->
+    <section class="product-container container-1 hero-section" id="hero">
+      <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="./video/instagram-reels-1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-award"></i>
+            Alice super bubble max
+          </div>
+          <h1 class="hero-title">
+            Deep
+            <span class="text-primary">cleansing skin</span> <br /> system
+          </h1>
+          <p class="hero-subtitle">
+            Get deep into the pores and take away dirt with shiny and beautiful results. Premium Alice bubble model with
+            safe, precise and painless results.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">
+              <i class="fas fa-calendar"></i>
+              Book a Free Demo
+            </a>
+            <a href="#brochure" class="btn btn-outline">
+              <i class="fas fa-download"></i>
+              Download Brochure
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: The Power of Picosecond - UPDATED -->
+    <section class="product-container container-2 power-section" id="power">
+      <img src="./image/product-bg-1-2.jpg" alt="Product page image 1 2" />
+      <div class="power-container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fas fa-bolt"></i>
+            Revolutionary technology
+          </div>
+          <h2>Why Alice bubble technology?</h2>
+          <p>
+            The Alice Bubble system is an advanced, multi-functional hydra-facial device that often incorporates
+            additional technologies like Oxygeneo, Radiofrequency (RF), and cold/hot therapy for comprehensive skin
+            rejuvenation.
+          </p>
+        </div>
+
+        <div class="power-content">
+          <div class="stats-grid">
+            <div class="ripple-container"></div>
+            <div class="stat-card stat-1">
+              <div class="stat-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="stat-number">10+</div>
+              <div class="stat-label">indication covered</div>
+            </div>
+
+            <div class="stat-card stat-2">
+              <div class="stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="stat-number">0%</div>
+              <div class="stat-label">downtime required</div>
+            </div>
+
+            <div class="stat-card stat-3">
+              <div class="stat-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <div class="stat-number">100%</div>
+              <div class="stat-label">painless </div>
+            </div>
+
+            <div class="stat-card stat-4">
+              <div class="stat-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="stat-number">5X</div>
+              <div class="stat-label">more machine life</div>
+            </div>
+            <div class="stat-card stat-5">
+              <div class="stat-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="stat-number">1MHz</div>
+              <div class="stat-label">radio frequency </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-container container-3 updates-section" id="features">
+      <!-- <div class="section-bg-shapes">
+          <div class="section-bg-pill"></div>
+        </div> -->
+
+      <img src="./image/product-bg-1-3.jpg" alt="Product page image 1 3" />
+
+      <div class="content-container">
+        <div class="col-1">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">8 technologies </h3>
+              <p class="feature-desc">
+                Bubble cleansing, oxygen bubble, ultrasound atomization, nano spray , diamond dermabrasion, cold & hot
+                hammer, tripolar RF, bipolar RF.
+              </p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">10 exfoliation tips</h3>
+              <p class="feature-desc">
+                Comes with high grade ABS and silicon tips for normal skin, large pores skin. This device is ideal for
+                sensitive skin as it has silicon tips it also has tips for oily skin.
+              </p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">High power</h3>
+              <p class="feature-desc">
+                With RF frequency of 0.5Mhz and ultrasound frequency of 1MHz , this device is ideal for treating
+                anti-ageing treatments along with exfoliation.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">High grade dermabration</h3>
+              <p class="feature-desc">
+                The nanocrystal in diamond dermabration tips uses nanoscale contact that can be as thin as 250nanometer
+                and as short as 0.1millimeters. this help in opening of stratum corneum without damaging dermis layer.
+              </p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Longer lifespan</h3>
+              <p class="feature-desc">
+                Machine has self cleansing function using flat tip to extract out all waste after treatment. This help
+                in increasing lifespan of machine.
+              </p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Multiple treatment indications</h3>
+              <p class="feature-desc">
+                Alice superbubble max works on sagging skin, dry and oily skin, wrinkles & fine lines, acne pits ,
+                exfoliation and instant brightening.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="ab-stacking-container">
+    <!-- Page 1: Image Left -->
+    <div class="ab-project-page">
+      <div class="ab-project-layout">
+        <div class="ab-project-image">
+          <img src="./image/product/Alicesuperbubblemax/part1.webp" alt="Modular Switches Project" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 2: Image Right -->
+    <div class="ab-project-page">
+      <div class="ab-project-layout">
+        <div class="ab-project-image">
+          <img src="./image/product/Alicesuperbubblemax/part2.webp" alt="Sockets & Plug Tops Project" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 3: Image Left -->
+    <div class="ab-project-page">
+      <div class="ab-project-layout">
+        <div class="ab-project-image">
+          <img src="./image/product/Alicesuperbubblemax/part3.jpg" alt="Modular Switches Project" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 2: Image Right -->
+    <div class="ab-project-page">
+      <div class="ab-project-layout">
+        <div class="ab-project-image">
+          <img src="./image/product/Alicesuperbubblemax/part4.webp" alt="Sockets & Plug Tops Project" />
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- before after section -->
+  <section class="before-after">
+    <h2 class="before-after-title">Before And After</h2>
+    <div class="before-after-wrapper">
+      <!-- Before After Slider (70%) -->
+      <div class="slider-container">
+        <div class="before-image">
+          <img
+            src="https://imgs.search.brave.com/hXWbHiTIg6__xJodmdYtl28RNUnpg_R5mqoR7D4OYF4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2Fybmllci5pbi8t/L21lZGlhL3Byb2pl/Y3QvbG9yZWFsL2Jy/YW5kLXNpdGVzL2dh/cm5pZXIvYXBhYy9p/bi9hbGwtYXJ0aWNs/ZS1wYWdlcy9za2lu/LWNhcmUtdGlwcy83/LWZvcmVoZWFkLXBp/bXBsZS1jYXVzZXMt/dGhhdC15b3UtcHJv/YmFibHktZGlkbnQt/a25vdy8xNy10aHVt/Ym5haWwuanBnP3Jl/dj1lYWU5OTc4ODll/OGY0N2QzYjEyNDRj/YmI4MzE2YWI5OCZo/PTMzNCZ3PTYwMCZs/YT1lbi1JTiZoYXNo/PUE2NTg4MUQ5NDgx/MkM3NDMyM0E5OEE2/NkNGNUYxNTk2"
+            alt="Before Image">
+        </div>
+        <div class="after-image">
+          <img
+            src="https://imgs.search.brave.com/0fkMw3PpBU6aDin2COAi9eYycIYy7iyvEC45BVfq1x8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/Nzg3NTk1Mi9waG90/by9mZW1hbGUtZm9y/ZWhlYWQtd2l0aC13/cmlua2xlcy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9TWd6/UVJSc2FfWXhCN3dD/WXhPMXZCMFBvdmtK/WEoyRjNDbFVYQzct/MGF6ND0"
+            alt="After Image">
+        </div>
+        <div class="slider-handle" id="sliderHandle"></div>
+        <div class="slider-line">
+          <div class="pulse-container">
+            <svg role="presentation" focusable="false" fill="none" width="50" height="50" viewBox="0 0 50 50">
+              <g>
+                <rect width="50" height="50" rx="25" fill="#ffffff"></rect>
+                <path d="m19.25 19-6 6 6 6m11.5 0 6-6-6-6" stroke="#000000" stroke-width=".75" stroke-linecap="square">
+                </path>
+              </g>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- YouTube Video (30%) -->
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Before After Video" frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Download Brochure Section -->
+  <section class="brochure-section" id="brochure">
+    <div class="container">
+      <h2 class="bg-text">Download Now</h2>
+      <h2 class="brochure-title">Dow<span>nload</span> Now</h2>
+      <p class="brochure-text">Lasermach</p>
+      <p class="brochure-text2">Brochure</p>
+      <button class="btn-primary" id="openBrochureModal">Download Brochure</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="brochure-modal" id="brochureModal">
+      <div class="brochure-modal-content">
+        <span class="close-modal" id="closeBrochureModal">&times;</span>
+        <h3>Fill in your details</h3>
+        <form id="brochureForm">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label>Contact No.</label>
+            <input type="tel" id="contact" name="contact" required />
+          </div>
+
+          <button type="submit" class="btn-primary">Submit & Download</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- footer section -->
+  <footer class="footer-section">
+    <section class="container">
+      <div class="footer-grid">
+        <div class="grid-card first-grid">
+          <img src="./image/footer-logo.webp" alt="logo">
+          <p class="desc">Leading provider of advanced laser technology for dermatological and aesthetic
+            treatments. </p>
+          <div class="social-media">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="content"><a href="tel:1234567890">+91 1234567890</a></div>
+          </div>
+          <div class="social-media">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="content"><a href="mailto:infounilog@gmail.com">infounilog@gmail.com</a></div>
+          </div>
+          <div class="social-media">
+            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="content"><a href="#">Mon-Sat, 9:00 AM - 6:00 PM</a></div>
+          </div>
+        </div>
+        <div class="grid-card">
+          <h2 class="title">Company</h2>
+          <ul class="links">
+            <li><a href="./about.html">About Unilog</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Clinical Result</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Training</a></li>
+          </ul>
+        </div>
+        <div class="grid-card">
+          <h2 class="title">Product</h2>
+          <ul class="links">
+            <li><a href="#">Diode Laser</a></li>
+            <li><a href="#">Picosecond Laser</a></li>
+            <li><a href="#">Picosecond Laser</a></li>
+            <li><a href="#">Picosecond Laser</a></li>
+            <li><a href="#">Picosecond Laser</a></li>
+          </ul>
+        </div>
+        <div class="grid-card">
+          <h2 class="title">Support</h2>
+          <ul class="links">
+            <li><a href="#">Technical Problem</a></li>
+            <li><a href="#">Training Programs</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Parts & Services</a></li>
+            <li><a href="#">User Manuals</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="./js/product.js"></script>
+  <script src="./js/navbar.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</body>
+
+</html>

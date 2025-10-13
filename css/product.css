@@ -630,6 +630,10 @@ main {
   display: inline-block;
 }
 
+.power-section .dteclaser .stat-number {
+  font-size: 1.5rem;
+}
+
 .power-section .stat-1 .stat-number {
   color: var(--blue-600);
 }
@@ -828,6 +832,10 @@ main {
     font-size: 2rem;
   }
 
+  .power-section .dteclaser .stat-number {
+    font-size: 1rem;
+  }
+
   .power-section .stat-label {
     font-size: 0.85rem;
   }
@@ -915,6 +923,10 @@ main {
   .power-section .stat-number {
     font-size: 2.2rem;
     margin-bottom: 0.3rem;
+  }
+
+  .power-section .dteclaser .stat-number {
+    font-size: 1rem;
   }
 
   .power-section .stat-label {
@@ -1096,6 +1108,10 @@ main {
     margin-bottom: 0.2rem;
   }
 
+  .power-section .dteclaser .stat-number {
+    font-size: 1rem;
+  }
+
   .power-section .stat-label {
     font-size: 0.85rem;
     line-height: 1.2;
@@ -1205,6 +1221,10 @@ main {
   .power-section .stat-number {
     font-size: 1.4rem;
     margin-bottom: 0.1rem;
+  }
+
+  .power-section .dteclaser .stat-number {
+    font-size: 1rem;
   }
 
   .power-section .stat-label {
