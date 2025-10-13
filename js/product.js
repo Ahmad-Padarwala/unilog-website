@@ -35,11 +35,18 @@ window.addEventListener("load", () => {
             yPercent: 50,
         },
     ];
+    
+    //old size
+    // const imgStates = [
+    //     { width: 600 },
+    //     { width: 400 },
+    //     { width: 250 }
+    // ];
+    //new size
     const imgStates = [
-        { width: 600 },
-        { width: 400 },
-        { width: 250 },
-        // { width: 300 },
+        { width: 450 },
+        { width: 300 },
+        { width: 200 }
     ];
 
     const sections = document.querySelectorAll(".product-container");
