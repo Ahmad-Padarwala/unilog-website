@@ -52,46 +52,52 @@ const productsData = {
   machine: [
     {
       img: "./image/hero-machine-1.webp",
-      title: "Hydraluxe Aquastar",
-      desc: "Premium Hydrafacial device",
-      imageDesc: "Best premium HydraFacial device. Ultimate anti-aging treatment, superior exfoliation, and advanced skin brightening. Experience a truly results-oriented facial machine."
+      title: "Alice super bubble max",
+      desc: "Get deep into the pores and take away dirt with shiny and beautiful results.",
+      imageDesc: "Best premium HydraFacial device. Ultimate anti-aging treatment, superior exfoliation, and advanced skin brightening. Experience a truly results-oriented facial machine.",
+      link: "Alicesuperbubblemax.html"
     },
     {
       img: "./image/hero-machine-2.webp",
-      title: "Epiglow",
-      desc: "Premium Diode & Pico combination laser platform",
-      imageDesc: "Best Pico + diode laser, Pico + diode supplier, best combination laser device, pico + diode machine with best results, best tattoo removal, carbon facial, hair removal device."
+      title: "Hydraluxe Aquastar",
+      desc: "Advanced analyzer and probes for a radiant, healthy glow.",
+      imageDesc: "Best Pico + diode laser, Pico + diode supplier, best combination laser device, pico + diode machine with best results, best tattoo removal, carbon facial, hair removal device.",
+      link: "HydraluxeAquastar.html"
     },
     {
       img: "./image/hero-machine-3.webp",
-      title: "Revive",
-      desc: "True Q switch Nd:Yag laser device",
-      imageDesc: "Best Q switch Nd:Yag laser, best FDA approved Q switch Nd:Yag, premium Q switch Nd:Yag laser for pigmentation removal, best laser for tattoo removal."
+      title: "Oxyrich PDT+",
+      desc: "Premium hydra facial device with analyzer and oxygen dome.",
+      imageDesc: "Best Q switch Nd:Yag laser, best FDA approved Q switch Nd:Yag, premium Q switch Nd:Yag laser for pigmentation removal, best laser for tattoo removal.",
+      link: "OxyrichPDT.html"
     },
     {
       img: "./image/hero-machine-4.webp",
-      title: "Ice1200",
-      desc: "Painless, comfortable four wavelength diode laser",
-      imageDesc: "Best 4 wavelength diode laser device, best FDA approved laser device, best 1200W diode laser, best laser for hair removal treatment, painless device for hair removal treatment."
+      title: "4Dteclaser device",
+      desc: "Advanced 4-wavelength diode laser for all skin and hair types.",
+      imageDesc: "Best 4 wavelength diode laser device, best FDA approved laser device, best 1200W diode laser, best laser for hair removal treatment, painless device for hair removal treatment.",
+      link: "4Dteclaserdevice.html"
     },
     {
       img: "./image/hero-machine-4.webp",
-      title: "Cool 360",
-      desc: "Freeze away stubborn fat",
-      imageDesc: "Best Cryolipolysis device, safest cryolipolysis device, fastest cryolipolysis device, best cooling cryolipolysis device, premium result oriented cryolipolysis device, best fat reduction device."
+      title: "Ice 1200 DLD",
+      desc: "USFDA-approved 4-wavelength diode laser for safe, effective hair reduction.",
+      imageDesc: "Best Cryolipolysis device, safest cryolipolysis device, fastest cryolipolysis device, best cooling cryolipolysis device, premium result oriented cryolipolysis device, best fat reduction device.",
+      link: "Ice1200diodelaserdevice.html"
     },
     {
       img: "./image/hero-machine-4.webp",
-      title: "Ultraflaxe",
-      desc: "Fast and effective CO2 laser device",
-      imageDesc: "Best 60W CO2 fractional laser, best laser for acne scars, best laser for vaginal tightening, best CO2 fractional laser, high quality CO2 fractional laser."
+      title: "Epilite HP",
+      desc: "Premium USFDA-approved 4-wavelength diode laser.",
+      imageDesc: "Best 60W CO2 fractional laser, best laser for acne scars, best laser for vaginal tightening, best CO2 fractional laser, high quality CO2 fractional laser.",
+      link: "EpiliteHP.html"
     }
   ],
   product: [
-    { img: "./image/hero-machine-1.webp", title: "Product 1", desc: "Best selling product 1.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-    { img: "./image/hero-machine-2.webp", title: "Product 2", desc: "Best selling product 2.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-    { img: "./image/hero-machine-3.webp", title: "Product 3", desc: "Best selling product 3.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
-    { img: "./image/hero-machine-4.webp", title: "Product 4", desc: "Best selling product 4.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }
+    { img: "./image/hero-machine-1.webp", title: "Product 1", desc: "Best selling product 1.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", link: "product.html" },
+    { img: "./image/hero-machine-2.webp", title: "Product 2", desc: "Best selling product 2.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", link: "product2.html" },
+    { img: "./image/hero-machine-3.webp", title: "Product 3", desc: "Best selling product 3.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", link: "product.html" },
+    { img: "./image/hero-machine-4.webp", title: "Product 4", desc: "Best selling product 4.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", link: "product2.html" }
   ]
 };
 function renderProducts(items) {
@@ -101,20 +107,22 @@ function renderProducts(items) {
     slide.className = "swiper-slide";
     slide.innerHTML = `
             <article class="product-card" itemscope itemtype="https://schema.org/Product">
-                <div class="product-image">
-                <img src="${item.img}" 
-                    alt="${item.title} - ${item.desc}" 
-                    width="300" height="300"
-                    loading="lazy"
-                    itemprop="image">
-                </div>
-                <div class="product-description">
-                <p itemprop="description">${item.imageDesc}</p>
-                </div>
-                <div class="product-info">
-                <h3 itemprop="name">${item.title}</h3>
-                <p>${item.desc}</p>
-                </div>
+                <a href="${item.link}" class="product-link" aria-label="View ${item.title} details">
+                    <div class="product-image">
+                    <img src="${item.img}" 
+                        alt="${item.title} - ${item.desc}" 
+                        width="300" height="300"
+                        loading="lazy"
+                        itemprop="image">
+                    </div>
+                    <div class="product-description">
+                    <p itemprop="description">${item.imageDesc}</p>
+                    </div>
+                    <div class="product-info">
+                    <h3 itemprop="name">${item.title}</h3>
+                    <p>${item.desc}</p>
+                    </div>
+                </a>
             </article>
         `;
     productWrapper.appendChild(slide);

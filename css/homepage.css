@@ -375,7 +375,7 @@
 }
 
 .product-section .product-info h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 8px;
     color: var(--black);
@@ -2170,4 +2170,49 @@
 .segment:hover {
     filter: brightness(1.1);
     transform-origin: center;
+}
+/* Pro
+duct card link styles */
+.product-section .product-card .product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-section .product-card .product-link:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.product-section .product-card .product-link:active {
+    transform: translateY(-2px);
+}
+
+/* Ensure product info text remains styled correctly within links */
+.product-section .product-card .product-link .product-info h3 {
+    color: var(--black);
+    transition: color 0.3s ease;
+}
+
+.product-section .product-card .product-link .product-info p {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.product-section .product-card .product-link:hover .product-info h3 {
+    color: var(--primary);
+}
+
+.product-section .product-card .product-link:hover .product-info p {
+    color: var(--black);
+}
+
+/* Mobile responsive adjustments for product links */
+@media screen and (max-width: 768px) {
+    .product-section .product-card .product-link:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
 }
