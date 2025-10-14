@@ -937,43 +937,48 @@
                 <div class="contact-form">
                     <h2>Stay Updated with Latest Innovations</h2>
 
-                    <form>
+                    <form id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Full name *</label>
-                                <input type="text" placeholder="John Doe" />
+                                <label>Full Name *</label>
+                                <input type="text" placeholder="John Doe" name="fullName" id="fullName" />
                             </div>
                             <div class="form-group">
                                 <label>Email *</label>
-                                <input type="email" placeholder="info123@mail.com" />
+                                <input type="email" placeholder="info123@mail.com" name="email" id="email" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Phone Number *</label>
-                                <input type="text" placeholder="1231455865" />
+                                <input type="text" placeholder="1234567890" name="contact" id="contact" />
                             </div>
                             <div class="form-group">
                                 <label>Country *</label>
-                                <input type="text" placeholder="India" />
+                                <input type="text" placeholder="India" name="country" id="country" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Company *</label>
-                                <input type="text" placeholder="Your Company" />
+                                <input type="text" placeholder="Your Company" name="company" id="company" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group full">
                                 <label>Message *</label>
-                                <textarea placeholder="Write your message"></textarea>
+                                <textarea placeholder="Write your message" name="message" id="message"></textarea>
                             </div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur. In maecenas tincidunt maecenas tincidunt.</p>
+
+                        <div>
+                            <input type="checkbox" id="terms" name="terms" value="terms">
+                            <label class="terms" for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                        </div>
+
                         <button type="submit" class="btn">CONTACT US <i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
@@ -1041,10 +1046,15 @@
             </div>
         </section>
     </footer>
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/homepage.js"></script>
+    <script src="./js/contact.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </body>
 
 </html>
