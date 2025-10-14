@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://yourdomain.com/</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/clinic-preview.webp</image:loc>
+      <image:title>Unilog Skincare - Advanced Laser Equipment</image:title>
+      <image:caption>Leading provider of professional skincare and laser equipment</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://yourdomain.com/about.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/about-unilog-preview.webp</image:loc>
+      <image:title>About Unilog Skincare</image:title>
+      <image:caption>15+ years of excellence in laser equipment manufacturing</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Products Catalog -->
+  <url>
+    <loc>https://yourdomain.com/product.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/products-catalog-preview.webp</image:loc>
+      <image:title>Professional Skincare Equipment Catalog</image:title>
+      <image:caption>Complete range of laser and aesthetic devices</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://yourdomain.com/contact.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/contact-unilog-preview.webp</image:loc>
+      <image:title>Contact Unilog Skincare</image:title>
+      <image:caption>Get in touch for quotes and technical support</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Terms and Conditions -->
+  <url>
+    <loc>https://yourdomain.com/terms_and_conditions.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Individual Product Pages -->
+  
+  <!-- Alice Super Bubble Max -->
+  <url>
+    <loc>https://yourdomain.com/Alicesuperbubblemax.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/alice-super-bubble-max-preview.webp</image:loc>
+      <image:title>Alice Super Bubble Max - Hydra Facial Machine</image:title>
+      <image:caption>8-in-1 professional hydra facial machine with bubble cleansing technology</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- 4Dtec Laser Device -->
+  <url>
+    <loc>https://yourdomain.com/4Dteclaserdevice.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/4dtec-laser-device-preview.webp</image:loc>
+      <image:title>4Dtec Laser Device - 4-Wavelength Diode Laser</image:title>
+      <image:caption>Advanced diode laser hair removal system for all skin types</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Hydraluxe Aquastar -->
+  <url>
+    <loc>https://yourdomain.com/HydraluxeAquastar.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/hydraluxe-aquastar-preview.webp</image:loc>
+      <image:title>Hydraluxe Aquastar - Advanced Hydra Facial System</image:title>
+      <image:caption>Professional hydra facial system with real-time skin analysis</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Ice 1200 Diode Laser -->
+  <url>
+    <loc>https://yourdomain.com/Ice1200diodelaserdevice.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/ice-1200-diode-laser-preview.webp</image:loc>
+      <image:title>Ice 1200 Diode Laser Device - USFDA Approved</image:title>
+      <image:caption>Premium USFDA approved diode laser with advanced cooling technology</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Epilite HP -->
+  <url>
+    <loc>https://yourdomain.com/EpiliteHP.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/epilite-hp-preview.webp</image:loc>
+      <image:title>Epilite HP - High Performance Laser Hair Removal</image:title>
+      <image:caption>High-performance laser hair removal system with superior efficacy</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Oxyrich PDT -->
+  <url>
+    <loc>https://yourdomain.com/OxyrichPDT.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/oxyrich-pdt-preview.webp</image:loc>
+      <image:title>Oxyrich PDT+ - Multifunctional Treatment Platform</image:title>
+      <image:caption>Advanced PDT technology platform addressing 7+ skin concerns</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Epiglow Diode Laser -->
+  <url>
+    <loc>https://yourdomain.com/EpiglowDiodelaser.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yourdomain.com/image/epiglow-diode-laser-preview.webp</image:loc>
+      <image:title>Epiglow Diode Laser - Professional Hair Removal System</image:title>
+      <image:caption>Professional diode laser system for effective hair removal treatments</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>
