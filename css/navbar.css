@@ -7,8 +7,9 @@
     --black: #000000;
     --font1: "Montserrat", sans-serif;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -28,15 +29,13 @@ header {
 
 header .top-bar {
     background: var(--primary);
-    padding: 15px 30px;
+    padding: 15px 0px;
 }
 
 header .top-bar .top-bar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1280px;
-    margin: 0 auto;
 }
 
 header .top-bar .top-bar-container a.email-link {
@@ -107,6 +106,7 @@ header nav#navbar .dropdown .dropdown-menu {
     background: var(--white);
     padding: 0;
     width: 1106px;
+    height: 370px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 9999;
@@ -149,7 +149,7 @@ header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar .sidebar-card:hover
 }
 
 header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar .sidebar-card h3 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -181,17 +181,19 @@ header nav#navbar .dropdown .dropdown-menu .dropdown-content {
 
 /* Active state (fade + slide in) */
 header nav#navbar .dropdown .dropdown-menu .dropdown-content.active {
+    display: block;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+}
+
+header nav#navbar .dropdown .dropdown-menu .swiper {
+    overflow: visible !important;
 }
 
 header nav#navbar .dropdown .dropdown-menu .dropdown-content .content-card {
     color: var(--black);
-    padding: 20px 10px;
+    padding: 0px;
     border-radius: 7px;
     height: fit-content;
     cursor: pointer;
@@ -246,6 +248,46 @@ header nav#navbar .dropdown .dropdown-menu .dropdown-content .content-card .desc
     opacity: 0.9;
     color: var(--black);
     transition: all 0.5s ease;
+}
+
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .swiper-button-prev svg,
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .swiper-button-next svg {
+    display: none !important;
+}
+
+
+/* --- Custom Navigation Buttons --- */
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-prev,
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-next {
+    color: var(--primary);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+/* Hover interaction */
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-prev:hover,
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-next:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Positioning (so both sliders stay correct) */
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-prev {
+    left: -20px !important;
+}
+
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-next {
+    right: -20px !important;
+}
+
+/* Optional: adjust icon size */
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-prev i,
+header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-next i {
+    font-size: 16px;
 }
 
 /* Dropdown base */
@@ -509,7 +551,7 @@ header nav#navbar .menu-toggle {
 
 @media screen and (max-width: 576px) {
     header .top-bar {
-        padding: 15px 15px;
+        padding: 15px 0px;
     }
 }
 

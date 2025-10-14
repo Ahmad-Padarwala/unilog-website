@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <!-- 1) GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -23,7 +23,7 @@
   <!-- header -->
   <header>
     <div class="top-bar">
-      <div class="top-bar-container">
+      <div class="top-bar-container container">
         <a class="email-link" href="mailto:info@unilog.com.cn">info@unilog.com.cn</a>
         <div class="social-icons">
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -57,79 +57,95 @@
                 <h3>Laser Hair Reduction</h3>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
               </div>
-              <div class="sidebar-card" data-target="content-3">
-                <h3>Products 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-              <div class="sidebar-card" data-target="content-4">
-                <h3>Products 4</h3>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
             </div>
 
             <!-- Right Content -->
             <div class="dropdown-right">
-              <div class="dropdown-content active" id="content-1">
-                <a href="./Alicesuperbubblemax.html" class="content-card">
-                  <img src="./image/hero-machine-1.webp" alt="machine">
-                  <h3 class="title">Alice super bubble max</h3>
-                  <p class="description">Get deep into the pores and take away dirt with shiny and
-                    beautiful results..</p>
-                </a>
-                <a href="./HydraluxeAquastar.html" class="content-card">
-                  <img src="./image/hero-machine-1.webp" alt="machine">
-                  <h3 class="title">Hydraluxe Aquastar</h3>
-                  <p class="description">Featuring an advanced analyzer for real-time results,
-                    high-quality probes for anti-aging...</p>
-                </a>
-                <a href="./OxyrichPDT.html" class="content-card">
-                  <img src="./image/hero-machine-1.webp" alt="machine">
-                  <h3 class="title">Oxyrich PDT+</h3>
-                  <p class="description"> Oxyrich PDT+ is multifunctional platform which helps to
-                    solve more than 7 skin concerns.</p>
-                </a>
-              </div>
-              <div class="dropdown-content" id="content-2">
-                <a href="./4Dteclaserdevice.html" class="content-card">
-                  <img src="./image/hero-machine-2.webp" alt="machine">
-                  <h3 class="title">4Dteclaser device</h3>
-                  <p class="description"> The most advanced diode laser hair reduction system that
-                    combines 4 wavelengths that works on every skin and
-                    hair types.</p>
-                </a>
-                <a href="./Ice1200diodelaserdevice.html" class="content-card">
-                  <img src="./image/hero-machine-2.webp" alt="machine">
-                  <h3 class="title">Ice 1200 diode laser device</h3>
-                  <p class="description">The premium USFDA approved diode laser device with
-                    combination...</p>
-                </a>
-                <a href="./EpiliteHP.html" class="content-card">
-                  <img src="./image/hero-machine-2.webp" alt="machine">
-                  <h3 class="title">Epilite HP</h3>
-                  <p class="description">The premium USFDA approved diode laser device with
-                    combination...</p>
-                </a>
-              </div>
-              <div class="dropdown-content" id="content-3">
-                <a href="#" class="content-card">
-                  <img src="./image/hero-machine-3.webp" alt="machine">
-                  <h3 class="title">Product 3A</h3>
-                  <p class="description">Description for product 3A.</p>
-                </a>
-              </div>
-              <div class="dropdown-content" id="content-4">
-                <a href="#" class="content-card">
-                  <img src="./image/hero-machine-4.webp" alt="machine">
-                  <h3 class="title">Product 4A</h3>
-                  <p class="description">Description for product 4A.</p>
-                </a>
-                <a href="#" class="content-card">
-                  <img src="./image/hero-machine-4.webp" alt="machine">
-                  <h3 class="title">Product 4B</h3>
-                  <p class="description">Description for product 4B.</p>
-                </a>
-              </div>
+              <div class="dropdown-content swiper active" id="content-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="./Alicesuperbubblemax.html" class="content-card">
+                      <img src="./image/hero-machine-1.webp" alt="machine">
+                      <h3 class="title">Alice super bubble max</h3>
+                      <p class="description">Get deep into the pores and take away dirt with shiny
+                        and
+                        beautiful results.</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="./HydraluxeAquastar.html" class="content-card">
+                      <img src="./image/hero-machine-1.webp" alt="machine">
+                      <h3 class="title">Hydraluxe Aquastar</h3>
+                      <p class="description">Advanced analyzer and probes for a radiant, healthy
+                        glow.
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="./OxyrichPDT.html" class="content-card">
+                      <img src="./image/hero-machine-1.webp" alt="machine">
+                      <h3 class="title">Oxyrich PDT+</h3>
+                      <p class="description">Premium hydra facial device with analyzer and oxygen
+                        dome
+                        for
+                        skin healing.
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-prev custom-prev"><i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next custom-next"><i class="fa-solid fa-chevron-right"></i>
+                </div>
 
+              </div>
+              <div class="dropdown-content swiper" id="content-2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="./4Dteclaserdevice.html" class="content-card">
+                      <img src="./image/hero-machine-2.webp" alt="machine">
+                      <h3 class="title">4Dteclaser device</h3>
+                      <p class="description">Advanced 4-wavelength diode laser for all skin
+                        and
+                        hair types.</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="./Ice1200diodelaserdevice.html" class="content-card">
+                      <img src="./image/hero-machine-2.webp" alt="machine">
+                      <h3 class="title">Ice 1200 diode laser device</h3>
+                      <p class="description">USFDA-approved 4-wavelength diode laser for safe,
+                        effective hair reduction.</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="./EpiliteHP.html" class="content-card">
+                      <img src="./image/hero-machine-2.webp" alt="machine">
+                      <h3 class="title">Epilite HP</h3>
+                      <p class="description">Premium USFDA-approved 4-wavelength diode laser
+                        for
+                        safe, effective hair removal.</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="./EpiliteHP.html" class="content-card">
+                      <img src="./image/hero-machine-2.webp" alt="machine">
+                      <h3 class="title">Epilite HP</h3>
+                      <p class="description">Premium USFDA-approved 4-wavelength diode laser
+                        for
+                        safe, effective hair removal.</p>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-prev custom-prev"><i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next custom-next"><i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+              </div>
             </div>
           </div>
         </li>
@@ -514,6 +530,7 @@
   </footer>
 
   <script src="./js/product.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./js/navbar.js"></script>
 
   <!-- EmailJS SDK -->

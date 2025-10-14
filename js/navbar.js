@@ -45,3 +45,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+//dropdown content swiper
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdowns = document.querySelectorAll(".dropdown-content");
+
+    dropdowns.forEach((dropdown, index) => {
+        new Swiper(dropdown, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: false,
+            navigation: {
+                nextEl: dropdown.querySelector(".swiper-button-next"),
+                prevEl: dropdown.querySelector(".swiper-button-prev"),
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+        });
+    });
+});
