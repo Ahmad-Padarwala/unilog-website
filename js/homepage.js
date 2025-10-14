@@ -51,14 +51,14 @@ const indicator = document.querySelector(".tab-indicator");
 const productsData = {
   machine: [
     {
-      img: "./image/hero-machine-1.webp",
+      img: "./image/product/Alicesuperbubblemax/1.webp",
       title: "Alice super bubble max",
       desc: "Get deep into the pores and take away dirt with shiny and beautiful results.",
       imageDesc: "Best premium HydraFacial device. Ultimate anti-aging treatment, superior exfoliation, and advanced skin brightening. Experience a truly results-oriented facial machine.",
       link: "Alicesuperbubblemax.html"
     },
     {
-      img: "./image/hero-machine-2.webp",
+      img: "./image/product/HydraluxeAquastar/hydralux-1.webp",
       title: "Hydraluxe Aquastar",
       desc: "Advanced analyzer and probes for a radiant, healthy glow.",
       imageDesc: "Best Pico + diode laser, Pico + diode supplier, best combination laser device, pico + diode machine with best results, best tattoo removal, carbon facial, hair removal device.",
@@ -79,7 +79,7 @@ const productsData = {
       link: "4Dteclaserdevice.html"
     },
     {
-      img: "./image/hero-machine-4.webp",
+      img: "./image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
       title: "Ice 1200 DLD",
       desc: "USFDA-approved 4-wavelength diode laser for safe, effective hair reduction.",
       imageDesc: "Best Cryolipolysis device, safest cryolipolysis device, fastest cryolipolysis device, best cooling cryolipolysis device, premium result oriented cryolipolysis device, best fat reduction device.",
