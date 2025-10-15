@@ -21,13 +21,6 @@
 
     <!-- Robots -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="bingbot" content="index, follow" />
-
-    <!-- Language and Location -->
-    <meta name="language" content="English" />
-    <meta name="geo.region" content="IN-MH" />
-    <meta name="geo.placename" content="Mumbai" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Professional Skincare & Laser Equipment | Unilog Product Catalog" />
@@ -36,32 +29,15 @@
     <meta property="og:image" content="https://yourdomain.com/image/products-catalog-preview.webp" />
     <meta property="og:url" content="https://yourdomain.com/product.html" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Unilog Skincare" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Professional Skincare & Laser Equipment | Unilog" />
     <meta name="twitter:description"
         content="Browse our complete range of professional skincare equipment and laser devices for aesthetic treatments." />
-    <meta name="twitter:image" content="https://yourdomain.com/image/products-catalog-preview.webp" />
-    <meta name="twitter:site" content="@unilogskincare" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yourdomain.com/product.html" />
-
-    <!-- Additional SEO Meta Tags -->
-    <meta name="revisit-after" content="3 days" />
-    <meta name="rating" content="general" />
-    <meta name="distribution" content="global" />
-    <meta name="theme-color" content="#4C2896" />
-    <meta name="msapplication-TileColor" content="#4C2896" />
-
-    <!-- Product Categories -->
-    <meta name="product:category" content="Medical Equipment" />
-    <meta name="product:category" content="Aesthetic Devices" />
-    <meta name="product:category" content="Laser Equipment" />
-    <meta name="product:category" content="Skincare Machines" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon" />
@@ -77,63 +53,6 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <!-- Structured Data for Product Catalog -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Unilog Skincare Product Catalog",
-        "description": "Professional skincare and laser equipment catalog featuring medi-facial devices, laser hair removal systems, and aesthetic treatment machines.",
-        "url": "https://yourdomain.com/product.html",
-        "mainEntity": {
-            "@type": "ItemList",
-            "name": "Skincare Equipment Categories",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Medi Facial Series",
-                    "description": "Advanced facial treatment machines for professional skincare"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Laser Hair Reduction",
-                    "description": "Professional hair removal systems with advanced laser technology"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Skin Rejuvenation",
-                    "description": "Anti-aging and skin renewal devices for professional treatments"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 4,
-                    "name": "Body Contouring",
-                    "description": "Body shaping and sculpting equipment for aesthetic treatments"
-                }
-            ]
-        },
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://yourdomain.com/"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Products",
-                    "item": "https://yourdomain.com/product.html"
-                }
-            ]
-        }
-    }
-    </script>
 </head>
 
 <body>
@@ -296,267 +215,68 @@
         <section class="products-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Our Product Range</h1>
+                    <h1>Our Products</h1>
                     <p>Discover our comprehensive collection of advanced skincare and laser equipment designed for
                         professional treatments and exceptional results.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Category Filter -->
-        <section class="category-filter">
+        <!-- Filter Section -->
+        <section class="filter-section">
             <div class="container">
-                <h2>Browse by Category</h2>
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-category="all">All Products</button>
-                    <button class="filter-btn" data-category="medi-facial">Medi Facial Series</button>
-                    <button class="filter-btn" data-category="laser-hair">Laser Hair Reduction</button>
-                    <button class="filter-btn" data-category="skin-rejuvenation">Skin Rejuvenation</button>
-                    <button class="filter-btn" data-category="body-contouring">Body Contouring</button>
-                </div>
-            </div>
-        </section>
+                <div class="filter-wrapper">
+                    <div class="filter-header">
+                        <h2>Find Your Perfect Equipment</h2>
+                        <p>Search through our comprehensive range of professional aesthetic devices</p>
+                    </div>
 
-        <!-- Products Grid -->
-        <section class="products-grid">
-            <div class="container">
-                <!-- Medi Facial Series -->
-                <div class="category-section" data-category="medi-facial">
-                    <h2 class="category-title">Medi Facial Series</h2>
-                    <div class="products-row">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-1.webp" alt="Alice Super Bubble Max">
-                                <div class="product-overlay">
-                                    <a href="./Alicesuperbubblemax.html" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>Alice Super Bubble Max</h3>
-                                <p>Deep cleansing skin system with advanced bubble technology for pore purification and
-                                    skin brightening.</p>
-                                <div class="product-features">
-                                    <span class="feature-tag">8 Technologies</span>
-                                    <span class="feature-tag">Painless</span>
-                                    <span class="feature-tag">No Downtime</span>
-                                </div>
-                                <a href="./Alicesuperbubblemax.html" class="product-btn">Learn More</a>
-                            </div>
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="productSearch" placeholder="Search by product name, category..." />
+                            <button class="search-btn" id="searchBtn">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
+                        <div class="search-suggestions" id="searchSuggestions"></div>
+                    </div>
 
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-1.webp" alt="Hydraluxe Aquastar">
-                                <div class="product-overlay">
-                                    <a href="./HydraluxeAquastar.html" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>Hydraluxe Aquastar</h3>
-                                <p>Advanced analyzer for real-time results with high-quality probes for comprehensive
-                                    anti-aging treatments.</p>
-                                <div class="product-features">
-                                    <span class="feature-tag">Real-time Analysis</span>
-                                    <span class="feature-tag">Anti-aging</span>
-                                    <span class="feature-tag">Professional</span>
-                                </div>
-                                <a href="./HydraluxeAquastar.html" class="product-btn">Learn More</a>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-1.webp" alt="Oxyrich PDT+">
-                                <div class="product-overlay">
-                                    <a href="./OxyrichPDT.html" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>Oxyrich PDT+</h3>
-                                <p>Multifunctional platform that addresses more than 7 skin concerns with advanced PDT
-                                    technology.</p>
-                                <div class="product-features">
-                                    <span class="feature-tag">7+ Treatments</span>
-                                    <span class="feature-tag">PDT Technology</span>
-                                    <span class="feature-tag">Versatile</span>
-                                </div>
-                                <a href="./OxyrichPDT.html" class="product-btn">Learn More</a>
-                            </div>
+                    <!-- Category Tabs -->
+                    <div class="category-filters">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-category="all">
+                                <span>All Products</span>
+                            </button>
+                            <button class="filter-tab" data-category="medi-facial">
+                                <span>Medi Facial</span>
+                            </button>
+                            <button class="filter-tab" data-category="laser-hair">
+                                <span>Hair Removal</span>
+                            </button>
                         </div>
                     </div>
-                </div>
 
-                <!-- Laser Hair Reduction -->
-                <div class="category-section" data-category="laser-hair">
-                    <h2 class="category-title">Laser Hair Reduction</h2>
-                    <div class="products-row">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-2.webp" alt="4Dtec Laser Device">
-                                <div class="product-overlay">
-                                    <a href="./4Dteclaserdevice.html" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>4Dtec Laser Device</h3>
-                                <p>The most advanced diode laser hair reduction system combining 4 wavelengths for all
-                                    skin and hair types.</p>
-                                <div class="product-features">
-                                    <span class="feature-tag">4 Wavelengths</span>
-                                    <span class="feature-tag">All Skin Types</span>
-                                    <span class="feature-tag">Advanced</span>
-                                </div>
-                                <a href="./4Dteclaserdevice.html" class="product-btn">Learn More</a>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-2.webp" alt="Ice 1200 Diode Laser">
-                                <div class="product-overlay">
-                                    <a href="./Ice1200diodelaserdevice.html" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>Ice 1200 Diode Laser Device</h3>
-                                <p>Premium USFDA approved diode laser device with advanced cooling technology for
-                                    comfortable treatments.</p>
-                                <div class="product-features">
-                                    <span class="feature-tag">USFDA Approved</span>
-                                    <span class="feature-tag">Cooling Tech</span>
-                                    <span class="feature-tag">Premium</span>
-                                </div>
-                                <a href="./Ice1200diodelaserdevice.html" class="product-btn">Learn More</a>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-2.webp" alt="Epilite HP">
-                                <div class="product-overlay">
-                                    <a href="./EpiliteHP.html" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>Epilite HP</h3>
-                                <p>High-performance laser hair removal system with superior efficacy and patient
-                                    comfort.</p>
-                                <div class="product-features">
-                                    <span class="feature-tag">High Performance</span>
-                                    <span class="feature-tag">Comfortable</span>
-                                    <span class="feature-tag">Effective</span>
-                                </div>
-                                <a href="./EpiliteHP.html" class="product-btn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Skin Rejuvenation -->
-                <div class="category-section" data-category="skin-rejuvenation">
-                    <h2 class="category-title">Skin Rejuvenation</h2>
-                    <div class="products-row">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-3.webp" alt="RF Microneedling Pro">
-                                <div class="product-overlay">
-                                    <a href="#" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>RF Microneedling Pro</h3>
-                                <p>Advanced radiofrequency microneedling for skin tightening, wrinkle reduction, and
-                                    texture improvement.</p>
-                                <div class="product-features">
-                                    <span class="feature-tag">RF Technology</span>
-                                    <span class="feature-tag">Skin Tightening</span>
-                                    <span class="feature-tag">Anti-aging</span>
-                                </div>
-                                <a href="#" class="product-btn">Learn More</a>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-3.webp" alt="Plasma Pen Elite">
-                                <div class="product-overlay">
-                                    <a href="#" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>Plasma Pen Elite</h3>
-                                <p>Non-invasive plasma technology for skin tightening, wrinkle reduction, and scar
-                                    treatment.</p>
-                                <div class="product-features">
-                                    <span class="feature-tag">Plasma Tech</span>
-                                    <span class="feature-tag">Non-invasive</span>
-                                    <span class="feature-tag">Precision</span>
-                                </div>
-                                <a href="#" class="product-btn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Body Contouring -->
-                <div class="category-section" data-category="body-contouring">
-                    <h2 class="category-title">Body Contouring</h2>
-                    <div class="products-row">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-4.webp" alt="CoolSculpt Pro">
-                                <div class="product-overlay">
-                                    <a href="#" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>CoolSculpt Pro</h3>
-                                <p>Advanced cryolipolysis technology for non-invasive fat reduction and body contouring.
-                                </p>
-                                <div class="product-features">
-                                    <span class="feature-tag">Fat Freezing</span>
-                                    <span class="feature-tag">Non-invasive</span>
-                                    <span class="feature-tag">Body Sculpting</span>
-                                </div>
-                                <a href="#" class="product-btn">Learn More</a>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="./image/hero-machine-4.webp" alt="UltraCavitation">
-                                <div class="product-overlay">
-                                    <a href="#" class="view-product">View Details</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3>UltraCavitation</h3>
-                                <p>Ultrasonic cavitation technology for effective fat reduction and cellulite treatment.
-                                </p>
-                                <div class="product-features">
-                                    <span class="feature-tag">Ultrasonic</span>
-                                    <span class="feature-tag">Cellulite Treatment</span>
-                                    <span class="feature-tag">Effective</span>
-                                </div>
-                                <a href="#" class="product-btn">Learn More</a>
-                            </div>
+                    <!-- Filter Actions -->
+                    <div class="filter-actions">
+                        <button class="clear-filters" id="clearFilters">
+                            <i class="fas fa-refresh"></i><span>Clear All</span>
+                        </button>
+                        <div class="results-preview" id="resultsPreview">
+                            <span class="results-text">12 products found</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="products-cta">
+
+        <!-- Products Section -->
+        <section class="products-section">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Transform Your Practice?</h2>
-                    <p>Discover how our advanced equipment can enhance your treatment offerings and patient
-                        satisfaction.</p>
-                    <div class="cta-buttons">
-                        <a href="./contact.html" class="btn btn-primary">Get Quote</a>
-                        <a href="#" class="btn btn-outline">Schedule Demo</a>
-                    </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically inserted here -->
                 </div>
             </div>
         </section>
@@ -619,7 +339,7 @@
         </section>
     </footer>
 
-    <!-- Scripts -->
+    <!-- JavaScript Files -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/product-listing.js"></script>

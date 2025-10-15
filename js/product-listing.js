@@ -1,285 +1,308 @@
-// Product Listing Page JavaScript
+// Clean Product Listing JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // ===== CATEGORY FILTERING ===== //
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const categorySection = document.querySelectorAll('.category-section');
-    
-    // Filter functionality
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter categories
-            categorySection.forEach(section => {
-                const sectionCategory = section.getAttribute('data-category');
-                
-                if (category === 'all' || category === sectionCategory) {
-                    section.classList.remove('hidden');
-                    section.classList.add('visible');
-                } else {
-                    section.classList.add('hidden');
-                    section.classList.remove('visible');
-                }
-            });
-            
-            // Smooth scroll to products grid
-            document.querySelector('.products-grid').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    });
-    
-    // ===== SCROLL ANIMATIONS ===== //
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.product-card, .category-title, .hero-content, .cta-content');
-    animatedElements.forEach(el => {
-        el.classList.add('fade-in');
-        observer.observe(el);
-    });
-    
-    // ===== PRODUCT CARD INTERACTIONS ===== //
-    const productCards = document.querySelectorAll('.product-card');
-    
-    productCards.forEach(card => {
-        // Add hover sound effect (optional)
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-        
-        // Add click tracking (for analytics)
-        card.addEventListener('click', function(e) {
-            const productName = this.querySelector('h3').textContent;
-            console.log(`Product clicked: ${productName}`);
-            
-            // You can add analytics tracking here
-            // gtag('event', 'product_click', {
-            //     'product_name': productName,
-            //     'category': this.closest('.category-section').getAttribute('data-category')
-            // });
-        });
-    });
-    
+    // Product data
+    const products = [
+        {
+            id: 1,
+            name: "Alice super bubble max",
+            category: "medi-facial",
+            price: "premium",
+            image: "./image/product/Alicesuperbubblemax/1.webp",
+            description: "Revolutionary 8-in-1 HydraFacial system with advanced bubble technology for deep pore cleansing and skin brightening.",
+            link: "./Alicesuperbubblemax.html"
+        },
+        {
+            id: 2,
+            name: "Hydraluxe Aquastar",
+            category: "medi-facial",
+            price: "premium",
+            image: "./image/product/HydraluxeAquastar/hydralux-1.webp",
+            description: "Advanced skin analyzer with real-time imaging and high-precision probes for comprehensive anti-aging treatments.",
+            link: "./HydraluxeAquastar.html"
+        },
+        {
+            id: 3,
+            name: "Oxyrich PDT+",
+            category: "medi-facial",
+            price: "premium",
+            image: "./image/hero-machine-1.webp",
+            description: "Multifunctional platform combining photodynamic therapy with oxygen infusion for comprehensive skin treatment.",
+            link: "./OxyrichPDT.html"
+        },
+        {
+            id: 4,
+            name: "4Dtec Laser Device",
+            category: "laser-hair",
+            price: "luxury",
+            image: "./image/hero-machine-2.webp",
+            description: "Revolutionary 4-wavelength diode laser system for comprehensive hair removal across all skin types.",
+            link: "./4Dteclaserdevice.html"
+        },
+        {
+            id: 5,
+            name: "Ice 1200 Diode Laser",
+            category: "laser-hair",
+            price: "premium",
+            image: "./image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
+            description: "USFDA approved 4-wavelength diode laser with advanced sapphire cooling technology.",
+            link: "./Ice1200diodelaserdevice.html"
+        },
+        {
+            id: 6,
+            name: "Epilite HP",
+            category: "laser-hair",
+            price: "mid-range",
+            image: "./image/hero-machine-2.webp",
+            description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort.",
+            link: "./EpiliteHP.html"
+        },
+    ]
 
-    // ===== LAZY LOADING FOR IMAGES ===== //
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
-                }
+    // Initialize the page
+    init();
+
+    function init() {
+        renderProducts(products);
+        setupEventListeners();
+        updateResultsCount(products.length);
+    }
+
+    function setupEventListeners() {
+        // Search functionality
+        const searchInput = document.getElementById('productSearch');
+        const searchBtn = document.getElementById('searchBtn');
+        
+        searchInput.addEventListener('input', handleSearchInput);
+        searchInput.addEventListener('focus', showSearchSuggestions);
+        searchInput.addEventListener('blur', hideSearchSuggestions);
+        searchBtn.addEventListener('click', performSearch);
+        
+        // Filter tab functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const category = this.dataset.category;
+                setActiveTab(this);
+                filterByCategory(category);
+            });
+        });
+        
+        // Clear filters
+        document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+        
+        // Search suggestions
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-container')) {
+                hideSearchSuggestions();
             }
         });
-    });
-    
-    // Observe all product images
-    const productImages = document.querySelectorAll('.product-image img');
-    productImages.forEach(img => {
-        imageObserver.observe(img);
-    });
-    
-    // ===== RESPONSIVE NAVIGATION ===== //
-    function handleResponsiveNavigation() {
-        const screenWidth = window.innerWidth;
-        const filterButtons = document.querySelector('.filter-buttons');
-        
-        if (screenWidth <= 768) {
-            // Mobile: Stack filter buttons
-            filterButtons.style.flexDirection = 'column';
-            filterButtons.style.alignItems = 'center';
+    }
+
+    function handleSearchInput(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        if (searchTerm.length > 0) {
+            generateSearchSuggestions(searchTerm);
+            showSearchSuggestions();
         } else {
-            // Desktop: Horizontal layout
-            filterButtons.style.flexDirection = 'row';
-            filterButtons.style.alignItems = 'center';
+            hideSearchSuggestions();
         }
+        filterProducts();
     }
-    
-    // Initialize responsive navigation
-    handleResponsiveNavigation();
-    window.addEventListener('resize', handleResponsiveNavigation);
-    
-    // ===== SMOOTH SCROLLING FOR ANCHOR LINKS ===== //
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-    
-    // ===== PERFORMANCE OPTIMIZATIONS ===== //
-    
-    // Debounce function for resize events
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-    
-    // Optimized resize handler
-    const optimizedResize = debounce(handleResponsiveNavigation, 250);
-    window.addEventListener('resize', optimizedResize);
-    
-    // ===== ACCESSIBILITY ENHANCEMENTS ===== //
-    
-    // Add keyboard navigation for filter buttons
-    filterButtons.forEach(button => {
-        button.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.click();
-            }
-        });
-    });
-    
-    // Add ARIA labels for better screen reader support
-    productCards.forEach((card, index) => {
-        card.setAttribute('role', 'article');
-        card.setAttribute('aria-label', `Product ${index + 1}`);
+
+    function generateSearchSuggestions(searchTerm) {
+        const suggestions = new Set();
         
-        const productLink = card.querySelector('.product-btn');
-        if (productLink) {
-            productLink.setAttribute('aria-describedby', `product-desc-${index}`);
-            card.querySelector('p').setAttribute('id', `product-desc-${index}`);
-        }
-    });
-    
-    // ===== LOADING STATES ===== //
-    
-    // Add loading animation for filter transitions
-    function showLoadingState() {
-        const productsGrid = document.querySelector('.products-grid');
-        productsGrid.style.opacity = '0.5';
-        productsGrid.style.pointerEvents = 'none';
-        
-        setTimeout(() => {
-            productsGrid.style.opacity = '1';
-            productsGrid.style.pointerEvents = 'auto';
-        }, 300);
-    }
-    
-    // Apply loading state to filter buttons
-    filterButtons.forEach(button => {
-        const originalClickHandler = button.onclick;
-        button.addEventListener('click', function() {
-            showLoadingState();
-        });
-    });
-    
-    // ===== ANALYTICS TRACKING ===== //
-    
-    // Track page view
-    console.log('Product listing page loaded');
-    
-    // Track filter usage
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            console.log(`Filter applied: ${category}`);
+        products.forEach(product => {
+            // Add product name if it matches
+            if (product.name.toLowerCase().includes(searchTerm)) {
+                suggestions.add(product.name);
+            }
             
-            // You can add Google Analytics or other tracking here
-            // gtag('event', 'filter_products', {
-            //     'category': category
-            // });
+            // Add category if it matches
+            const categoryLabel = getCategoryLabel(product.category);
+            if (categoryLabel.toLowerCase().includes(searchTerm)) {
+                suggestions.add(categoryLabel);
+            }
         });
-    });
-    
-    // ===== INITIALIZATION COMPLETE ===== //
-    console.log('Product listing functionality initialized');
-});
 
-// ===== UTILITY FUNCTIONS ===== //
+        displaySearchSuggestions(Array.from(suggestions).slice(0, 5));
+    }
 
-// Function to get product data (for future API integration)
-function getProductData() {
-    return {
-        'medi-facial': [
-            {
-                name: 'Alice Super Bubble Max',
-                description: 'Deep cleansing skin system with advanced bubble technology',
-                features: ['8 Technologies', 'Painless', 'No Downtime'],
-                image: './image/hero-machine-1.webp',
-                link: './Alicesuperbubblemax.html'
-            },
-            // Add more products...
-        ],
-        'laser-hair': [
-            {
-                name: '4Dtec Laser Device',
-                description: 'Advanced diode laser hair reduction system',
-                features: ['4 Wavelengths', 'All Skin Types', 'Advanced'],
-                image: './image/hero-machine-2.webp',
-                link: './4Dteclaserdevice.html'
-            },
-            // Add more products...
-        ]
-        // Add more categories...
-    };
-}
+    function displaySearchSuggestions(suggestions) {
+        const suggestionsContainer = document.getElementById('searchSuggestions');
+        
+        if (suggestions.length === 0) {
+            suggestionsContainer.innerHTML = '';
+            return;
+        }
 
-// Function to dynamically generate product cards (for future use)
-function generateProductCard(product) {
-    return `
-        <div class="product-card fade-in">
+        suggestionsContainer.innerHTML = suggestions.map(suggestion => 
+            `<div class="suggestion-item" onclick="selectSuggestion('${suggestion}')">${suggestion}</div>`
+        ).join('');
+    }
+
+    function selectSuggestion(suggestion) {
+        document.getElementById('productSearch').value = suggestion;
+        hideSearchSuggestions();
+        filterProducts();
+    }
+
+    function showSearchSuggestions() {
+        const suggestionsContainer = document.getElementById('searchSuggestions');
+        if (suggestionsContainer.innerHTML.trim() !== '') {
+            suggestionsContainer.classList.add('show');
+        }
+    }
+
+    function hideSearchSuggestions() {
+        setTimeout(() => {
+            document.getElementById('searchSuggestions').classList.remove('show');
+        }, 200);
+    }
+
+    function performSearch() {
+        filterProducts();
+        hideSearchSuggestions();
+    }
+
+    function setActiveTab(activeTab) {
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        activeTab.classList.add('active');
+    }
+
+    function filterByCategory(category) {
+        const filteredProducts = category === 'all' 
+            ? products 
+            : products.filter(product => product.category === category);
+        
+        renderProducts(filteredProducts);
+        updateResultsCount(filteredProducts.length);
+    }
+
+    function renderProducts(productsToRender) {
+        const grid = document.getElementById('productsGrid');
+        grid.innerHTML = '';
+
+        if (productsToRender.length === 0) {
+            showEmptyState();
+            return;
+        }
+
+        productsToRender.forEach((product, index) => {
+            const productCard = createProductCard(product);
+            productCard.style.animationDelay = `${index * 0.1}s`;
+            grid.appendChild(productCard);
+        });
+    }
+
+    function showEmptyState() {
+        const grid = document.getElementById('productsGrid');
+        grid.innerHTML = `
+            <div class="empty-state" style="grid-column: 1 / -1;">
+                <i class="fas fa-search"></i>
+                <h3>No products found</h3>
+                <p>Try adjusting your search criteria or browse all categories to find what you're looking for.</p>
+            </div>
+        `;
+    }
+
+    function createProductCard(product) {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.setAttribute('data-category', product.category);
+        card.setAttribute('data-name', product.name.toLowerCase());
+
+        card.innerHTML = `
             <div class="product-image">
-                <img src="${product.image}" alt="${product.name}">
-                <div class="product-overlay">
-                    <a href="${product.link}" class="view-product">View Details</a>
-                </div>
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
             </div>
             <div class="product-info">
+                <div class="product-category">${getCategoryLabel(product.category)}</div>
                 <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <div class="product-features">
-                    ${product.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                <p class="product-description">${product.description}</p>
+                <div class="product-footer">
+                    <a href="${product.link}" class="view-more-btn">View Details</a>
                 </div>
-                <a href="${product.link}" class="product-btn">Learn More</a>
             </div>
-        </div>
-    `;
-}
+        `;
 
-// Export functions for potential module use
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        getProductData,
-        generateProductCard
-    };
-}
+        return card;
+    }
+
+    function getPriceLabel(price) {
+        const labels = {
+            'budget': 'Budget Friendly',
+            'mid-range': 'Mid Range',
+            'premium': 'Premium',
+            'luxury': 'Luxury'
+        };
+        return labels[price] || 'Contact for Price';
+    }
+
+    function getCategoryLabel(category) {
+        const labels = {
+            'medi-facial': 'Medi Facial',
+            'laser-hair': 'Hair Removal',
+            'skin-rejuvenation': 'Skin Rejuvenation',
+            'body-contouring': 'Body Contouring',
+            'laser-therapy': 'Laser Therapy'
+        };
+        return labels[category] || category;
+    }
+
+    function filterProducts() {
+        const searchTerm = document.getElementById('productSearch').value.toLowerCase();
+        const activeTab = document.querySelector('.filter-tab.active');
+        const categoryFilter = activeTab ? activeTab.dataset.category : 'all';
+
+        const filteredProducts = products.filter(product => {
+            const matchesSearch = searchTerm === '' || 
+                                product.name.toLowerCase().includes(searchTerm) ||
+                                product.description.toLowerCase().includes(searchTerm) ||
+                                getCategoryLabel(product.category).toLowerCase().includes(searchTerm);
+            
+            const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;
+
+            return matchesSearch && matchesCategory;
+        });
+
+        renderProducts(filteredProducts);
+        updateResultsCount(filteredProducts.length);
+    }
+
+    function clearAllFilters() {
+        document.getElementById('productSearch').value = '';
+        
+        // Reset to "All Products" tab
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.querySelector('.filter-tab[data-category="all"]').classList.add('active');
+        
+        hideSearchSuggestions();
+        renderProducts(products);
+        updateResultsCount(products.length);
+    }
+
+    function updateResultsCount(count) {
+        const previewElement = document.getElementById('resultsPreview');
+        
+        let text;
+        if (count === 0) {
+            text = 'No products found';
+        } else if (count === 1) {
+            text = 'Showing 1 product';
+        } else {
+            text = `Showing ${count} products`;
+        }
+        
+        if (previewElement) {
+            previewElement.querySelector('.results-text').textContent = `${count} products found`;
+        }
+    }
+
+    // Make selectSuggestion available globally
+    window.selectSuggestion = selectSuggestion;
+});
