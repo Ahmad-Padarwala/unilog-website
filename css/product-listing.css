@@ -173,8 +173,8 @@
 
 .search-btn {
     background: var(--primary);
+    border: 2px solid var(--primary);
     color: var(--white);
-    border: none;
     width: 3rem;
     height: 3rem;
     border-radius: 10px;
@@ -184,8 +184,9 @@
 }
 
 .search-btn:hover {
-    background: var(--secondary);
-    transform: scale(1.08);
+    background: transparent;
+    color: var(--primary);
+    /* transform: scale(1.08); */
 }
 
 /* Suggestions Dropdown */
