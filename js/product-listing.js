@@ -231,16 +231,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return card;
     }
 
-    function getPriceLabel(price) {
-        const labels = {
-            'budget': 'Budget Friendly',
-            'mid-range': 'Mid Range',
-            'premium': 'Premium',
-            'luxury': 'Luxury'
-        };
-        return labels[price] || 'Contact for Price';
-    }
-
     function getCategoryLabel(category) {
         const labels = {
             'medi-facial': 'Medi Facial',

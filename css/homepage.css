@@ -629,9 +629,17 @@
     padding: 50px 0;
 }
 
+.reels-section .header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
 .reels-section .title {
     font-size: 2rem;
-    margin-bottom: 30px;
     text-align: center;
     font-weight: 700;
     color: var(--white);
@@ -664,6 +672,42 @@
 .reels-section .video-item:hover video {
     transform: scale(1.05);
 }
+
+/* Instagram button container */
+.reels-section .cta-container {
+    text-align: center;
+}
+
+/* Animated gradient button */
+.reels-section .instagram-btn {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--white);
+    padding: 10px 20px;
+    cursor: pointer;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 30px;
+    transition: all .3s;
+}
+
+
+.reels-section .instagram-btn:hover {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.reels-section .instagram-btn i {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
 
 
 /* review section */
@@ -2171,6 +2215,7 @@
     filter: brightness(1.1);
     transform-origin: center;
 }
+
 /* Pro
 duct card link styles */
 .product-section .product-card .product-link {
@@ -2181,6 +2226,7 @@ duct card link styles */
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .product-section .product-card .product-link:focus {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
