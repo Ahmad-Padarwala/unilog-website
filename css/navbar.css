@@ -758,6 +758,10 @@ header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide .content-card 
     gap: 10px;
 }
 
+header nav#navbar .dropdown .dropdown-menu.single-swiper-menu .dropdown-content .custom-next {
+    right: 0px !important;
+}
+
 header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide .content-card img {
     width: 200px;
     height: auto;
