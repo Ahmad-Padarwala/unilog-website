@@ -615,37 +615,75 @@ header nav#navbar .menu-toggle {
     }
 }
 
-/* Toast Styles */
+/* Toast Container */
 .toast-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
+/* Toast Base */
 .toast {
-    background: #222;
-    color: #fff;
-    padding: 14px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
+  position: relative;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transform: translateX(120%);
+  transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  min-width: 260px;
+  max-width: 360px;
 }
 
+/* Show animation */
 .toast.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
+/* Success / Error / Info Variants */
 .toast.success {
-    background-color: #28a745;
+  border-left: 4px solid #00c853;
+  background: #102e1c;
+  box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
 }
 
 .toast.error {
-    background-color: #dc3545;
+  border-left: 4px solid #e53935;
+  background: #2d1616;
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
+}
+
+.toast.info {
+  border-left: 4px solid #1e88e5;
+  background: #152238;
+  box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+}
+
+/* Optional: subtle entry glow */
+.toast.show::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05) inset;
+  pointer-events: none;
+}
+
+/* Optional: exit animation */
+.toast.hide {
+  opacity: 0;
+  transform: translateX(120%);
+  transition: all 0.4s ease;
 }

@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 message
             });
 
-            showToast("Form submitted successfully! Download will start shortly.", "success");
+            showToast("Form submitted successfully!", "success");
 
             form.reset();
         } catch (error) {
