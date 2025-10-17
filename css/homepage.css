@@ -674,38 +674,74 @@
 }
 
 /* Instagram button container */
-.reels-section .cta-container {
-    text-align: center;
-}
-
-/* Animated gradient button */
-.reels-section .instagram-btn {
-    background-color: var(--white);
+.reels-section .header .instagram-btn {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border: 2px solid var(--white);
-    padding: 10px 20px;
-    cursor: pointer;
-    color: var(--black);
+    justify-content: flex-start;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    width: fit-content;
-    margin: 0 auto;
-    border-radius: 30px;
-    transition: all .3s;
+    gap: 8px;
+    width: 48px;
+    height: 48px;
+    padding: 8px 24px 8px 8px;
+    background: linear-gradient(to right, #8b5cf6, #ec4899, #f97316);
+    color: #fafafa;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.7s ease, background 0.7s ease;
 }
 
-
-.reels-section .instagram-btn:hover {
-    background-color: transparent;
-    color: var(--white);
+.reels-section .header .instagram-btn:hover {
+    width: 176px;
+    /* expands to 44 tailwind units */
 }
 
-.reels-section .instagram-btn i {
-    font-size: 14px;
-    margin-left: 10px;
+/* Icon */
+.reels-section .header .instagram-btn .icon {
+    width: 32px;
+    height: 32px;
+    fill: #fafafa;
+    flex-shrink: 0;
+}
+
+/* Username Text */
+.reels-section .header .instagram-btn span {
+    border-left: 2px solid rgba(255, 255, 255, 0.6);
+    padding-left: 6px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease, opacity 0.1s ease;
+    white-space: nowrap;
+}
+
+/* Hover reveal with delay */
+.reels-section .header .instagram-btn:hover span {
+    opacity: 1;
+    transform: scaleX(1);
+    transition: all 0.3s ease 0.5s;
+}
+
+/* Pink diamond behind (the ::before element) */
+.reels-section .header .instagram-btn::before {
+    content: "";
+    position: absolute;
+    left: 32px;
+    width: 24px;
+    height: 24px;
+    background-color: #db2777;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    z-index: -1;
+    transition: all 0.7s ease;
+}
+
+.reels-section .header .instagram-btn:hover::before {
+    left: 160px;
+    background-color: #ec4899;
 }
 
 
@@ -1259,6 +1295,10 @@
 
     .reels-section .video-item {
         aspect-ratio: 9 / 12;
+    }
+
+    .reels-section .title {
+        font-size: 1.7rem;
     }
 
     .review-section .review-container .video-review {
