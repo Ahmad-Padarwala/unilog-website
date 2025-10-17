@@ -44,11 +44,21 @@ header .top-bar .top-bar-container a.email-link {
     font-size: 16px;
 }
 
+header .top-bar .top-bar-container .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 header .top-bar .top-bar-container .social-icons a {
-    margin-left: 15px;
     color: var(--white);
     text-decoration: none;
     font-size: 16px;
+    transition: scale 0.3s ease-in-out;
+}
+
+header .top-bar .top-bar-container .social-icons a:hover {
+    scale: 1.2;
 }
 
 /* Navbar */
@@ -362,6 +372,10 @@ header .mobile-menu .mobile-menu-list li a:hover {
     color: var(--primary);
 }
 
+header .mobile-menu .mobile-menu-list li a.active {
+    color: var(--primary);
+}
+
 header .mobile-menu .mobile-menu-list .contact-btn {
     width: fit-content;
     margin-top: 10px;
@@ -617,73 +631,134 @@ header nav#navbar .menu-toggle {
 
 /* Toast Container */
 .toast-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  font-family: "Inter", system-ui, sans-serif;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: "Inter", system-ui, sans-serif;
 }
 
 /* Toast Base */
 .toast {
-  position: relative;
-  background: #1a1a1a;
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
-  opacity: 0;
-  transform: translateX(120%);
-  transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  min-width: 260px;
-  max-width: 360px;
+    position: relative;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transform: translateX(120%);
+    transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    min-width: 260px;
+    max-width: 360px;
 }
 
 /* Show animation */
 .toast.show {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Success / Error / Info Variants */
 .toast.success {
-  border-left: 4px solid #00c853;
-  background: #102e1c;
-  box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+    border-left: 4px solid #00c853;
+    background: #102e1c;
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
 }
 
 .toast.error {
-  border-left: 4px solid #e53935;
-  background: #2d1616;
-  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
+    border-left: 4px solid #e53935;
+    background: #2d1616;
+    box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
 }
 
 .toast.info {
-  border-left: 4px solid #1e88e5;
-  background: #152238;
-  box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+    border-left: 4px solid #1e88e5;
+    background: #152238;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
 }
 
 /* Optional: subtle entry glow */
 .toast.show::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05) inset;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05) inset;
+    pointer-events: none;
 }
 
 /* Optional: exit animation */
 .toast.hide {
-  opacity: 0;
-  transform: translateX(120%);
-  transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateX(120%);
+    transition: all 0.4s ease;
+}
+
+/* new */
+/* --- Single Swiper Dropdown (no sidebar) --- */
+/* Single Swiper Dropdown */
+header nav#navbar .dropdown-menu.single-swiper-menu {
+    width: 900px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 370px;
+    /* dynamic height */
+    overflow: visible;
+    /* allow vertical content */
+}
+
+header nav#navbar .dropdown-menu.single-swiper-menu .dropdown-right {
+    width: 100%;
+    padding: 0;
+    height: -webkit-fill-available;
+    /* allow vertical overflow */
+}
+
+header nav#navbar .dropdown-menu.single-swiper-menu .dropdown-content {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    right: 0px;
+}
+
+header nav#navbar .dropdown-menu.single-swiper-menu .dropdown-content.swiper {
+    position: relative;
+    pointer-events: auto;
+    overflow: visible;
+    /* let content-card descriptions show */
+}
+
+header nav#navbar .dropdown-menu.single-swiper-menu .swiper-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* remove forced height */
+}
+
+header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide .content-card {
+    height: 100%;
+    /* adjust to description text */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide .content-card img {
+    width: 200px;
+    height: auto;
 }

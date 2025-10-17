@@ -24,7 +24,7 @@ document.querySelectorAll('.dropdown-sidebar .sidebar-card').forEach(item => {
         item.classList.add('active');
 
         // Hide all contents
-        document.querySelectorAll('.dropdown-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.one-content').forEach(content => content.classList.remove('active'));
 
         // Show the matched one
         const target = item.getAttribute('data-target');
@@ -49,7 +49,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 //dropdown content swiper
 document.addEventListener("DOMContentLoaded", () => {
-    const dropdowns = document.querySelectorAll(".dropdown-content");
+    const dropdowns = document.querySelectorAll(".one-content");
 
     dropdowns.forEach((dropdown, index) => {
         new Swiper(dropdown, {
@@ -67,4 +67,27 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         });
     });
+});
+
+
+
+// Machine Product dropdown swiper
+document.addEventListener("DOMContentLoaded", () => {
+    const machineProductSlider = document.querySelector("#machine-product-slider");
+    if (machineProductSlider) {
+        new Swiper(machineProductSlider, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: false,
+            navigation: {
+                nextEl: machineProductSlider.querySelector(".swiper-button-next"),
+                prevEl: machineProductSlider.querySelector(".swiper-button-prev"),
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+        });
+    }
 });

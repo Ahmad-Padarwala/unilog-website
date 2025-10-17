@@ -725,25 +725,6 @@
     transition: all 0.3s ease 0.5s;
 }
 
-/* Pink diamond behind (the ::before element) */
-.reels-section .header .instagram-btn::before {
-    content: "";
-    position: absolute;
-    left: 32px;
-    width: 24px;
-    height: 24px;
-    background-color: #db2777;
-    transform: rotate(45deg);
-    border-radius: 2px;
-    z-index: -1;
-    transition: all 0.7s ease;
-}
-
-.reels-section .header .instagram-btn:hover::before {
-    left: 160px;
-    background-color: #ec4899;
-}
-
 
 
 /* review section */
