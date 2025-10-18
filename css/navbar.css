@@ -758,6 +758,11 @@ header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide .content-card 
     gap: 10px;
 }
 
+/* Active state (fade + slide in) */
+header nav#navbar .dropdown-menu.single-swiper-menu .dropdown-content.active {
+    transform: translateY(15px);
+}
+
 header nav#navbar .dropdown .dropdown-menu.single-swiper-menu .dropdown-content .custom-next {
     right: 0px !important;
 }
@@ -765,4 +770,9 @@ header nav#navbar .dropdown .dropdown-menu.single-swiper-menu .dropdown-content 
 header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide .content-card img {
     width: 200px;
     height: auto;
+}
+
+header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide .content-card img.image-2 {
+    width: 180px;
+    height: 214px;
 }
