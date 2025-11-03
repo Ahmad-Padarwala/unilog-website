@@ -1,0 +1,206 @@
+/* hero section */
+.product-hero-section {
+    position: relative;
+    max-width: 2000px;
+    margin-top: 130px;
+    background-image: url('../image/product-unilog/hero-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 50vh;
+    padding: 50px 0;
+}
+
+.product-hero-section .content-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 550px;
+}
+
+.product-hero-section .content-card .title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--black);
+}
+
+.product-hero-section .content-card .description {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--black);
+}
+
+.product-hero-section .content-card .badges {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.product-hero-section .content-card .badges span {
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.product-hero-section .content-card .badges span.price {
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: 600;
+}
+
+/* product desction section */
+.product-description-section {
+    padding: 50px 0;
+    background-color: #F5F5F5;
+}
+
+.product-description-section .header {
+    text-align: center;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.product-description-section .header .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.product-description-section .header .description {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--black);
+    text-align: center;
+}
+
+/* Product Content Section */
+.product-content {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.product-card .content {
+    width: 50%;
+}
+
+.product-card:nth-child(even) .content {
+    order: 2;
+}
+
+.product-card .image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.product-card .image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.feature-points {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+.point-item .number {
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.point-item p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 500;
+    flex: 1;
+}
+
+/* Responsive Design for Product Card */
+@media screen and (max-width: 1200px) {
+    .product-card {
+        gap: 10px;
+    }
+
+    .feature-points {
+        gap: 15px;
+    }
+
+    .product-card .image {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-content {
+        row-gap: 20px;
+    }
+
+    .product-card {
+        gap: 20px;
+    }
+
+    .product-card .content {
+        width: 100%;
+    }
+
+    .point-item .number {
+        font-size: 16px;
+    }
+
+    .point-item p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .product-card {
+        flex-direction: column;
+    }
+
+    .product-card:nth-child(even) .content {
+        order: unset;
+    }
+
+}

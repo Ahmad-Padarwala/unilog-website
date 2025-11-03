@@ -287,11 +287,11 @@ header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-next:hover 
 
 /* Positioning (so both sliders stay correct) */
 header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-prev {
-    left: -20px !important;
+    left: -25px !important;
 }
 
 header nav#navbar .dropdown .dropdown-menu .dropdown-content .custom-next {
-    right: -20px !important;
+    right: -6px !important;
 }
 
 /* Optional: adjust icon size */
