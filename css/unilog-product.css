@@ -287,5 +287,4 @@
     .product-description-section .product-content .product-card:nth-child(even) .content {
         order: unset;
     }
-
 }

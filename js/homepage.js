@@ -94,10 +94,34 @@ const productsData = {
     }
   ],
   product: [
-    { img: "./image/hero-machine-1.webp", title: "Product 1", desc: "Best selling product 1.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", link: "product.html" },
-    { img: "./image/hero-machine-2.webp", title: "Product 2", desc: "Best selling product 2.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", link: "product2.html" },
-    { img: "./image/hero-machine-3.webp", title: "Product 3", desc: "Best selling product 3.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", link: "product.html" },
-    { img: "./image/hero-machine-4.webp", title: "Product 4", desc: "Best selling product 4.", imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", link: "product2.html" }
+    {
+      img: "./image/hero-machine-1.webp",
+      title: "Product 1",
+      desc: "Best selling product 1.",
+      imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      link: "product.html"
+    },
+    {
+      img: "./image/hero-machine-2.webp",
+      title: "Product 2",
+      desc: "Best selling product 2.",
+      imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      link: "product2.html"
+    },
+    {
+      img: "./image/hero-machine-3.webp",
+      title: "Product 3",
+      desc: "Best selling product 3.",
+      imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      link: "product.html"
+    },
+    {
+      img: "./image/hero-machine-4.webp",
+      title: "Product 4",
+      desc: "Best selling product 4.",
+      imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      link: "product2.html"
+    }
   ]
 };
 function renderProducts(items) {

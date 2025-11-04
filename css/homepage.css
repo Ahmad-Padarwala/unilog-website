@@ -1736,18 +1736,6 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
-/* Static design - no floating animation needed */
-
-/* Product-item elements removed */
-
-/* Product-number removed */
-
-/* Product-item colors removed */
-
-/* Product-number pseudo-elements removed */
-
-/* All product-title and hover effects removed */
-
 /* Description Panel */
 .description-panel {
     flex: 1;
