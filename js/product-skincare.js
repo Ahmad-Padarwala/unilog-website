@@ -66,11 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Filter tab functionality
         const filterTabs = document.querySelectorAll('.filter-tab');
-        console.log('Found filter tabs:', filterTabs.length); // Debug log
         filterTabs.forEach(tab => {
             tab.addEventListener('click', function () {
                 const category = this.dataset.category;
-                console.log('Filter tab clicked:', category); // Debug log
                 setActiveTab(this);
                 filterByCategory(category);
             });
@@ -253,13 +251,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function clearAllFilters() {
-        console.log('Clear all filters clicked'); // Debug log
-        
         // Reset search input
         const searchInput = document.getElementById('productSearch');
         if (searchInput) {
             searchInput.value = '';
-            console.log('Search input cleared'); // Debug log
         }
 
         // Reset to "All Products" tab
@@ -269,7 +264,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const allTab = document.querySelector('.filter-tab[data-category="all"]');
         if (allTab) {
             allTab.classList.add('active');
-            console.log('All products tab activated'); // Debug log
         }
 
         // Hide search suggestions
@@ -278,7 +272,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Render all products
         renderProducts(products);
         updateResultsCount(products.length);
-        console.log('All products rendered'); // Debug log
     }
 
     function updateResultsCount(count) {
@@ -291,17 +284,3 @@ document.addEventListener('DOMContentLoaded', function () {
     // Make selectSuggestion available globally
     window.selectSuggestion = selectSuggestion;
 });
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    window.skincareProducts = new SkincareProductListing();
-});
-
-// Also initialize if DOM is already loaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        window.skincareProducts = new SkincareProductListing();
-    });
-} else {
-    window.skincareProducts = new SkincareProductListing();
-}
