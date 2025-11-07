@@ -342,8 +342,8 @@ header .mobile-menu {
 }
 
 header .mobile-menu.active {
-    max-height: 400px;
-    padding: 30px;
+    max-height: 600px;
+    padding: 15px;
     border-top: 2px solid var(--black);
     opacity: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -548,6 +548,9 @@ header nav#navbar .menu-toggle {
 }
 
 @media (max-width: 950px) {
+    header nav#navbar {
+        padding: 10px 10px;
+    }
 
     header nav#navbar .nav-links,
     header .contact-btn {
@@ -556,6 +559,83 @@ header nav#navbar .menu-toggle {
 
     header nav#navbar .menu-toggle {
         display: block;
+    }
+
+    /* Mobile Dropdown Styles */
+    header .mobile-menu .mobile-dropdown {
+        position: relative;
+    }
+
+    header .mobile-menu .mobile-dropdown>a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .mobile-menu .mobile-dropdown .dropdown-arrow {
+        transition: transform 0.3s ease;
+        font-size: 12px;
+        color: var(--black);
+    }
+
+    header .mobile-menu .mobile-dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    header .mobile-menu .mobile-dropdown-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: transparent;
+        margin-left: 15px;
+    }
+
+    header .mobile-menu .mobile-dropdown.active .mobile-dropdown-content {
+        max-height: 400px;
+        padding: 10px 0;
+    }
+
+    header .mobile-menu .mobile-dropdown-content .mobile-category {
+        margin-bottom: 8px;
+    }
+
+    header .mobile-menu .mobile-dropdown-content .mobile-category:last-child {
+        margin-bottom: 0;
+    }
+
+    header .mobile-menu .mobile-dropdown-content .mobile-category-title {
+        color: var(--black);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    header .mobile-menu .mobile-dropdown-content .mobile-product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    header .mobile-menu .mobile-dropdown-content .mobile-product-link {
+        color: var(--black);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 5px 0;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    header .mobile-menu .mobile-dropdown-content .mobile-product-link:hover {
+        color: var(--primary);
+        padding-left: 10px;
+    }
+
+    header .mobile-menu .mobile-dropdown-content .mobile-product-link:last-child {
+        border-bottom: none;
     }
 }
 
@@ -695,9 +775,7 @@ header nav#navbar .dropdown-menu.single-swiper-menu {
     justify-content: center;
     align-items: flex-start;
     height: 370px;
-    /* dynamic height */
     overflow: visible;
-    /* allow vertical content */
 }
 
 header nav#navbar .dropdown:hover .single-swiper-menu {
@@ -708,7 +786,6 @@ header nav#navbar .dropdown-menu.single-swiper-menu .dropdown-right {
     width: 100%;
     padding: 0;
     height: -webkit-fill-available;
-    /* allow vertical overflow */
 }
 
 header nav#navbar .dropdown-menu.single-swiper-menu .dropdown-content {
@@ -722,7 +799,6 @@ header nav#navbar .dropdown-menu.single-swiper-menu .dropdown-content.swiper {
     position: relative;
     pointer-events: auto;
     overflow: visible;
-    /* let content-card descriptions show */
 }
 
 header nav#navbar .dropdown-menu.single-swiper-menu .swiper-wrapper {
@@ -734,12 +810,10 @@ header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* remove forced height */
 }
 
 header nav#navbar .dropdown-menu.single-swiper-menu .swiper-slide .content-card {
     height: 100%;
-    /* adjust to description text */
     display: flex;
     flex-direction: column;
     gap: 10px;

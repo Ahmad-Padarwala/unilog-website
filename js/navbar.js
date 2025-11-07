@@ -15,6 +15,46 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
+// Mobile dropdown functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    
+    mobileDropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('a');
+        const dropdownContent = dropdown.querySelector('.mobile-dropdown-content');
+        
+        dropdownLink.addEventListener('click', (e) => {
+            // Only prevent default if clicking on the arrow area or if we want to toggle
+            const clickedOnArrow = e.target.classList.contains('dropdown-arrow') || 
+                                 e.target.closest('.dropdown-arrow');
+            
+            if (clickedOnArrow || dropdown.classList.contains('active')) {
+                e.preventDefault();
+                
+                // Close other dropdowns
+                mobileDropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+            }
+            // If dropdown is not active and not clicking on arrow, allow normal navigation
+        });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.mobile-dropdown')) {
+            mobileDropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+});
+
 
 // navbar mega menu
 document.querySelectorAll('.dropdown-sidebar .sidebar-card').forEach(item => {
