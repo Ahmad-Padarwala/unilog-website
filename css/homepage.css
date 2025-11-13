@@ -364,8 +364,9 @@
 }
 
 .product-section .product-image img {
-    max-width: 200px;
+    width: auto;
     height: auto;
+    max-height: 215px;
 }
 
 .product-section .product-info {

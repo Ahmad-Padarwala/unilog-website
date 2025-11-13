@@ -95,30 +95,30 @@ const productsData = {
   ],
   product: [
     {
-      img: "./image/hero-machine-1.webp",
-      title: "Product 1",
-      desc: "Best selling product 1.",
+      img: "./image/product-unilog/aa-complex.webp",
+      title: "AA Complex",
+      desc: "Exosomes powered black peel for the management of Grade I-IV Acne.",
       imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       link: "product.html"
     },
     {
-      img: "./image/hero-machine-2.webp",
-      title: "Product 2",
-      desc: "Best selling product 2.",
+      img: "./image/product-unilog/acnepeel.webp",
+      title: "Acnepeel Exo",
+      desc: "Exosomes powered black peel for the management of Grade I-IV Acne.",
       imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       link: "product2.html"
     },
     {
-      img: "./image/hero-machine-3.webp",
-      title: "Product 3",
-      desc: "Best selling product 3.",
+      img: "./image/product-unilog/epidew.webp",
+      title: "Epidew",
+      desc: "Intense Hydrating Biomimic Skin Booster.",
       imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       link: "product.html"
     },
     {
-      img: "./image/hero-machine-4.webp",
-      title: "Product 4",
-      desc: "Best selling product 4.",
+      img: "./image/product-unilog/scalpon.webp",
+      title: "Scalpon",
+      desc: "Advanced Liposomal Hair Growth Modulator.",
       imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       link: "product2.html"
     }
