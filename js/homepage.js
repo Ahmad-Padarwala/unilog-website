@@ -91,7 +91,21 @@ const productsData = {
       desc: "Premium USFDA-approved 4-wavelength diode laser.",
       imageDesc: "Best 60W CO2 fractional laser, best laser for acne scars, best laser for vaginal tightening, best CO2 fractional laser, high quality CO2 fractional laser.",
       link: "EpiliteHP.html"
-    }
+    },
+    {
+      img: "./image/hero-machine-4.webp",
+      title: "LUMA 2000",
+      desc: "LUMA 2000- High quality android-based Diode laser system.",
+      imageDesc: "LUMA 2000 has 4 wavelengths (755nm+810nm+ 980nm+ 1064nm ) that works together for safe & comfortable hair reduction system. LUMA 2000 has multiple attachement, perfect choice for full body hair reduction treatment.",
+      link: "luma2000.html"
+    },
+    {
+      img: "./image/hero-machine-4.webp",
+      title: "LUMA 3000",
+      desc: "Unleash powerful, permanent results; this is next-level diode laser technology.",
+      imageDesc: "LUMA 3000 is powerful 3000W diode laser system which works 40% more faster for hair reduction system. LUMA 3000 helps in achieving skin confidence with its advance 4 wavelength technology.",
+      link: "luma3000.html"
+    },
   ],
   product: [
     {

@@ -58,11 +58,20 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 6,
-            name: "Epiglow diode laser",
+            name: "LUMA 2000",
             category: "laser-hair",
             price: "mid-range",
             image: "./image/hero-machine-2.webp",
             description: "new verticle hair removal device with economical price safe for all skin and hair type.",
+            link: "./EpiglowDiodelaser.html"
+        },
+        {
+            id: 7,
+            name: "LUMA 3000",
+            category: "laser-hair",
+            price: "mid-range",
+            image: "./image/hero-machine-2.webp",
+            description: "Unleash powerful, permanent results; this is next-level diode laser technology.",
             link: "./EpiglowDiodelaser.html"
         },
     ]
