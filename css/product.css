@@ -450,7 +450,8 @@ main {
   box-shadow: var(--shadow-md);
   text-align: center;
   width: 200px;
-  height: 200px;
+  height: auto;
+  /* height: 200px; */
   transition: all var(--transition-normal);
   border: 1px solid transparent;
   backdrop-filter: blur(10px);
@@ -738,7 +739,8 @@ main {
 
   .power-section .stat-card {
     width: 140px;
-    height: 140px;
+    height: auto;
+    /* height: 140px; */
     padding: 10px;
   }
 
@@ -831,7 +833,8 @@ main {
   .power-section .stat-card {
     padding: 8px;
     width: 160px;
-    height: 160px;
+    height: auto;
+    /* height: 160px; */
   }
 
   .power-section .stat-card .stat-icon {

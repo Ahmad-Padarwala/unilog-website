@@ -135,7 +135,7 @@ header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar {
     background: var(--primary);
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
     padding: 20px;
     width: 280px;
     border-radius: 0 0 0 10px;
