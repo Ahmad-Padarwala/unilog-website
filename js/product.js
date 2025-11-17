@@ -37,17 +37,17 @@ window.addEventListener("load", () => {
     ];
     
     //old size
-    // const imgStates = [
-    //     { width: 600 },
-    //     { width: 400 },
-    //     { width: 250 }
-    // ];
-    //new size
     const imgStates = [
-        { width: 450 },
-        { width: 300 },
-        { width: 200 }
+        { width: 600 },
+        { width: 400 },
+        { width: 250 }
     ];
+    //new size
+    // const imgStates = [
+    //     { width: 450 },
+    //     { width: 300 },
+    //     { width: 230 }
+    // ];
 
     const sections = document.querySelectorAll(".product-container");
 

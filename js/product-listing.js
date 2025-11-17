@@ -29,35 +29,17 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "Multifunctional platform combining photodynamic therapy with oxygen infusion for comprehensive skin treatment.",
             link: "./OxyrichPDT.html"
         },
-        {
+         {
             id: 4,
-            name: "4Dtec Laser Device",
-            category: "laser-hair",
-            price: "luxury",
-            image: "./image/hero-machine-2.webp",
-            description: "Revolutionary 4-wavelength diode laser system for comprehensive hair removal across all skin types.",
-            link: "./4Dteclaserdevice.html"
-        },
-        {
-            id: 5,
-            name: "Ice 1200 Diode Laser",
-            category: "laser-hair",
-            price: "premium",
-            image: "./image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
-            description: "USFDA approved 4-wavelength diode laser with advanced sapphire cooling technology.",
-            link: "./Ice1200diodelaserdevice.html"
-        },
-        {
-            id: 6,
-            name: "Epilite HP",
+            name: "LUMA 3000",
             category: "laser-hair",
             price: "mid-range",
             image: "./image/hero-machine-2.webp",
-            description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort.",
-            link: "./EpiliteHP.html"
+            description: "Unleash powerful, permanent results; this is next-level diode laser technology.",
+            link: "./EpiglowDiodelaser.html"
         },
         {
-            id: 6,
+            id: 5,
             name: "LUMA 2000",
             category: "laser-hair",
             price: "mid-range",
@@ -66,13 +48,51 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./EpiglowDiodelaser.html"
         },
         {
+            id: 6,
+            name: "4DTECLASER",
+            category: "laser-hair",
+            price: "luxury",
+            image: "./image/hero-machine-2.webp",
+            description: "Revolutionary 4-wavelength diode laser system for comprehensive hair removal across all skin types.",
+            link: "./4Dteclaserdevice.html"
+        },
+        {
             id: 7,
-            name: "LUMA 3000",
+            name: "ICE 1200",
+            category: "laser-hair",
+            price: "premium",
+            image: "./image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
+            description: "USFDA approved 4-wavelength diode laser with advanced sapphire cooling technology.",
+            link: "./Ice1200diodelaserdevice.html"
+        },
+        {
+            id: 8,
+            name: "EPILITE HP",
             category: "laser-hair",
             price: "mid-range",
             image: "./image/hero-machine-2.webp",
-            description: "Unleash powerful, permanent results; this is next-level diode laser technology.",
-            link: "./EpiglowDiodelaser.html"
+            description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort.",
+            link: "./EpiliteHP.html"
+        },
+        
+       
+        {
+            id: 9,
+            name: "LUMASPOT",
+            category: "yag-laser",
+            price: "mid-range",
+            image: "./image/hero-machine-2.webp",
+            description: "LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
+            link: "./lumaspot.html"
+        },
+        {
+            id: 10,
+            name: "PICOFOCUS",
+            category: "yag-laser",
+            price: "mid-range",
+            image: "./image/hero-machine-2.webp",
+            description: "top powerful technology for pigment and tattoo removal treatment.",
+            link: "./picofocus.html"
         },
     ]
 

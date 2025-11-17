@@ -73,14 +73,28 @@ const productsData = {
     },
     {
       img: "./image/hero-machine-4.webp",
-      title: "4Dteclaser device",
+      title: "LUMA 3000",
+      desc: "Unleash powerful, permanent results; this is next-level diode laser technology.",
+      imageDesc: "LUMA 3000 is powerful 3000W diode laser system which works 40% more faster for hair reduction system. LUMA 3000 helps in achieving skin confidence with its advance 4 wavelength technology.",
+      link: "luma3000.html"
+    },
+    {
+      img: "./image/hero-machine-4.webp",
+      title: "LUMA 2000",
+      desc: "LUMA 2000- High quality android-based Diode laser system.",
+      imageDesc: "LUMA 2000 has 4 wavelengths (755nm+810nm+ 980nm+ 1064nm ) that works together for safe & comfortable hair reduction system. LUMA 2000 has multiple attachement, perfect choice for full body hair reduction treatment.",
+      link: "luma2000.html"
+    },
+    {
+      img: "./image/hero-machine-4.webp",
+      title: "4DTECLASER",
       desc: "Advanced 4-wavelength diode laser for all skin and hair types.",
       imageDesc: "Best 4 wavelength diode laser device, best FDA approved laser device, best 1200W diode laser, best laser for hair removal treatment, painless device for hair removal treatment.",
       link: "4Dteclaserdevice.html"
     },
     {
       img: "./image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
-      title: "Ice 1200 DLD",
+      title: "ICE 1200",
       desc: "USFDA-approved 4-wavelength diode laser for safe, effective hair reduction.",
       imageDesc: "Best Cryolipolysis device, safest cryolipolysis device, fastest cryolipolysis device, best cooling cryolipolysis device, premium result oriented cryolipolysis device, best fat reduction device.",
       link: "Ice1200diodelaserdevice.html"
@@ -94,18 +108,18 @@ const productsData = {
     },
     {
       img: "./image/hero-machine-4.webp",
-      title: "LUMA 2000",
-      desc: "LUMA 2000- High quality android-based Diode laser system.",
-      imageDesc: "LUMA 2000 has 4 wavelengths (755nm+810nm+ 980nm+ 1064nm ) that works together for safe & comfortable hair reduction system. LUMA 2000 has multiple attachement, perfect choice for full body hair reduction treatment.",
-      link: "luma2000.html"
+      title: "LUMASPOT",
+      desc: "Picosecond laser works on 4 operational modes for better results.",
+      imageDesc: " LUMASPOT is active Q switch Nd:Yag laser system with most advance technology with very short pulse width and high power. LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
+      link: "lumaspot.html"
     },
     {
       img: "./image/hero-machine-4.webp",
-      title: "LUMA 3000",
-      desc: "Unleash powerful, permanent results; this is next-level diode laser technology.",
-      imageDesc: "LUMA 3000 is powerful 3000W diode laser system which works 40% more faster for hair reduction system. LUMA 3000 helps in achieving skin confidence with its advance 4 wavelength technology.",
-      link: "luma3000.html"
-    },
+      title: "PICOFOCUS",
+      desc: "Top powerful technology for pigment and tattoo removal treatment.",
+      imageDesc: " Picofocus laser works on picosecond technology that works 100 times faster than traditional nanosecond technology, as a result, the Picofocus laser system breaks up tattoos faster than traditional laser. Picofocus laser will shatter even tiny ink particles making it easier for the body to clear the tattoo ink.",
+      link: "picofocus.html"
+    }
   ],
   product: [
     {
