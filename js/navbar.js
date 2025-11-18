@@ -45,6 +45,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    // Nested category dropdown functionality
+    const mobileCategories = document.querySelectorAll('.mobile-category');
+    
+    mobileCategories.forEach(category => {
+        const categoryTitle = category.querySelector('.mobile-category-title');
+        
+        if (categoryTitle) {
+            categoryTitle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                
+                // Get parent dropdown to find sibling categories
+                const parentDropdown = category.closest('.mobile-dropdown-content');
+                const siblingCategories = parentDropdown.querySelectorAll('.mobile-category');
+                
+                // Close other categories in the same dropdown
+                siblingCategories.forEach(otherCategory => {
+                    if (otherCategory !== category) {
+                        otherCategory.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current category
+                category.classList.toggle('active');
+            });
+        }
+    });
+    
     // Close dropdowns when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.mobile-dropdown')) {
