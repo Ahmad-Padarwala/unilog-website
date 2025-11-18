@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Oxyrich PDT+",
             category: "medi-facial",
             price: "premium",
-            image: "./image/hero-machine-1.webp",
+            image: "./image/product/OxyrichPDT/pdt.webp",
             description: "Multifunctional platform combining photodynamic therapy with oxygen infusion for comprehensive skin treatment.",
             link: "./OxyrichPDT.html"
         },
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "LUMA 3000",
             category: "laser-hair",
             price: "mid-range",
-            image: "./image/hero-machine-2.webp",
+            image: "./image/product/luma3000/luma-3000.webp",
             description: "Unleash powerful, permanent results; this is next-level diode laser technology.",
             link: "./EpiglowDiodelaser.html"
         },
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "LUMA 2000",
             category: "laser-hair",
             price: "mid-range",
-            image: "./image/hero-machine-2.webp",
+            image: "./image/product/luma2000/luma-2000.webp",
             description: "new verticle hair removal device with economical price safe for all skin and hair type.",
             link: "./EpiglowDiodelaser.html"
         },
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "4DTECLASER",
             category: "laser-hair",
             price: "luxury",
-            image: "./image/hero-machine-2.webp",
+            image: "./image/product/4Dteclaserdevice/4dteclaser.webp",
             description: "Revolutionary 4-wavelength diode laser system for comprehensive hair removal across all skin types.",
             link: "./4Dteclaserdevice.html"
         },
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "EPILITE HP",
             category: "laser-hair",
             price: "mid-range",
-            image: "./image/hero-machine-2.webp",
+            image: "./image/product/EpiliteHP/epilite.webp",
             description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort.",
             link: "./EpiliteHP.html"
         },
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "LUMASPOT",
             category: "yag-laser",
             price: "mid-range",
-            image: "./image/hero-machine-2.webp",
+            image: "./image/product/lumaspot/lumaspot.webp",
             description: "LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
             link: "./lumaspot.html"
         },
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "PICOFOCUS",
             category: "yag-laser",
             price: "mid-range",
-            image: "./image/hero-machine-2.webp",
+            image: "./image/product/picofocus/picofocus.webp",
             description: "top powerful technology for pigment and tattoo removal treatment.",
             link: "./picofocus.html"
         },

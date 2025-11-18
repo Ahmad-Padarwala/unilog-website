@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Acnepeel Exo",
             category: "chemical-peels",
             price: "premium",
-            image: "./image/product-unilog/acnepeel.webp",
+            image: "./image/skincare-product/acnepeel.webp",
             description: "India's first black peel with triple exosomes in highly stable gel form for Grade I-IV acne management.",
             link: "./Acnepeelexo.html"
         },
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "AA Complex",
             category: "skin-boosters",
             price: "premium",
-            image: "./image/product-unilog/aa-complex.webp",
+            image: "./image/skincare-product/aa-complex.webp",
             description: "Innovative repairing, brightening & age reversing complex for comprehensive skin care and anti-aging treatments.",
             link: "./AAComplex.html"
         },
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Epidew",
             category: "skin-boosters",
             price: "mid-range",
-            image: "./image/product-unilog/epidew.webp",
+            image: "./image/skincare-product/epidew.webp",
             description: "Intense Hydrating Biomimic Skin Booster for deep hydration and skin rejuvenation with advanced technology.",
             link: "./Epidew.html"
         },
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Scalpon",
             category: "hair-growth",
             price: "premium",
-            image: "./image/product-unilog/scalpon.webp",
+            image: "./image/skincare-product/scalpon.webp",
             description: "Advanced Liposomal Hair Growth Modulator for effective hair restoration therapy and scalp treatment.",
             link: "./Scalpon.html"
         }

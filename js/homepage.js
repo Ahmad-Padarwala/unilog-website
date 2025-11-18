@@ -65,28 +65,28 @@ const productsData = {
       link: "HydraluxeAquastar.html"
     },
     {
-      img: "./image/hero-machine-3.webp",
+      img: "./image/product/OxyrichPDT/pdt.webp",
       title: "Oxyrich PDT+",
       desc: "Premium hydra facial device with analyzer and oxygen dome.",
       imageDesc: "Best Q switch Nd:Yag laser, best FDA approved Q switch Nd:Yag, premium Q switch Nd:Yag laser for pigmentation removal, best laser for tattoo removal.",
       link: "OxyrichPDT.html"
     },
     {
-      img: "./image/hero-machine-4.webp",
+      img: "./image/product/luma3000/luma-3000.webp",
       title: "LUMA 3000",
       desc: "Unleash powerful, permanent results; this is next-level diode laser technology.",
       imageDesc: "LUMA 3000 is powerful 3000W diode laser system which works 40% more faster for hair reduction system. LUMA 3000 helps in achieving skin confidence with its advance 4 wavelength technology.",
       link: "luma3000.html"
     },
     {
-      img: "./image/hero-machine-4.webp",
+      img: "./image/product/luma2000/luma-2000.webp",
       title: "LUMA 2000",
       desc: "LUMA 2000- High quality android-based Diode laser system.",
       imageDesc: "LUMA 2000 has 4 wavelengths (755nm+810nm+ 980nm+ 1064nm ) that works together for safe & comfortable hair reduction system. LUMA 2000 has multiple attachement, perfect choice for full body hair reduction treatment.",
       link: "luma2000.html"
     },
     {
-      img: "./image/hero-machine-4.webp",
+      img: "./image/product/4Dteclaserdevice/4dteclaser.webp",
       title: "4DTECLASER",
       desc: "Advanced 4-wavelength diode laser for all skin and hair types.",
       imageDesc: "Best 4 wavelength diode laser device, best FDA approved laser device, best 1200W diode laser, best laser for hair removal treatment, painless device for hair removal treatment.",
@@ -100,21 +100,21 @@ const productsData = {
       link: "Ice1200diodelaserdevice.html"
     },
     {
-      img: "./image/hero-machine-4.webp",
+      img: "./image/product/EpiliteHP/epilite.webp",
       title: "Epilite HP",
       desc: "Premium USFDA-approved 4-wavelength diode laser.",
       imageDesc: "Best 60W CO2 fractional laser, best laser for acne scars, best laser for vaginal tightening, best CO2 fractional laser, high quality CO2 fractional laser.",
       link: "EpiliteHP.html"
     },
     {
-      img: "./image/hero-machine-4.webp",
+      img: "./image/product/lumaspot/lumaspot.webp",
       title: "LUMASPOT",
       desc: "Picosecond laser works on 4 operational modes for better results.",
       imageDesc: " LUMASPOT is active Q switch Nd:Yag laser system with most advance technology with very short pulse width and high power. LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
       link: "lumaspot.html"
     },
     {
-      img: "./image/hero-machine-4.webp",
+      img: "./image/product/picofocus/picofocus.webp",
       title: "PICOFOCUS",
       desc: "Top powerful technology for pigment and tattoo removal treatment.",
       imageDesc: " Picofocus laser works on picosecond technology that works 100 times faster than traditional nanosecond technology, as a result, the Picofocus laser system breaks up tattoos faster than traditional laser. Picofocus laser will shatter even tiny ink particles making it easier for the body to clear the tattoo ink.",
@@ -123,28 +123,28 @@ const productsData = {
   ],
   product: [
     {
-      img: "./image/product-unilog/aa-complex.webp",
+      img: "./image/skincare-product/aa-complex.webp",
       title: "AA Complex",
       desc: "Exosomes powered black peel for the management of Grade I-IV Acne.",
       imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       link: "product.html"
     },
     {
-      img: "./image/product-unilog/acnepeel.webp",
+      img: "./image/skincare-product/acnepeel.webp",
       title: "Acnepeel Exo",
       desc: "Exosomes powered black peel for the management of Grade I-IV Acne.",
       imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       link: "product2.html"
     },
     {
-      img: "./image/product-unilog/epidew.webp",
+      img: "./image/skincare-product/epidew.webp",
       title: "Epidew",
       desc: "Intense Hydrating Biomimic Skin Booster.",
       imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       link: "product.html"
     },
     {
-      img: "./image/product-unilog/scalpon.webp",
+      img: "./image/skincare-product/scalpon.webp",
       title: "Scalpon",
       desc: "Advanced Liposomal Hair Growth Modulator.",
       imageDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
