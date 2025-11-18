@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
         //   yPercent: 0,
         // },
         {
-            bottom: "56%",
+            bottom: "45%",
             right: "50%",
             position: "fixed",
             xPercent: 50,
