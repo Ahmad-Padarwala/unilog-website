@@ -316,91 +316,224 @@ class InteractiveCircle {
     this.circleContainer = document.querySelector(".circle-container");
     this.descriptionPanel = document.querySelector(".description-panel");
     this.segments = document.querySelectorAll(".segment");
-    this.descriptionContents = document.querySelectorAll(
-      ".description-content"
-    );
+    this.shapes = document.querySelectorAll(".shape");
+    this.descriptionContents = document.querySelectorAll(".description-content");
     this.isAnimating = false;
     this.currentProduct = null;
     this.isHovering = false;
+    this.hoverTimeout = null;
+    this.leaveTimeout = null;
   }
 
   init() {
-    if (
-      !this.circleContainer ||
-      !this.descriptionPanel ||
-      !this.segments.length
-    ) {
+    if (!this.circleContainer || !this.descriptionPanel || !this.segments.length) {
       return;
     }
     this.bindEvents();
     this.setupResponsive();
+    this.createHoverAreas();
+  }
+
+  createHoverAreas() {
+    // Create invisible hover areas that are larger than the segments for better UX
+    this.segments.forEach((segment, index) => {
+      const hoverArea = document.createElement('div');
+      hoverArea.className = `hover-area hover-area-${index + 1}`;
+      hoverArea.style.cssText = `
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        z-index: 10;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      `;
+      
+      // Position hover areas based on segment positions
+      const positions = [
+        { top: '15%', left: '65%' }, // segment-1
+        { top: '45%', right: '15%' }, // segment-2  
+        { top: '70%', left: '40%' },  // segment-3
+        { top: '45%', left: '15%' },  // segment-4
+        { top: '15%', left: '25%' }   // segment-5
+      ];
+      
+      const pos = positions[index];
+      Object.assign(hoverArea.style, pos);
+      hoverArea.style.transform = 'translate(-50%, -50%)';
+      
+      this.circleContainer.appendChild(hoverArea);
+      
+      // Add hover events to the larger areas
+      hoverArea.addEventListener('mouseenter', (e) => {
+        e.stopPropagation();
+        this.handleHover(index + 1);
+      });
+      
+      hoverArea.addEventListener('mouseleave', (e) => {
+        e.stopPropagation();
+        this.handleHoverLeave();
+      });
+    });
   }
 
   bindEvents() {
-    // Add hover events to SVG segments instead of product items
-    const segments = document.querySelectorAll(".segment");
-    segments.forEach((segment, index) => {
-      segment.addEventListener("mouseenter", () => {
+    // Enhanced hover events for SVG segments
+    this.segments.forEach((segment, index) => {
+      segment.style.cursor = 'pointer';
+      
+      segment.addEventListener("mouseenter", (e) => {
+        e.stopPropagation();
+        this.handleHover(index + 1);
+      });
+      
+      segment.addEventListener("mouseleave", (e) => {
+        e.stopPropagation();
+        this.handleHoverLeave();
+      });
+    });
+
+    // Add hover events to shape labels as well
+    this.shapes.forEach((shape, index) => {
+      shape.style.cursor = 'pointer';
+      shape.style.zIndex = '15';
+      
+      shape.addEventListener("mouseenter", (e) => {
+        e.stopPropagation();
+        this.handleHover(index + 1);
+      });
+      
+      shape.addEventListener("mouseleave", (e) => {
+        e.stopPropagation();
+        this.handleHoverLeave();
+      });
+    });
+
+    // Add hover events to the entire circle container
+    this.circleContainer.addEventListener("mouseleave", () => {
+      this.handleShowcaseLeave();
+    });
+
+    // Add hover events to description panel to keep it visible
+    this.descriptionPanel.addEventListener("mouseenter", () => {
+      this.clearTimeouts();
+      this.isHovering = true;
+    });
+
+    this.descriptionPanel.addEventListener("mouseleave", () => {
+      this.handleShowcaseLeave();
+    });
+
+    // Add click events for mobile/touch devices
+    this.segments.forEach((segment, index) => {
+      segment.addEventListener("click", (e) => {
+        e.preventDefault();
         this.handleHover(index + 1);
       });
     });
 
-    // Add hover events to the entire showcase for better UX
-    const showcase = document.querySelector(".circle-showcase");
-    if (showcase) {
-      showcase.addEventListener("mouseleave", () => {
-        this.handleShowcaseLeave();
+    this.shapes.forEach((shape, index) => {
+      shape.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.handleHover(index + 1);
       });
+    });
+  }
+
+  clearTimeouts() {
+    if (this.hoverTimeout) {
+      clearTimeout(this.hoverTimeout);
+      this.hoverTimeout = null;
+    }
+    if (this.leaveTimeout) {
+      clearTimeout(this.leaveTimeout);
+      this.leaveTimeout = null;
     }
   }
 
   handleHover(productId) {
-    if (this.isAnimating) {
-      return;
-    }
+    this.clearTimeouts();
+    
+    // Debounce rapid hover events
+    this.hoverTimeout = setTimeout(() => {
+      if (this.currentProduct === productId && this.isHovering) {
+        return; // Already showing this product
+      }
 
-    this.isAnimating = true;
-    this.isHovering = true;
-    this.currentProduct = productId;
+      this.isHovering = true;
+      this.currentProduct = productId;
 
-    // Product items removed - no need to manage active states
+      // Add visual feedback to the hovered segment
+      this.segments.forEach((segment, index) => {
+        segment.classList.toggle('segment-hovered', index + 1 === productId);
+      });
 
-    // Show the corresponding description
-    this.showDescription(productId);
-    this.circleContainer.classList.add("hovered");
-    this.descriptionPanel.classList.add("visible");
+      this.shapes.forEach((shape, index) => {
+        shape.classList.toggle('shape-hovered', index + 1 === productId);
+      });
 
-    // Reset animation flag after transition
-    setTimeout(() => {
-      this.isAnimating = false;
-    }, 500);
+      // Show the corresponding description
+      this.showDescription(productId);
+      this.circleContainer.classList.add("hovered");
+      this.descriptionPanel.classList.add("visible");
+    }, 50); // Small debounce delay
+  }
+
+  handleHoverLeave() {
+    this.clearTimeouts();
+    
+    // Add a small delay before hiding to prevent flickering
+    this.leaveTimeout = setTimeout(() => {
+      if (!this.isHovering) return;
+      this.handleShowcaseLeave();
+    }, 100);
   }
 
   handleShowcaseLeave() {
-    if (!this.isHovering) return;
-
+    this.clearTimeouts();
+    
     this.isHovering = false;
     this.currentProduct = null;
 
-    // Product items removed - no active states to manage
+    // Remove visual feedback from all segments
+    this.segments.forEach(segment => {
+      segment.classList.remove('segment-hovered');
+    });
 
-    // Hide description panel
-    this.circleContainer.classList.remove("hovered");
-    this.descriptionPanel.classList.remove("visible");
+    this.shapes.forEach(shape => {
+      shape.classList.remove('shape-hovered');
+    });
+
+    // Hide description panel with delay
+    this.leaveTimeout = setTimeout(() => {
+      this.circleContainer.classList.remove("hovered");
+      this.descriptionPanel.classList.remove("visible");
+      
+      // Reset to first description after hiding
+      setTimeout(() => {
+        if (!this.isHovering) {
+          this.showDescription(1);
+        }
+      }, 300);
+    }, 200);
   }
 
   showDescription(productId) {
+    if (this.isAnimating) return;
+    
+    this.isAnimating = true;
+    
     // Find current active description
     const currentActive = document.querySelector(".description-content.active");
-
+    
     // Find target description
     const targetDescription = document.querySelector(
       `.description-content[data-product="${productId}"]`
     );
 
-    if (targetDescription) {
+    if (targetDescription && targetDescription !== currentActive) {
       // If there's a current active description, fade it out first
-      if (currentActive && currentActive !== targetDescription) {
+      if (currentActive) {
         currentActive.classList.add("fade-out");
 
         // After fade out completes, switch to new description
@@ -409,23 +542,27 @@ class InteractiveCircle {
           this.descriptionContents.forEach((content) => {
             content.classList.remove("active", "fade-out");
           });
+          
           targetDescription.classList.add("active");
 
-          // Add a subtle shake animation to draw attention
-          targetDescription.style.animation =
-            "slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
-
+          // Reset animation flag
           setTimeout(() => {
-            targetDescription.style.animation = "";
-          }, 600);
-        }, 300);
+            this.isAnimating = false;
+          }, 100);
+        }, 200);
       } else {
         // No current active, show immediately
         this.descriptionContents.forEach((content) => {
           content.classList.remove("active", "fade-out");
         });
         targetDescription.classList.add("active");
+        
+        setTimeout(() => {
+          this.isAnimating = false;
+        }, 100);
       }
+    } else {
+      this.isAnimating = false;
     }
   }
 
@@ -442,9 +579,23 @@ class InteractiveCircle {
       }
     }, 100);
 
-    // Handle responsive behavior
+    // Handle responsive behavior with throttling
+    let resizeTimeout;
     const handleResize = () => {
-      const isMobile = window.innerWidth <= 1200;
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const isMobile = window.innerWidth <= 1200;
+        
+        // On mobile, always show description panel
+        if (isMobile) {
+          this.descriptionPanel.classList.add("visible");
+        } else {
+          // Reset hover state on desktop
+          if (!this.isHovering) {
+            this.descriptionPanel.classList.remove("visible");
+          }
+        }
+      }, 100);
     };
 
     window.addEventListener("resize", handleResize);
@@ -453,8 +604,7 @@ class InteractiveCircle {
 
   // Method to programmatically show a product (for future enhancements)
   showProduct(productId) {
-    this.showDescription(productId);
-    this.currentProduct = productId;
+    this.handleHover(productId);
   }
 }
 
