@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "premium",
             image: "./assets/image/skincare-product/acnepeel.webp",
             description: "India's first black peel with triple exosomes in highly stable gel form for Grade I-IV acne management.",
-            link: "./Acnepeelexo.html"
+            link: "./skincare/Acnepeelexo.html"
         },
         {
             id: 2,
