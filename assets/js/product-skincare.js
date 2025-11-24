@@ -1,100 +1,44 @@
-// Clean Product Listing JavaScript
+// Skincare Products Data and Functionality - Matching machine-product.html exactly
 document.addEventListener('DOMContentLoaded', function () {
     // Product data
     const products = [
         {
             id: 1,
-            name: "Alice super bubble max",
-            category: "medi-facial",
+            name: "Acnepeel Exo",
+            category: "chemical-peels",
             price: "premium",
-            image: "./image/product/Alicesuperbubblemax/1.webp",
-            description: "Revolutionary 8-in-1 HydraFacial system with advanced bubble technology for deep pore cleansing and skin brightening.",
-            link: "./Alicesuperbubblemax.html"
+            image: "./assets/image/skincare-product/acnepeel.webp",
+            description: "India's first black peel with triple exosomes in highly stable gel form for Grade I-IV acne management.",
+            link: "./Acnepeelexo.html"
         },
         {
             id: 2,
-            name: "Hydraluxe Aquastar",
-            category: "medi-facial",
+            name: "AA Complex",
+            category: "skin-boosters",
             price: "premium",
-            image: "./image/product/HydraluxeAquastar/hydralux-1.webp",
-            description: "Advanced skin analyzer with real-time imaging and high-precision probes for comprehensive anti-aging treatments.",
-            link: "./HydraluxeAquastar.html"
+            image: "./assets/image/skincare-product/aa-complex.webp",
+            description: "Innovative repairing, brightening & age reversing complex for comprehensive skin care and anti-aging treatments.",
+            link: "./AAComplex.html"
         },
         {
             id: 3,
-            name: "Oxyrich PDT+",
-            category: "medi-facial",
-            price: "premium",
-            image: "./image/product/OxyrichPDT/pdt.webp",
-            description: "Multifunctional platform combining photodynamic therapy with oxygen infusion for comprehensive skin treatment.",
-            link: "./OxyrichPDT.html"
+            name: "Epidew",
+            category: "skin-boosters",
+            price: "mid-range",
+            image: "./assets/image/skincare-product/epidew.webp",
+            description: "Intense Hydrating Biomimic Skin Booster for deep hydration and skin rejuvenation with advanced technology.",
+            link: "./Epidew.html"
         },
-         {
+        {
             id: 4,
-            name: "LUMA 3000",
-            category: "laser-hair",
-            price: "mid-range",
-            image: "./image/product/luma3000/luma-3000.webp",
-            description: "Unleash powerful, permanent results; this is next-level diode laser technology.",
-            link: "./EpiglowDiodelaser.html"
-        },
-        {
-            id: 5,
-            name: "LUMA 2000",
-            category: "laser-hair",
-            price: "mid-range",
-            image: "./image/product/luma2000/luma-2000.webp",
-            description: "new verticle hair removal device with economical price safe for all skin and hair type.",
-            link: "./EpiglowDiodelaser.html"
-        },
-        {
-            id: 6,
-            name: "4DTECLASER",
-            category: "laser-hair",
-            price: "luxury",
-            image: "./image/product/4Dteclaserdevice/4dteclaser.webp",
-            description: "Revolutionary 4-wavelength diode laser system for comprehensive hair removal across all skin types.",
-            link: "./4Dteclaserdevice.html"
-        },
-        {
-            id: 7,
-            name: "ICE 1200",
-            category: "laser-hair",
+            name: "Scalpon",
+            category: "hair-growth",
             price: "premium",
-            image: "./image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
-            description: "USFDA approved 4-wavelength diode laser with advanced sapphire cooling technology.",
-            link: "./Ice1200diodelaserdevice.html"
-        },
-        {
-            id: 8,
-            name: "EPILITE HP",
-            category: "laser-hair",
-            price: "mid-range",
-            image: "./image/product/EpiliteHP/epilite.webp",
-            description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort.",
-            link: "./EpiliteHP.html"
-        },
-        
-       
-        {
-            id: 9,
-            name: "LUMASPOT",
-            category: "yag-laser",
-            price: "mid-range",
-            image: "./image/product/lumaspot/lumaspot.webp",
-            description: "LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
-            link: "./lumaspot.html"
-        },
-        {
-            id: 10,
-            name: "PICOFOCUS",
-            category: "yag-laser",
-            price: "mid-range",
-            image: "./image/product/picofocus/picofocus.webp",
-            description: "top powerful technology for pigment and tattoo removal treatment.",
-            link: "./picofocus.html"
-        },
-    ]
+            image: "./assets/image/skincare-product/scalpon.webp",
+            description: "Advanced Liposomal Hair Growth Modulator for effective hair restoration therapy and scalp treatment.",
+            link: "./Scalpon.html"
+        }
+    ];
 
     // Initialize the page
     init();
@@ -110,10 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const searchInput = document.getElementById('productSearch');
         const searchBtn = document.getElementById('searchBtn');
 
-        searchInput.addEventListener('input', handleSearchInput);
-        searchInput.addEventListener('focus', showSearchSuggestions);
-        searchInput.addEventListener('blur', hideSearchSuggestions);
-        searchBtn.addEventListener('click', performSearch);
+        if (searchInput) {
+            searchInput.addEventListener('input', handleSearchInput);
+            searchInput.addEventListener('focus', showSearchSuggestions);
+            searchInput.addEventListener('blur', hideSearchSuggestions);
+        }
+        
+        if (searchBtn) {
+            searchBtn.addEventListener('click', performSearch);
+        }
 
         // Filter tab functionality
         const filterTabs = document.querySelectorAll('.filter-tab');
@@ -126,7 +75,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Clear filters
-        document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+        const clearFiltersBtn = document.getElementById('clearFilters');
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', clearAllFilters);
+        }
 
         // Search suggestions
         document.addEventListener('click', function (e) {
@@ -271,11 +223,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function getCategoryLabel(category) {
         const labels = {
-            'medi-facial': 'Medi Facial',
-            'laser-hair': 'Hair Removal',
-            'skin-rejuvenation': 'Skin Rejuvenation',
-            'body-contouring': 'Body Contouring',
-            'laser-therapy': 'Laser Therapy'
+            'chemical-peels': 'Chemical Peels',
+            'skin-boosters': 'Skin Boosters',
+            'hair-growth': 'Hair Growth'
         };
         return labels[category] || category;
     }
@@ -301,33 +251,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function clearAllFilters() {
-        document.getElementById('productSearch').value = '';
+        // Reset search input
+        const searchInput = document.getElementById('productSearch');
+        if (searchInput) {
+            searchInput.value = '';
+        }
 
         // Reset to "All Products" tab
         document.querySelectorAll('.filter-tab').forEach(tab => {
             tab.classList.remove('active');
         });
-        document.querySelector('.filter-tab[data-category="all"]').classList.add('active');
+        const allTab = document.querySelector('.filter-tab[data-category="all"]');
+        if (allTab) {
+            allTab.classList.add('active');
+        }
 
+        // Hide search suggestions
         hideSearchSuggestions();
+        
+        // Render all products
         renderProducts(products);
         updateResultsCount(products.length);
     }
 
     function updateResultsCount(count) {
-        const previewElement = document.getElementById('resultsPreview');
-
-        let text;
-        if (count === 0) {
-            text = 'No products found';
-        } else if (count === 1) {
-            text = 'Showing 1 product';
-        } else {
-            text = `Showing ${count} products`;
-        }
-
-        if (previewElement) {
-            previewElement.querySelector('.results-text').textContent = `${count} products found`;
+        const resultsText = document.querySelector('.results-text');
+        if (resultsText) {
+            resultsText.textContent = `${count} products found`;
         }
     }
 
