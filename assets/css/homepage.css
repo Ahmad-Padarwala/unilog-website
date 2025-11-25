@@ -1712,7 +1712,7 @@
 .shape-1 {
     top: 29%;
     left: 67%;
-    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .shape-2 {
@@ -1730,13 +1730,13 @@
 .shape-4 {
     top: 59%;
     left: 27%;
-    transform: translateX(-50%) translateY(-50%) rotate(-23deg);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .shape-5 {
     top: 27%;
     left: 34%;
-    transform: translateX(-50%) translateY(-50%) rotate(-34deg);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 /* Description Panel */
