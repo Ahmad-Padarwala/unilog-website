@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "premium",
             image: "./assets/image/product/Alicesuperbubblemax/1.webp",
             description: "Revolutionary 8-in-1 HydraFacial system with advanced bubble technology for deep pore cleansing and skin brightening.",
-            link: "./Alicesuperbubblemax.html"
+            link: "./machine/medi-facial/Alicesuperbubblemax.html"
         },
         {
             id: 2,
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "premium",
             image: "./assets/image/product/HydraluxeAquastar/hydralux-1.webp",
             description: "Advanced skin analyzer with real-time imaging and high-precision probes for comprehensive anti-aging treatments.",
-            link: "./HydraluxeAquastar.html"
+            link: "./machine/medi-facial/HydraluxeAquastar.html"
         },
         {
             id: 3,
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "premium",
             image: "./assets/image/product/OxyrichPDT/pdt.webp",
             description: "Multifunctional platform combining photodynamic therapy with oxygen infusion for comprehensive skin treatment.",
-            link: "./OxyrichPDT.html"
+            link: "./machine/medi-facial/OxyrichPDT.html"
         },
          {
             id: 4,
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "mid-range",
             image: "./assets/image/product/luma3000/luma-3000.webp",
             description: "Unleash powerful, permanent results; this is next-level diode laser technology.",
-            link: "./EpiglowDiodelaser.html"
+            link: "./machine/hair-reduction/luma3000.html"
         },
         {
             id: 5,
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "mid-range",
             image: "./assets/image/product/luma2000/luma-2000.webp",
             description: "new verticle hair removal device with economical price safe for all skin and hair type.",
-            link: "./EpiglowDiodelaser.html"
+            link: "./machine/hair-reduction/luma2000.html"
         },
         {
             id: 6,
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "luxury",
             image: "./assets/image/product/4Dteclaserdevice/4dteclaser.webp",
             description: "Revolutionary 4-wavelength diode laser system for comprehensive hair removal across all skin types.",
-            link: "./4Dteclaserdevice.html"
+            link: "./machine/hair-reduction/4Dteclaserdevice.html"
         },
         {
             id: 7,
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "premium",
             image: "./assets/image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
             description: "USFDA approved 4-wavelength diode laser with advanced sapphire cooling technology.",
-            link: "./Ice1200diodelaserdevice.html"
+            link: "./machine/hair-reduction/Ice1200diodelaserdevice.html"
         },
         {
             id: 8,
@@ -72,10 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "mid-range",
             image: "./assets/image/product/EpiliteHP/epilite.webp",
             description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort.",
-            link: "./EpiliteHP.html"
-        },
-        
-       
+            link: "./machine/hair-reduction/EpiliteHP.html"
+        },       
         {
             id: 9,
             name: "LUMASPOT",
@@ -83,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "mid-range",
             image: "./assets/image/product/lumaspot/lumaspot.webp",
             description: "LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
-            link: "./lumaspot.html"
+            link: "./machine/yag-laser/lumaspot.html"
         },
         {
             id: 10,
@@ -92,7 +90,16 @@ document.addEventListener('DOMContentLoaded', function () {
             price: "mid-range",
             image: "./assets/image/product/picofocus/picofocus.webp",
             description: "top powerful technology for pigment and tattoo removal treatment.",
-            link: "./picofocus.html"
+            link: "./machine/yag-laser/picofocus.html"
+        },
+        {
+            id: 11,
+            name: "RUIKD GENELUX LASER",
+            category: "yag-laser",
+            price: "mid-range",
+            image: "./assets/image/product/picofocus/picofocus.webp",
+            description: "all pigment removal and tattoo removal treatment with 2 wavelengths.",
+            link: "./machine/yag-laser/ruikd_genelux.html"
         },
     ]
 

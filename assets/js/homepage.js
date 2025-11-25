@@ -55,71 +55,78 @@ const productsData = {
       title: "Alice super bubble max",
       desc: "Get deep into the pores and take away dirt with shiny and beautiful results.",
       imageDesc: "Best premium HydraFacial device. Ultimate anti-aging treatment, superior exfoliation, and advanced skin brightening. Experience a truly results-oriented facial machine.",
-      link: "Alicesuperbubblemax.html"
+      link: "machine/medi-facial/Alicesuperbubblemax.html"
     },
     {
       img: "./assets/image/product/HydraluxeAquastar/hydralux-1.webp",
       title: "Hydraluxe Aquastar",
       desc: "Advanced analyzer and probes for a radiant, healthy glow.",
       imageDesc: "Best Pico + diode laser, Pico + diode supplier, best combination laser device, pico + diode machine with best results, best tattoo removal, carbon facial, hair removal device.",
-      link: "HydraluxeAquastar.html"
+      link: "machine/medi-facial/HydraluxeAquastar.html"
     },
     {
       img: "./assets/image/product/OxyrichPDT/pdt.webp",
       title: "Oxyrich PDT+",
       desc: "Premium hydra facial device with analyzer and oxygen dome.",
       imageDesc: "Best Q switch Nd:Yag laser, best FDA approved Q switch Nd:Yag, premium Q switch Nd:Yag laser for pigmentation removal, best laser for tattoo removal.",
-      link: "OxyrichPDT.html"
+      link: "machine/medi-facial/OxyrichPDT.html"
     },
     {
       img: "./assets/image/product/luma3000/luma-3000.webp",
       title: "LUMA 3000",
       desc: "Unleash powerful, permanent results; this is next-level diode laser technology.",
       imageDesc: "LUMA 3000 is powerful 3000W diode laser system which works 40% more faster for hair reduction system. LUMA 3000 helps in achieving skin confidence with its advance 4 wavelength technology.",
-      link: "luma3000.html"
+      link: "machine/hair-reduction/luma3000.html"
     },
     {
       img: "./assets/image/product/luma2000/luma-2000.webp",
       title: "LUMA 2000",
       desc: "LUMA 2000- High quality android-based Diode laser system.",
       imageDesc: "LUMA 2000 has 4 wavelengths (755nm+810nm+ 980nm+ 1064nm ) that works together for safe & comfortable hair reduction system. LUMA 2000 has multiple attachement, perfect choice for full body hair reduction treatment.",
-      link: "luma2000.html"
+      link: "machine/hair-reduction/luma2000.html"
     },
     {
       img: "./assets/image/product/4Dteclaserdevice/4dteclaser.webp",
       title: "4DTECLASER",
       desc: "Advanced 4-wavelength diode laser for all skin and hair types.",
       imageDesc: "Best 4 wavelength diode laser device, best FDA approved laser device, best 1200W diode laser, best laser for hair removal treatment, painless device for hair removal treatment.",
-      link: "4Dteclaserdevice.html"
+      link: "machine/hair-reduction/4Dteclaserdevice.html"
     },
     {
       img: "./assets/image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
       title: "ICE 1200",
       desc: "USFDA-approved 4-wavelength diode laser for safe, effective hair reduction.",
       imageDesc: "Best Cryolipolysis device, safest cryolipolysis device, fastest cryolipolysis device, best cooling cryolipolysis device, premium result oriented cryolipolysis device, best fat reduction device.",
-      link: "Ice1200diodelaserdevice.html"
+      link: "machine/hair-reduction/Ice1200diodelaserdevice.html"
     },
     {
       img: "./assets/image/product/EpiliteHP/epilite.webp",
       title: "Epilite HP",
       desc: "Premium USFDA-approved 4-wavelength diode laser.",
       imageDesc: "Best 60W CO2 fractional laser, best laser for acne scars, best laser for vaginal tightening, best CO2 fractional laser, high quality CO2 fractional laser.",
-      link: "EpiliteHP.html"
+      link: "machine/hair-reduction/EpiliteHP.html"
     },
     {
       img: "./assets/image/product/lumaspot/lumaspot.webp",
       title: "LUMASPOT",
       desc: "Picosecond laser works on 4 operational modes for better results.",
       imageDesc: " LUMASPOT is active Q switch Nd:Yag laser system with most advance technology with very short pulse width and high power. LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
-      link: "lumaspot.html"
+      link: "machine/yag-laser/lumaspot.html"
     },
     {
       img: "./assets/image/product/picofocus/picofocus.webp",
       title: "PICOFOCUS",
       desc: "Top powerful technology for pigment and tattoo removal treatment.",
       imageDesc: " Picofocus laser works on picosecond technology that works 100 times faster than traditional nanosecond technology, as a result, the Picofocus laser system breaks up tattoos faster than traditional laser. Picofocus laser will shatter even tiny ink particles making it easier for the body to clear the tattoo ink.",
-      link: "picofocus.html"
-    }
+      link: "machine/yag-laser/picofocus.html"
+    },
+    {
+      img: "./assets/image/product/picofocus/picofocus.webp",
+      title: "RUIKD GENELUX LASER",
+      desc: "all pigment removal and tattoo removal treatment with 2 wavelengths.",
+      imageDesc: "Ruikd Genelux Pico Laser is a cutting-edge aesthetic machine designed to provide a wide range of skin treatments with enhanced precision and minimal discomfort. Utilizing advanced Q-switched ND:YAG Laser technology.",
+      link: "machine/yag-laser/ruikd_genelux.html"
+    },
   ],
   product: [
     {

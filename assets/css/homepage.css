@@ -1690,7 +1690,7 @@
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border: 8px solid #ffffff;
+    border: 4px solid #ffffff;
 }
 
 /* Step Numbers inside Circle Segments */
@@ -1702,15 +1702,17 @@
     align-items: center;
     justify-content: center;
     color: #333;
-    font-size: 18px;
+    font-size: 17px;
+    text-align: center;
+    max-width: 100px;
     font-weight: 800;
     transition: all 0.3s ease;
 }
 
 .shape-1 {
-    top: 27%;
-    left: 71%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 29%;
+    left: 67%;
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
 
 .shape-2 {
@@ -1726,15 +1728,15 @@
 }
 
 .shape-4 {
-    top: 57%;
-    left: 26%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 59%;
+    left: 27%;
+    transform: translateX(-50%) translateY(-50%) rotate(-23deg);
 }
 
 .shape-5 {
     top: 27%;
     left: 34%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%) rotate(-34deg);
 }
 
 /* Description Panel */
@@ -1750,7 +1752,7 @@
 
 .description-content {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
-    padding: 40px;
+    padding: 20px;
     border-radius: 24px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08),
         0 12px 25px rgba(76, 40, 150, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -2053,9 +2055,14 @@
         margin-bottom: 40px;
     }
 
+    .shape {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
     .circle-container {
-        width: 320px;
-        height: 320px;
+        width: 400px;
+        height: 400px;
     }
 
     .product-item {
@@ -2097,14 +2104,19 @@
     }
 
     .circle-container {
-        width: 280px;
-        height: 280px;
+        width: 350px;
+        height: 350px;
     }
 
     .product-number {
         width: 40px;
         height: 40px;
         font-size: 14px;
+    }
+
+    .shape {
+        font-size: 13px;
+        font-weight: 500;
     }
 
     .product-title {
