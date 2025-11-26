@@ -115,8 +115,7 @@ header nav#navbar .dropdown .dropdown-menu {
     background: var(--white);
     padding: 0;
     width: 1106px;
-    /* height: 370px; */
-    height: 395px;
+    height: 370px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 9999;
