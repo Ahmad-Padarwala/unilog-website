@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "Multifunctional platform combining photodynamic therapy with oxygen infusion for comprehensive skin treatment.",
             link: "./machine/medi-facial/OxyrichPDT.html"
         },
-         {
+        {
             id: 4,
             name: "LUMA 3000",
             category: "laser-hair",
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "./assets/image/product/EpiliteHP/epilite.webp",
             description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort.",
             link: "./machine/hair-reduction/EpiliteHP.html"
-        },       
+        },
         {
             id: 9,
             name: "LUMASPOT",
@@ -100,6 +100,78 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "./assets/image/product/picofocus/picofocus.webp",
             description: "all pigment removal and tattoo removal treatment with 2 wavelengths.",
             link: "./machine/yag-laser/ruikd_genelux.html"
+        },
+        {
+            id: 12,
+            name: "Epiglow Diode + pico laser",
+            category: "laser-platform",
+            price: "mid-range",
+            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            description: "most advance combination laser system of diode and picosecond laser.",
+            link: "./machine/laser-platform/epiglow_diode_pico_laser.html"
+        },
+        {
+            id: 13,
+            name: "Elite Diode + pico laser",
+            category: "laser-platform",
+            price: "mid-range",
+            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            description: "combination laser system of diode and picosecond laser.",
+            link: "./machine/laser-platform/elite_diode_pico_laser.html"
+        },
+        {
+            id: 14,
+            name: "Epiglow FDA Diode + Pico",
+            category: "laser-platform",
+            price: "mid-range",
+            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            description: "most advance FDA approved multifunctional platform.",
+            link: "./machine/laser-platform/epiglow_fda_pico_laser.html"
+        },
+        {
+            id: 15,
+            name: "IPL Q switch laser system",
+            category: "laser-platform",
+            price: "mid-range",
+            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            description: "Unilog 4 in 1 IPL Q switch laser system is economical laser device.",
+            link: "./machine/laser-platform/ipl_switch_laser_system.html"
+        },
+        {
+            id: 16,
+            name: "Ematrix CO2 fractional laser",
+            category: "co2-fractional",
+            price: "mid-range",
+            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            description: "works at 10600 nm wavelength and comes with 60W power.",
+            link: "./machine/co2-fractional/ematrix_co2.html"
+        },
+        {
+            id: 17,
+            name: "UltraFlexe CO2 fractional laser",
+            category: "co2-fractional",
+            price: "mid-range",
+            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            description: "USFDA approved laser with 60W power useful to treat.",
+            link: "./machine/co2-fractional/ultraflexe_co2.html"
+        },
+        {
+            id: 18,
+            name: "Super CO2 fractional laser",
+            category: "co2-fractional",
+            price: "mid-range",
+            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            description: "USFDA approved laser with 60W power useful to treat.",
+            link: "./machine/co2-fractional/super_co2.html"
+        },
+        {
+            id: 19,
+            name: "Super Pulse CO2 fractional laser",
+            category: "co2-fractional",
+            price: "mid-range",
+            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            description: "USFDA approved laser with 60W power useful to treat.",
+            link: "./machine/co2-fractional/super_pulse_co2.html"
         },
     ]
 

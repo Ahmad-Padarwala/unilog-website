@@ -1,5 +1,5 @@
 # Robots.txt for Unilog Skincare Website
-# https://yourdomain.com/robots.txt
+# https://ahmad-padarwala.github.io/unilog-website/robots.txt
 
 User-agent: *
 Allow: /
@@ -48,11 +48,11 @@ Disallow: *.bak
 # Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://ahmad-padarwala.github.io/unilog-website/sitemap.xml
 
 # Additional sitemaps (if you have them)
-# Sitemap: https://yourdomain.com/sitemap-products.xml
-# Sitemap: https://yourdomain.com/sitemap-images.xml
+# Sitemap: https://ahmad-padarwala.github.io/unilog-website/sitemap-products.xml
+# Sitemap: https://ahmad-padarwala.github.io/unilog-website/sitemap-images.xml
 
 # Block bad bots (optional)
 User-agent: AhrefsBot
@@ -81,4 +81,4 @@ User-agent: WhatsApp
 Allow: /
 
 # Host directive (specify your preferred domain)
-Host: https://yourdomain.com
+Host: https://ahmad-padarwala.github.io/unilog-website

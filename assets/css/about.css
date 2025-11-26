@@ -190,7 +190,6 @@
     font-size: 0.95rem;
     line-height: 1.6;
     color: #444;
-    margin: 15px 0;
 }
 
 .stand-for-section .container .stand-for-content .tab-content.active {
@@ -429,17 +428,22 @@
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--black);
-}
-
-.history-section .timeline-container .timeline-item:nth-child(1) .year {
     color: var(--secondary);
 }
 
 
 .history-section .timeline-container .timeline-item .points li {
+    list-style-type: none;
+    text-align: justify;
     color: var(--black);
     line-height: 1.5;
     font-size: 1rem;
+}
+
+.history-section .timeline-container .timeline-item .points li:nth-child(1) {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary);
 }
 
 /* map section */
@@ -558,7 +562,7 @@
         transform: none;
     }
 
-    .welcome-section .welcome-content .welcome-card p{
+    .welcome-section .welcome-content .welcome-card p {
         letter-spacing: 0.5px;
     }
 

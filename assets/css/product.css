@@ -905,6 +905,16 @@ main {
     display: none;
   }
 
+  .hero-section .hero-content {
+    text-align: left;
+    width: 90%;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 1rem;
+    width: 100%;
+  }
+
   .updates-section .content-container .col-1 .feature-card,
   .updates-section .content-container .col-2 .feature-card {
     max-width: none;
@@ -1052,6 +1062,15 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .hero-section .hero-content {
+    text-align: left;
+    width: 97%;
+  }
+
+  .hero-section .hero-badge {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
 
   .updates-section .content-container .col-1 .feature-card,
   .updates-section .content-container .col-2 .feature-card {
