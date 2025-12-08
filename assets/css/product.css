@@ -320,6 +320,15 @@ main {
   line-height: 1.1;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
+  text-shadow:
+    2px 0 0 #fff,
+    -2px 0 0 #fff,
+    0 2px 0 #fff,
+    0 -2px 0 #fff,
+    1.5px 1.5px 0 #fff,
+    -1.5px 1.5px 0 #fff,
+    1.5px -1.5px 0 #fff,
+    -1.5px -1.5px 0 #fff;
 }
 
 .hero-section .text-primary {
