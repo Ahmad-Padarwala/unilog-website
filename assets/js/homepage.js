@@ -121,7 +121,7 @@ const productsData = {
       link: "machine/yag-laser/picofocus.html"
     },
     {
-      img: "./assets/image/product/picofocus/picofocus.webp",
+      img: "./assets/image/product/ruikd-genelux/ruikd.webp",
       title: "RUIKD GENELUX LASER",
       desc: "all pigment removal and tattoo removal treatment with 2 wavelengths.",
       imageDesc: "Ruikd Genelux Pico Laser is a cutting-edge aesthetic machine designed to provide a wide range of skin treatments with enhanced precision and minimal discomfort. Utilizing advanced Q-switched ND:YAG Laser technology.",

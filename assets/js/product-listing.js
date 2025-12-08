@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "RUIKD GENELUX LASER",
             category: "yag-laser",
             price: "mid-range",
-            image: "./assets/image/product/picofocus/picofocus.webp",
+            image: "./assets/image/product/ruikd-genelux/ruikd.webp",
             description: "all pigment removal and tattoo removal treatment with 2 wavelengths.",
             link: "./machine/yag-laser/ruikd_genelux.html"
         },
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Epiglow Diode + pico laser",
             category: "laser-platform",
             price: "mid-range",
-            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            image: "./assets/image/product/Epiglow-Diode/epiglow-1.webp",
             description: "most advance combination laser system of diode and picosecond laser.",
             link: "./machine/laser-platform/epiglow_diode_pico_laser.html"
         },
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Elite Diode + pico laser",
             category: "laser-platform",
             price: "mid-range",
-            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            image: "./assets/image/product/elite-diode/Elitediode.webp",
             description: "combination laser system of diode and picosecond laser.",
             link: "./machine/laser-platform/elite_diode_pico_laser.html"
         },
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Epiglow FDA Diode + Pico",
             category: "laser-platform",
             price: "mid-range",
-            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            image: "./assets/image/product/epiglow-fda/epiglow-fda.webp",
             description: "most advance FDA approved multifunctional platform.",
             link: "./machine/laser-platform/epiglow_fda_pico_laser.html"
         },
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "IPL Q switch laser system",
             category: "laser-platform",
             price: "mid-range",
-            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            image: "./assets/image/product/ipl-q-switch/ipl-1.webp",
             description: "Unilog 4 in 1 IPL Q switch laser system is economical laser device.",
             link: "./machine/laser-platform/ipl_switch_laser_system.html"
         },
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Ematrix CO2 fractional laser",
             category: "co2-fractional",
             price: "mid-range",
-            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            image: "./assets/image/product/ematrix-co2/ematrix.webp",
             description: "works at 10600 nm wavelength and comes with 60W power.",
             link: "./machine/co2-fractional/ematrix_co2.html"
         },
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "UltraFlexe CO2 fractional laser",
             category: "co2-fractional",
             price: "mid-range",
-            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            image: "./assets/image/product/ultraflex-co2/ultraflex.webp",
             description: "USFDA approved laser with 60W power useful to treat.",
             link: "./machine/co2-fractional/ultraflexe_co2.html"
         },
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Super CO2 fractional laser",
             category: "co2-fractional",
             price: "mid-range",
-            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            image: "./assets/image/product/super-co2/super.webp",
             description: "USFDA approved laser with 60W power useful to treat.",
             link: "./machine/co2-fractional/super_co2.html"
         },
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Super Pulse CO2 fractional laser",
             category: "co2-fractional",
             price: "mid-range",
-            image: "./assets/image/product/Alicesuperbubblemax/1.webp",
+            image: "./assets/image/product/super-pulse-co2/super-pulse.webp",
             description: "USFDA approved laser with 60W power useful to treat.",
             link: "./machine/co2-fractional/super_pulse_co2.html"
         },
