@@ -355,7 +355,7 @@ class InteractiveCircle {
         cursor: pointer;
         transition: all 0.3s ease;
       `;
-      
+
       // Position hover areas based on segment positions
       const positions = [
         { top: '15%', left: '65%' }, // segment-1
@@ -364,19 +364,19 @@ class InteractiveCircle {
         { top: '45%', left: '15%' },  // segment-4
         { top: '15%', left: '25%' }   // segment-5
       ];
-      
+
       const pos = positions[index];
       Object.assign(hoverArea.style, pos);
       hoverArea.style.transform = 'translate(-50%, -50%)';
-      
+
       this.circleContainer.appendChild(hoverArea);
-      
+
       // Add hover events to the larger areas
       hoverArea.addEventListener('mouseenter', (e) => {
         e.stopPropagation();
         this.handleHover(index + 1);
       });
-      
+
       hoverArea.addEventListener('mouseleave', (e) => {
         e.stopPropagation();
         this.handleHoverLeave();
@@ -388,12 +388,12 @@ class InteractiveCircle {
     // Enhanced hover events for SVG segments
     this.segments.forEach((segment, index) => {
       segment.style.cursor = 'pointer';
-      
+
       segment.addEventListener("mouseenter", (e) => {
         e.stopPropagation();
         this.handleHover(index + 1);
       });
-      
+
       segment.addEventListener("mouseleave", (e) => {
         e.stopPropagation();
         this.handleHoverLeave();
@@ -404,12 +404,12 @@ class InteractiveCircle {
     this.shapes.forEach((shape, index) => {
       shape.style.cursor = 'pointer';
       shape.style.zIndex = '15';
-      
+
       shape.addEventListener("mouseenter", (e) => {
         e.stopPropagation();
         this.handleHover(index + 1);
       });
-      
+
       shape.addEventListener("mouseleave", (e) => {
         e.stopPropagation();
         this.handleHoverLeave();
@@ -460,7 +460,7 @@ class InteractiveCircle {
 
   handleHover(productId) {
     this.clearTimeouts();
-    
+
     // Debounce rapid hover events
     this.hoverTimeout = setTimeout(() => {
       if (this.currentProduct === productId && this.isHovering) {
@@ -488,7 +488,7 @@ class InteractiveCircle {
 
   handleHoverLeave() {
     this.clearTimeouts();
-    
+
     // Add a small delay before hiding to prevent flickering
     this.leaveTimeout = setTimeout(() => {
       if (!this.isHovering) return;
@@ -498,7 +498,7 @@ class InteractiveCircle {
 
   handleShowcaseLeave() {
     this.clearTimeouts();
-    
+
     this.isHovering = false;
     this.currentProduct = null;
 
@@ -515,7 +515,7 @@ class InteractiveCircle {
     this.leaveTimeout = setTimeout(() => {
       this.circleContainer.classList.remove("hovered");
       this.descriptionPanel.classList.remove("visible");
-      
+
       // Reset to first description after hiding
       setTimeout(() => {
         if (!this.isHovering) {
@@ -527,12 +527,12 @@ class InteractiveCircle {
 
   showDescription(productId) {
     if (this.isAnimating) return;
-    
+
     this.isAnimating = true;
-    
+
     // Find current active description
     const currentActive = document.querySelector(".description-content.active");
-    
+
     // Find target description
     const targetDescription = document.querySelector(
       `.description-content[data-product="${productId}"]`
@@ -549,7 +549,7 @@ class InteractiveCircle {
           this.descriptionContents.forEach((content) => {
             content.classList.remove("active", "fade-out");
           });
-          
+
           targetDescription.classList.add("active");
 
           // Reset animation flag
@@ -563,7 +563,7 @@ class InteractiveCircle {
           content.classList.remove("active", "fade-out");
         });
         targetDescription.classList.add("active");
-        
+
         setTimeout(() => {
           this.isAnimating = false;
         }, 100);
@@ -592,7 +592,7 @@ class InteractiveCircle {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
         const isMobile = window.innerWidth <= 1200;
-        
+
         // On mobile, always show description panel
         if (isMobile) {
           this.descriptionPanel.classList.add("visible");

@@ -166,12 +166,48 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 19,
-            name: "Super Pulse CO2 fractional laser",
-            category: "co2-fractional",
+            name: "OPT hair removal system",
+            category: "intensed-pulse-light",
             price: "mid-range",
-            image: "./assets/image/product/super-pulse-co2/super-pulse.webp",
-            description: "USFDA approved laser with 60W power useful to treat.",
-            link: "./machine/co2-fractional/super_pulse_co2.html"
+            image: "./assets/image/product/opt-hair-removal/opt-hair-removal.webp",
+            description: "OPT Intense pulse light is most reliable device.",
+            link: "./machine/intensed-pulse-light/opt_hair_removal.html"
+        },
+        {
+            id: 20,
+            name: "Doublo New HIFU",
+            category: "hifu",
+            price: "mid-range",
+            image: "./assets/image/product/doublo-new-hifu/doublo-new-hifu.webp",
+            description: "Doublo New HIFU utilize stimulating natural collagen production.",
+            link: "./machine/hifu/doublo-new-hifu.html"
+        },
+        {
+            id: 21,
+            name: "Ultralift",
+            category: "hifu",
+            price: "mid-range",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Ultralift HIFU utilize stimulating natural collagen production and targeting.",
+            link: "./machine/hifu/ultralift.html"
+        },
+        {
+            id: 22,
+            name: "8D HIFU",
+            category: "hifu",
+            price: "mid-range",
+            image: "./assets/image/product/8d-hifu/8d-hifu.webp",
+            description: "8D HIFU utilize stimulating natural collagen production and targeting the SMAS layer.",
+            link: "./machine/hifu/8d-hifu.html"
+        },
+         {
+            id: 23,
+            name: "Crystalline Depth 8 MNRF",
+            category: "mnrf",
+            price: "mid-range",
+            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
+            description: "works on dual action of Micro needling and Radio Frequency technology with advanced depth.",
+            link: "./machine/mnrf/crystalline-depth.html"
         },
     ]
 
