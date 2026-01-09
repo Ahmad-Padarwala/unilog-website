@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "intensed-pulse-light",
             price: "mid-range",
             image: "./assets/image/product/opt-hair-removal/opt-hair-removal.webp",
-            description: "OPT Intense pulse light is most reliable device.",
+            description: "OPT Intense pulse light is most reliable device with wide range of wavelengths.",
             link: "./machine/intensed-pulse-light/opt_hair_removal.html"
         },
         {
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "8D HIFU utilize stimulating natural collagen production and targeting the SMAS layer.",
             link: "./machine/hifu/8d-hifu.html"
         },
-         {
+        {
             id: 23,
             name: "Crystalline Depth 8 MNRF",
             category: "mnrf",
@@ -445,6 +445,15 @@ document.addEventListener('DOMContentLoaded', function () {
             previewElement.querySelector('.results-text').textContent = `${count} products found`;
         }
     }
+
+    document.querySelectorAll('.filter-tabs').forEach((tabs) => {
+        tabs.addEventListener('wheel', (e) => {
+            if (e.deltaY === 0) return;
+
+            e.preventDefault(); // stop vertical scroll
+            tabs.scrollLeft += e.deltaY;
+        }, { passive: false });
+    });
 
     // Make selectSuggestion available globally
     window.selectSuggestion = selectSuggestion;
