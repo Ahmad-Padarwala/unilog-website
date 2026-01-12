@@ -191,7 +191,7 @@ function renderProducts(items) {
 }
 
 const swiper = new Swiper(".product-swiper", {
-  slidesPerView: 4,
+  slidesPerView: 5,
   spaceBetween: 20,
   loop: false,
   grabCursor: true,
@@ -202,7 +202,8 @@ const swiper = new Swiper(".product-swiper", {
   breakpoints: {
     320: { slidesPerView: 1 },
     640: { slidesPerView: 2 },
-    1024: { slidesPerView: 4 }
+    1024: { slidesPerView: 3 },
+    1441: { slidesPerView: 5 },
   }
 });
 renderProducts(productsData.machine);
