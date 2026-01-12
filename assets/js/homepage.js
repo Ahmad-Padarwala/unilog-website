@@ -625,3 +625,231 @@ document.addEventListener("DOMContentLoaded", () => {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = InteractiveCircle;
 }
+
+
+// consult now section
+// Data
+const consultTabs = [
+  { id: 'technology', title: '01. Cutting-Edge Technology', desc: 'Redirect to machine part' },
+  { id: 'consumables', title: '02. Clinical Consumables', desc: 'Redirect to consumables tab' },
+  { id: 'infrastructure', title: '03. Infrastructure', desc: 'Redirect to clinical furnitures & OT setup' },
+  { id: 'brands', title: '04. Professional Range', desc: 'Redirect to professional range' }
+];
+
+const formSteps = [
+  {
+    title: 'Step 1: Select Your Primary Goals',
+    description: 'Choose multiple options that apply',
+    type: 'multiple',
+    options: [
+      'Skin Rejuvenation & Anti-Aging',
+      'Permanent Hair Reduction',
+      'Body Contouring & Fat Loss',
+      'Pigmentation & Tattoo Removal',
+      'Acne & Scar Management'
+    ]
+  },
+  {
+    title: 'Step 2: Technology Interest',
+    description: 'Select the technologies you\'re interested in',
+    type: 'multiple',
+    grid: 'three-col',
+    options: [
+      'Q-Switched Nd:YAG',
+      'Diode Laser',
+      'Hydra facial Systems',
+      'MNRF',
+      'CO2 Fractional',
+      'Intensed Pulse Light',
+      'Hair and Skin Analyser',
+      'Meso Therapy Devices',
+      'Cautery Devices',
+      'Micro Dermabrasion Device',
+      'Hair Regrowth Devices',
+      'Slimming Devices'
+    ]
+  },
+  {
+    title: 'Step 3: Clinical Setup Budget',
+    description: 'Choose your budget range',
+    type: 'single',
+    options: [
+      'Entry Setup',
+      'Professional Growth (Mid-Range / Multi-platform)',
+      'Luxury/Premium Clinic (High-End / Latest Innovations)'
+    ]
+  },
+  {
+    title: 'Step 4: Infrastructure Needs',
+    description: 'Select your infrastructure requirements',
+    type: 'multiple',
+    options: [
+      'Device Only',
+      'Device + Consumables Package',
+      'Full Turnkey (Tech + Furniture + Training)'
+    ]
+  }
+];
+
+// State
+let activeTab = 'technology';
+let currentStep = 1;
+let formData = {
+  goals: [],
+  technologies: [],
+  budget: '',
+  infrastructure: []
+};
+
+// Initialize
+function init() {
+  renderTabs();
+  renderStepIndicators();
+  renderFormStep();
+  updateNavigation();
+}
+
+// Render Tabs
+function renderTabs() {
+  const container = document.getElementById('tabsContainer');
+  container.innerHTML = consultTabs.map(tab => `
+                <div class="tab ${tab.id === activeTab ? 'active' : ''}" onclick="setActiveTab('${tab.id}')">
+                    <h3>${tab.title}</h3>
+                    <p>${tab.desc}</p>
+                </div>
+            `).join('');
+}
+
+function setActiveTab(tabId) {
+  activeTab = tabId;
+  renderTabs();
+}
+
+// Render Step Indicators
+function renderStepIndicators() {
+  const container = document.getElementById('stepIndicators');
+  container.innerHTML = [1, 2, 3, 4].map(step => `
+                <div class="step-indicator ${step <= currentStep ? 'active' : ''}">${step}</div>
+            `).join('');
+}
+
+// Render Form Step
+function renderFormStep() {
+  const step = formSteps[currentStep - 1];
+  const container = document.getElementById('formContent');
+
+  const gridClass = step.grid || 'two-col';
+  const isMultiple = step.type === 'multiple';
+  const isSingle = step.type === 'single';
+
+  const selectedData = getSelectedData(currentStep);
+
+  container.innerHTML = `
+                <div class="step-content active">
+                    <h3 class="step-title">${step.title}</h3>
+                    <p class="step-description">${step.description}</p>
+                    <div class="options-grid ${isSingle ? '' : gridClass}">
+                        ${step.options.map((option, index) => {
+    const isSelected = selectedData.includes(option);
+    return `
+                                <div class="option-btn ${isSingle ? 'single-choice-btn' : ''} ${isSelected ? 'selected' : ''}" 
+                                     onclick="toggleOption(${currentStep}, '${option.replace(/'/g, "\\'")}')">
+                                    ${isMultiple ? `
+                                        <div class="checkbox">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                        </div>
+                                    ` : `
+                                        <div class="radio">
+                                            <div class="radio-dot"></div>
+                                        </div>
+                                    `}
+                                    <span class="option-text">${option}</span>
+                                </div>
+                            `;
+  }).join('')}
+                    </div>
+                </div>
+            `;
+}
+
+// Get Selected Data
+function getSelectedData(step) {
+  switch (step) {
+    case 1: return formData.goals;
+    case 2: return formData.technologies;
+    case 3: return formData.budget ? [formData.budget] : [];
+    case 4: return formData.infrastructure;
+    default: return [];
+  }
+}
+
+// Toggle Option
+function toggleOption(step, option) {
+  const stepData = formSteps[step - 1];
+
+  if (stepData.type === 'single') {
+    // Single selection
+    switch (step) {
+      case 3: formData.budget = option; break;
+    }
+  } else {
+    // Multiple selection
+    let dataArray;
+    switch (step) {
+      case 1: dataArray = formData.goals; break;
+      case 2: dataArray = formData.technologies; break;
+      case 4: dataArray = formData.infrastructure; break;
+    }
+
+    const index = dataArray.indexOf(option);
+    if (index > -1) {
+      dataArray.splice(index, 1);
+    } else {
+      dataArray.push(option);
+    }
+  }
+
+  renderFormStep();
+}
+
+// Navigation
+function nextStep() {
+  if (currentStep < 4) {
+    currentStep++;
+    renderStepIndicators();
+    renderFormStep();
+    updateNavigation();
+  } else {
+    submitForm();
+  }
+}
+
+function previousStep() {
+  if (currentStep > 1) {
+    currentStep--;
+    renderStepIndicators();
+    renderFormStep();
+    updateNavigation();
+  }
+}
+
+function updateNavigation() {
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const nextBtnText = document.getElementById('nextBtnText');
+
+  prevBtn.disabled = currentStep === 1;
+  nextBtnText.textContent = currentStep === 4 ? 'Submit Consultation' : 'Next Step';
+}
+
+// Submit Form
+function submitForm() {
+  console.log('Form Data:', formData);
+  alert('Form submitted! Thank you for your consultation request.\n\nYour selections:\n' +
+    JSON.stringify(formData, null, 2));
+}
+
+// Initialize on load
+init();

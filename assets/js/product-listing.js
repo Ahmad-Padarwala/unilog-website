@@ -209,6 +209,87 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "works on dual action of Micro needling and Radio Frequency technology with advanced depth.",
             link: "./machine/mnrf/crystalline-depth.html"
         },
+        {
+            id: 24,
+            name: "Folilase Hair regrowth system",
+            category: "low-level-laser-therapy",
+            price: "mid-range",
+            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
+            description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm.",
+            link: "./machine/low-level-laser-therapy/folilase-hair-regrowth-system.html"
+        },
+        {
+            id: 25,
+            name: "Folilase prime hair regrowth system",
+            category: "low-level-laser-therapy",
+            price: "mid-range",
+            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
+            description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm diode lasers.",
+            link: "./machine/low-level-laser-therapy/folilase-prime-hair-regrowth-system.html"
+        },
+        {
+            id: 26,
+            name: "Laser Helmet",
+            category: "low-level-laser-therapy",
+            price: "mid-range",
+            image: "./assets/image/product/laser-helmet/laser-helmet-1.webp",
+            description: "A laser hair growth helmet is a wearable home-use device that uses Low-Level Laser Therapy (LLLT).",
+            link: "./machine/low-level-laser-therapy/laser-helmet.html"
+        },
+        {
+            id: 27,
+            name: "Dr. Pen A11 ultima",
+            category: "micro-needling-portable-devices",
+            price: "mid-range",
+            image: "./assets/image/product/Dr.pen-A11/Dr.pen-A11-1.webp",
+            description: "Dr. Pen Ultima A11 is a professional-grade microneedling device designed to rejuvenate.",
+            link: "./machine/micro-needling-portable-devices/Dr.Pen-A11-ultima.html"
+        },
+        {
+            id: 28,
+            name: "Dr. Pen A6S ultima",
+            category: "micro-needling-portable-devices",
+            price: "mid-range",
+            image: "./assets/image/product/Dr.A6s-pen/Dr.Pen-A6S-ultima-1.webp",
+            description: "Dr. Pen Ultima A6S is a professional-grade microneedling device designed to rejuvenate.",
+            link: "./machine/micro-needling-portable-devices/Dr.Pen-A6S-ultima.html"
+        },
+        {
+            id: 29,
+            name: "Dr. Pen M8",
+            category: "micro-needling-portable-devices",
+            price: "mid-range",
+            image: "./assets/image/product/Dr.M8-pen/Dr-pen-M8-1.webp",
+            description: "Dr. Pen M8 is a professional-grade microneedling device designed to rejuvenate.",
+            link: "./machine/micro-needling-portable-devices/Dr.Pen-M8.html"
+        },
+        {
+            id: 30,
+            name: "Dr. Pen A6 ultima",
+            category: "micro-needling-portable-devices",
+            price: "mid-range",
+            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
+            description: "Dr. Pen A6 uses advanced vertical oscillation technology to create controlled micro-channels.",
+            link: "./machine/micro-needling-portable-devices/Dr.Pen-A6-ultima.html"
+        },
+        {
+            id: 31,
+            name: "Meso therapy Injectable device",
+            category: "mesotherapy-machine",
+            price: "mid-range",
+            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
+            description: "mesotherapy injectable device is an automated system designed to deliver precise micro-injections.",
+            link: "./machine/mesotherapy-machine/meso-therapy-injectable-device.html"
+        },
+        {
+            id: 32,
+            name: "Skin Cool electroporation device",
+            category: "mesotherapy-machine",
+            price: "mid-range",
+            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
+            description: "Skin Cool is a multi-functional skin rejuvenation device that combines thermal therapy.",
+            link: "./machine/mesotherapy-machine/skin-cool-electroporation-device.html"
+        },
     ]
 
     // Initialize the page
