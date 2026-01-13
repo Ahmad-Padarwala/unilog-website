@@ -322,6 +322,67 @@ header nav#navbar .nav-links li a:hover {
     color: var(--primary);
 }
 
+/* ===============================
+   Company Dropdown (Click Only)
+================================ */
+
+header nav#navbar .company-dropdown {
+    position: relative;
+}
+
+header nav#navbar .company-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--white);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+/* Open only via click */
+header nav#navbar .company-dropdown.open .company-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+header nav#navbar .company-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* Arrow icon */
+header nav#navbar .dropdown-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+header nav#navbar .company-dropdown.open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+header nav#navbar .company-menu a {
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--black);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
 header .contact-btn {
     background-color: var(--primary);
     color: var(--white);

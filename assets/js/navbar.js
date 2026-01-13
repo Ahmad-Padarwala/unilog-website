@@ -18,60 +18,60 @@ menuToggle.addEventListener('click', () => {
 // Mobile dropdown functionality
 document.addEventListener('DOMContentLoaded', () => {
     const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
-    
+
     mobileDropdowns.forEach(dropdown => {
         const dropdownLink = dropdown.querySelector('a');
         const dropdownContent = dropdown.querySelector('.mobile-dropdown-content');
-        
+
         dropdownLink.addEventListener('click', (e) => {
             // Only prevent default if clicking on the arrow area or if we want to toggle
-            const clickedOnArrow = e.target.classList.contains('dropdown-arrow') || 
-                                 e.target.closest('.dropdown-arrow');
-            
+            const clickedOnArrow = e.target.classList.contains('dropdown-arrow') ||
+                e.target.closest('.dropdown-arrow');
+
             if (clickedOnArrow || dropdown.classList.contains('active')) {
                 e.preventDefault();
-                
+
                 // Close other dropdowns
                 mobileDropdowns.forEach(otherDropdown => {
                     if (otherDropdown !== dropdown) {
                         otherDropdown.classList.remove('active');
                     }
                 });
-                
+
                 // Toggle current dropdown
                 dropdown.classList.toggle('active');
             }
             // If dropdown is not active and not clicking on arrow, allow normal navigation
         });
     });
-    
+
     // Nested category dropdown functionality
     const mobileCategories = document.querySelectorAll('.mobile-category');
-    
+
     mobileCategories.forEach(category => {
         const categoryTitle = category.querySelector('.mobile-category-title');
-        
+
         if (categoryTitle) {
             categoryTitle.addEventListener('click', (e) => {
                 e.stopPropagation();
-                
+
                 // Get parent dropdown to find sibling categories
                 const parentDropdown = category.closest('.mobile-dropdown-content');
                 const siblingCategories = parentDropdown.querySelectorAll('.mobile-category');
-                
+
                 // Close other categories in the same dropdown
                 siblingCategories.forEach(otherCategory => {
                     if (otherCategory !== category) {
                         otherCategory.classList.remove('active');
                     }
                 });
-                
+
                 // Toggle current category
                 category.classList.toggle('active');
             });
         }
     });
-    
+
     // Close dropdowns when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.mobile-dropdown')) {
@@ -109,6 +109,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: "smooth",
                 block: "start"
             });
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const companyToggle = document.querySelector(".company-toggle");
+    const companyDropdown = document.querySelector(".company-dropdown");
+
+    companyToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        companyDropdown.classList.toggle("open");
+    });
+
+    // Optional: close when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!companyDropdown.contains(e.target)) {
+            companyDropdown.classList.remove("open");
         }
     });
 });

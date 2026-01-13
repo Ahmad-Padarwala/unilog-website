@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Dr. Pen A6 ultima",
             category: "micro-needling-portable-devices",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/Dr.pen-A6/Dr.pen-A6-1.webp",
             description: "Dr. Pen A6 uses advanced vertical oscillation technology to create controlled micro-channels",
             link: "./machine/micro-needling-portable-devices/Dr.Pen-A6-ultima.html"
         },
