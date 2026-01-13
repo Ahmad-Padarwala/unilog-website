@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "medi-facial",
             price: "premium",
             image: "./assets/image/product/Alicesuperbubblemax/1.webp",
-            description: "Revolutionary 8-in-1 HydraFacial system with advanced bubble technology for deep pore cleansing and skin brightening.",
+            description: "Revolutionary 8-in-1 HydraFacial system with advanced bubble technology for deep pore",
             link: "./machine/medi-facial/Alicesuperbubblemax.html"
         },
         {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "medi-facial",
             price: "premium",
             image: "./assets/image/product/HydraluxeAquastar/hydralux-1.webp",
-            description: "Advanced skin analyzer with real-time imaging and high-precision probes for comprehensive anti-aging treatments.",
+            description: "Advanced skin analyzer with real-time imaging and high-precision probes for comprehensive",
             link: "./machine/medi-facial/HydraluxeAquastar.html"
         },
         {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "medi-facial",
             price: "premium",
             image: "./assets/image/product/OxyrichPDT/pdt.webp",
-            description: "Multifunctional platform combining photodynamic therapy with oxygen infusion for comprehensive skin treatment.",
+            description: "Multifunctional platform combining photodynamic therapy with oxygen infusion",
             link: "./machine/medi-facial/OxyrichPDT.html"
         },
         {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-hair",
             price: "mid-range",
             image: "./assets/image/product/luma3000/luma-3000.webp",
-            description: "Unleash powerful, permanent results; this is next-level diode laser technology.",
+            description: "Unleash powerful, permanent results; this is next-level diode laser technology",
             link: "./machine/hair-reduction/luma3000.html"
         },
         {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-hair",
             price: "mid-range",
             image: "./assets/image/product/luma2000/luma-2000.webp",
-            description: "new verticle hair removal device with economical price safe for all skin and hair type.",
+            description: "new verticle hair removal device with economical price safe for all skin and hair type",
             link: "./machine/hair-reduction/luma2000.html"
         },
         {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-hair",
             price: "luxury",
             image: "./assets/image/product/4Dteclaserdevice/4dteclaser.webp",
-            description: "Revolutionary 4-wavelength diode laser system for comprehensive hair removal across all skin types.",
+            description: "Revolutionary 4-wavelength diode laser system for comprehensive hair removal across all skin types",
             link: "./machine/hair-reduction/4Dteclaserdevice.html"
         },
         {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-hair",
             price: "premium",
             image: "./assets/image/product/Ice1200diodelaserdevice/Ice1200diodelaserdevice-1.webp",
-            description: "USFDA approved 4-wavelength diode laser with advanced sapphire cooling technology.",
+            description: "USFDA approved 4-wavelength diode laser with advanced sapphire cooling technology",
             link: "./machine/hair-reduction/Ice1200diodelaserdevice.html"
         },
         {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-hair",
             price: "mid-range",
             image: "./assets/image/product/EpiliteHP/epilite.webp",
-            description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort.",
+            description: "High-performance laser hair removal system with superior efficacy and enhanced patient comfort",
             link: "./machine/hair-reduction/EpiliteHP.html"
         },
         {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "yag-laser",
             price: "mid-range",
             image: "./assets/image/product/lumaspot/lumaspot.webp",
-            description: "LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
+            description: "LUMASPOT is best Picosecond laser works on 4 operational modes for better results",
             link: "./machine/yag-laser/lumaspot.html"
         },
         {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "yag-laser",
             price: "mid-range",
             image: "./assets/image/product/picofocus/picofocus.webp",
-            description: "top powerful technology for pigment and tattoo removal treatment.",
+            description: "top powerful technology for pigment and tattoo removal treatment",
             link: "./machine/yag-laser/picofocus.html"
         },
         {
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "yag-laser",
             price: "mid-range",
             image: "./assets/image/product/ruikd-genelux/ruikd.webp",
-            description: "all pigment removal and tattoo removal treatment with 2 wavelengths.",
+            description: "all pigment removal and tattoo removal treatment with 2 wavelengths",
             link: "./machine/yag-laser/ruikd_genelux.html"
         },
         {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-platform",
             price: "mid-range",
             image: "./assets/image/product/Epiglow-Diode/epiglow-1.webp",
-            description: "most advance combination laser system of diode and picosecond laser.",
+            description: "most advance combination laser system of diode and picosecond laser",
             link: "./machine/laser-platform/epiglow_diode_pico_laser.html"
         },
         {
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-platform",
             price: "mid-range",
             image: "./assets/image/product/elite-diode/Elitediode.webp",
-            description: "combination laser system of diode and picosecond laser.",
+            description: "combination laser system of diode and picosecond laser",
             link: "./machine/laser-platform/elite_diode_pico_laser.html"
         },
         {
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-platform",
             price: "mid-range",
             image: "./assets/image/product/epiglow-fda/epiglow-fda.webp",
-            description: "most advance FDA approved multifunctional platform.",
+            description: "most advance FDA approved multifunctional platform",
             link: "./machine/laser-platform/epiglow_fda_pico_laser.html"
         },
         {
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "laser-platform",
             price: "mid-range",
             image: "./assets/image/product/ipl-q-switch/ipl-1.webp",
-            description: "Unilog 4 in 1 IPL Q switch laser system is economical laser device.",
+            description: "Unilog 4 in 1 IPL Q switch laser system is economical laser device",
             link: "./machine/laser-platform/ipl_switch_laser_system.html"
         },
         {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "co2-fractional",
             price: "mid-range",
             image: "./assets/image/product/ematrix-co2/ematrix.webp",
-            description: "works at 10600 nm wavelength and comes with 60W power.",
+            description: "works at 10600 nm wavelength and comes with 60W power",
             link: "./machine/co2-fractional/ematrix_co2.html"
         },
         {
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "co2-fractional",
             price: "mid-range",
             image: "./assets/image/product/ultraflex-co2/ultraflex.webp",
-            description: "USFDA approved laser with 60W power useful to treat.",
+            description: "USFDA approved laser with 60W power useful to treat",
             link: "./machine/co2-fractional/ultraflexe_co2.html"
         },
         {
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "co2-fractional",
             price: "mid-range",
             image: "./assets/image/product/super-co2/super.webp",
-            description: "USFDA approved laser with 60W power useful to treat.",
+            description: "USFDA approved laser with 60W power useful to treat",
             link: "./machine/co2-fractional/super_co2.html"
         },
         {
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "intensed-pulse-light",
             price: "mid-range",
             image: "./assets/image/product/opt-hair-removal/opt-hair-removal.webp",
-            description: "OPT Intense pulse light is most reliable device with wide range of wavelengths.",
+            description: "OPT Intense pulse light is most reliable device with wide range of wavelengths",
             link: "./machine/intensed-pulse-light/opt_hair_removal.html"
         },
         {
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "hifu",
             price: "mid-range",
             image: "./assets/image/product/doublo-new-hifu/doublo-new-hifu.webp",
-            description: "Doublo New HIFU utilize stimulating natural collagen production.",
+            description: "Doublo New HIFU utilize stimulating natural collagen production",
             link: "./machine/hifu/doublo-new-hifu.html"
         },
         {
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "hifu",
             price: "mid-range",
             image: "./assets/image/product/ultralift/ultralift.webp",
-            description: "Ultralift HIFU utilize stimulating natural collagen production and targeting.",
+            description: "Ultralift HIFU utilize stimulating natural collagen production and targeting",
             link: "./machine/hifu/ultralift.html"
         },
         {
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "hifu",
             price: "mid-range",
             image: "./assets/image/product/8d-hifu/8d-hifu.webp",
-            description: "8D HIFU utilize stimulating natural collagen production and targeting the SMAS layer.",
+            description: "8D HIFU utilize stimulating natural collagen production and targeting the SMAS layer",
             link: "./machine/hifu/8d-hifu.html"
         },
         {
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "mnrf",
             price: "mid-range",
             image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
-            description: "works on dual action of Micro needling and Radio Frequency technology with advanced depth.",
+            description: "works on dual action of Micro needling and Radio Frequency technology with advanced depth",
             link: "./machine/mnrf/crystalline-depth.html"
         },
         {
@@ -214,17 +214,17 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Folilase Hair regrowth system",
             category: "low-level-laser-therapy",
             price: "mid-range",
-            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
-            description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm.",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm",
             link: "./machine/low-level-laser-therapy/folilase-hair-regrowth-system.html"
         },
         {
             id: 25,
-            name: "Folilase prime hair regrowth system",
+            name: "prime hair regrowth system",
             category: "low-level-laser-therapy",
             price: "mid-range",
-            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
-            description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm diode lasers.",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm diode lasers",
             link: "./machine/low-level-laser-therapy/folilase-prime-hair-regrowth-system.html"
         },
         {
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "low-level-laser-therapy",
             price: "mid-range",
             image: "./assets/image/product/laser-helmet/laser-helmet-1.webp",
-            description: "A laser hair growth helmet is a wearable home-use device that uses Low-Level Laser Therapy (LLLT).",
+            description: "A laser hair growth helmet is a wearable home-use device that uses Low-Level Laser Therapy (LLLT)",
             link: "./machine/low-level-laser-therapy/laser-helmet.html"
         },
         {
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "micro-needling-portable-devices",
             price: "mid-range",
             image: "./assets/image/product/Dr.pen-A11/Dr.pen-A11-1.webp",
-            description: "Dr. Pen Ultima A11 is a professional-grade microneedling device designed to rejuvenate.",
+            description: "Dr. Pen Ultima A11 is a professional-grade microneedling device designed to rejuvenate",
             link: "./machine/micro-needling-portable-devices/Dr.Pen-A11-ultima.html"
         },
         {
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "micro-needling-portable-devices",
             price: "mid-range",
             image: "./assets/image/product/Dr.A6s-pen/Dr.Pen-A6S-ultima-1.webp",
-            description: "Dr. Pen Ultima A6S is a professional-grade microneedling device designed to rejuvenate.",
+            description: "Dr. Pen Ultima A6S is a professional-grade microneedling device designed to rejuvenate",
             link: "./machine/micro-needling-portable-devices/Dr.Pen-A6S-ultima.html"
         },
         {
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "micro-needling-portable-devices",
             price: "mid-range",
             image: "./assets/image/product/Dr.M8-pen/Dr-pen-M8-1.webp",
-            description: "Dr. Pen M8 is a professional-grade microneedling device designed to rejuvenate.",
+            description: "Dr. Pen M8 is a professional-grade microneedling device designed to rejuvenate",
             link: "./machine/micro-needling-portable-devices/Dr.Pen-M8.html"
         },
         {
@@ -268,8 +268,8 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Dr. Pen A6 ultima",
             category: "micro-needling-portable-devices",
             price: "mid-range",
-            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
-            description: "Dr. Pen A6 uses advanced vertical oscillation technology to create controlled micro-channels.",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Dr. Pen A6 uses advanced vertical oscillation technology to create controlled micro-channels",
             link: "./machine/micro-needling-portable-devices/Dr.Pen-A6-ultima.html"
         },
         {
@@ -277,18 +277,36 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Meso therapy Injectable device",
             category: "mesotherapy-machine",
             price: "mid-range",
-            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
-            description: "mesotherapy injectable device is an automated system designed to deliver precise micro-injections.",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "mesotherapy injectable device is an automated system designed to deliver precise micro-injections",
             link: "./machine/mesotherapy-machine/meso-therapy-injectable-device.html"
         },
         {
             id: 32,
-            name: "Skin Cool electroporation device",
+            name: "Skin Cool electroporation",
             category: "mesotherapy-machine",
             price: "mid-range",
-            image: "./assets/image/product/crystalline-depth/crystalline-depth.webp",
-            description: "Skin Cool is a multi-functional skin rejuvenation device that combines thermal therapy.",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Skin Cool is a multi-functional skin rejuvenation device that combines thermal therapy",
             link: "./machine/mesotherapy-machine/skin-cool-electroporation-device.html"
+        },
+        {
+            id: 33,
+            name: "Electric Derma chair",
+            category: "clinical-furnitures",
+            price: "mid-range",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Electric Derma Bed offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/clinical-furnitures/electric-derma-chair.html"
+        },
+        {
+            id: 34,
+            name: "Fibered Hydraulic chair",
+            category: "clinical-furnitures",
+            price: "mid-range",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/clinical-furnitures/fibered-hydraulic-chair.html"
         },
     ]
 
