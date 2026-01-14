@@ -308,6 +308,42 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
             link: "./machine/clinical-furnitures/fibered-hydraulic-chair.html"
         },
+        {
+            id: 35,
+            name: "Dermascope",
+            category: "hair-skin-analyzer",
+            price: "mid-range",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Ideal for skin inspection, portable device can be used to analyze hair and skin issues",
+            link: "./machine/hair-skin-analyzer/dermascope.html"
+        },
+        {
+            id: 36,
+            name: "Skin Dermascope Report",
+            category: "hair-skin-analyzer",
+            price: "mid-range",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Portable device to check skin condition like moisturizer, fine line, sebum level, skin pore analysis",
+            link: "./machine/hair-skin-analyzer/skin-dermascope.html"
+        },
+        {
+            id: 37,
+            name: "Scalp Analyzer Reports",
+            category: "hair-skin-analyzer",
+            price: "mid-range",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Portable device to check skin condition like scalp condition, moisture level, oil and sebum level",
+            link: "./machine/hair-skin-analyzer/scalp-analyzer-reports.html"
+        },
+        {
+            id: 38,
+            name: "Dermascope with LCD",
+            category: "hair-skin-analyzer",
+            price: "mid-range",
+            image: "./assets/image/product/ultralift/ultralift.webp",
+            description: "Ideal for skin inspection, portable device can be used to analyze hair and skin issues",
+            link: "./machine/hair-skin-analyzer/dermascope-with-lcd.html"
+        },
     ]
 
     // Initialize the page
