@@ -17,62 +17,50 @@ menuToggle.addEventListener('click', () => {
 
 // Mobile dropdown functionality
 document.addEventListener('DOMContentLoaded', () => {
+
     const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
 
     mobileDropdowns.forEach(dropdown => {
-        const dropdownLink = dropdown.querySelector('a');
-        const dropdownContent = dropdown.querySelector('.mobile-dropdown-content');
+        const trigger = dropdown.querySelector('a');
 
-        dropdownLink.addEventListener('click', (e) => {
-            // Only prevent default if clicking on the arrow area or if we want to toggle
-            const clickedOnArrow = e.target.classList.contains('dropdown-arrow') ||
-                e.target.closest('.dropdown-arrow');
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
 
-            if (clickedOnArrow || dropdown.classList.contains('active')) {
-                e.preventDefault();
+            // Close other dropdowns
+            mobileDropdowns.forEach(other => {
+                if (other !== dropdown) {
+                    other.classList.remove('active');
+                }
+            });
 
-                // Close other dropdowns
-                mobileDropdowns.forEach(otherDropdown => {
-                    if (otherDropdown !== dropdown) {
-                        otherDropdown.classList.remove('active');
-                    }
-                });
-
-                // Toggle current dropdown
-                dropdown.classList.toggle('active');
-            }
-            // If dropdown is not active and not clicking on arrow, allow normal navigation
+            // Toggle current
+            dropdown.classList.toggle('active');
         });
     });
 
-    // Nested category dropdown functionality
+    /* Nested category dropdowns */
     const mobileCategories = document.querySelectorAll('.mobile-category');
 
     mobileCategories.forEach(category => {
-        const categoryTitle = category.querySelector('.mobile-category-title');
+        const title = category.querySelector('.mobile-category-title');
 
-        if (categoryTitle) {
-            categoryTitle.addEventListener('click', (e) => {
-                e.stopPropagation();
+        title.addEventListener('click', (e) => {
+            e.stopPropagation();
 
-                // Get parent dropdown to find sibling categories
-                const parentDropdown = category.closest('.mobile-dropdown-content');
-                const siblingCategories = parentDropdown.querySelectorAll('.mobile-category');
+            const parent = category.closest('.mobile-dropdown-content');
+            const siblings = parent.querySelectorAll('.mobile-category');
 
-                // Close other categories in the same dropdown
-                siblingCategories.forEach(otherCategory => {
-                    if (otherCategory !== category) {
-                        otherCategory.classList.remove('active');
-                    }
-                });
-
-                // Toggle current category
-                category.classList.toggle('active');
+            siblings.forEach(other => {
+                if (other !== category) {
+                    other.classList.remove('active');
+                }
             });
-        }
+
+            category.classList.toggle('active');
+        });
     });
 
-    // Close dropdowns when clicking outside
+    /* Close everything on outside click */
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.mobile-dropdown')) {
             mobileDropdowns.forEach(dropdown => {
@@ -80,24 +68,46 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
 });
+
 
 
 // navbar mega menu
-document.querySelectorAll('.dropdown-sidebar .sidebar-card').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        // Remove active class from all sidebar items
-        document.querySelectorAll('.dropdown-sidebar .sidebar-card').forEach(card => card.classList.remove('active'));
-        item.classList.add('active');
+// Mega menu logic (scoped per dropdown)
+document.querySelectorAll('.dropdown').forEach(dropdown => {
 
-        // Hide all contents
-        document.querySelectorAll('.one-content').forEach(content => content.classList.remove('active'));
+    const sidebarCards = dropdown.querySelectorAll('.dropdown-sidebar .sidebar-card');
+    const contents = dropdown.querySelectorAll('.one-content');
 
-        // Show the matched one
-        const target = item.getAttribute('data-target');
-        document.getElementById(target).classList.add('active');
+    // ✅ Set default active on load
+    if (sidebarCards.length && contents.length) {
+        sidebarCards.forEach(card => card.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+
+        sidebarCards[0].classList.add('active');
+        contents[0].classList.add('active');
+    }
+
+    // ✅ Hover functionality (scoped)
+    sidebarCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+
+            // Remove active only inside THIS dropdown
+            sidebarCards.forEach(c => c.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            card.classList.add('active');
+
+            const target = card.getAttribute('data-target');
+            const targetContent = dropdown.querySelector(`#${target}`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
     });
 });
+
 
 // smooth scrolling effect
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

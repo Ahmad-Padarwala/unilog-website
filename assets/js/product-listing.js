@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 25,
-            name: "prime hair regrowth system",
+            name: "Folilase prime hair regrowth system",
             category: "low-level-laser-therapy",
             price: "mid-range",
             image: "./assets/image/product/ultralift/ultralift.webp",
