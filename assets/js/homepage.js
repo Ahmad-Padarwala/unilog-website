@@ -174,8 +174,6 @@ function renderProducts(items) {
                         loading="lazy"
                         itemprop="image">
                     </div>
-                    <div class="product-description">
-                    <p itemprop="description">${item.imageDesc}</p>
                     </div>
                     <div class="product-info">
                     <h3 itemprop="name">${item.title}</h3>
