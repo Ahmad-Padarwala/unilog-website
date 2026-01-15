@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Ultralift",
             category: "hifu",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/ultralift/ultralift-1.webp",
             description: "Ultralift HIFU utilize stimulating natural collagen production and targeting",
             link: "./machine/hifu/ultralift.html"
         },
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Folilase Hair regrowth system",
             category: "low-level-laser-therapy",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/folilase-hair-regrowth-system/folilase-hair-regrowth-system-1.webp",
             description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm",
             link: "./machine/low-level-laser-therapy/folilase-hair-regrowth-system.html"
         },
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Folilase prime hair regrowth system",
             category: "low-level-laser-therapy",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/no-image/image.webp",
             description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm diode lasers",
             link: "./machine/low-level-laser-therapy/folilase-prime-hair-regrowth-system.html"
         },
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Meso therapy Injectable device",
             category: "mesotherapy-machine",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/meso-therapy-injectable-device/meso-therapy-injectable-device-1.webp",
             description: "mesotherapy injectable device is an automated system designed to deliver precise micro-injections",
             link: "./machine/mesotherapy-machine/meso-therapy-injectable-device.html"
         },
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Skin Cool electroporation",
             category: "mesotherapy-machine",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/skin-cool-electroporation-device/skin-cool-electroporation-device-1.webp",
             description: "Skin Cool is a multi-functional skin rejuvenation device that combines thermal therapy",
             link: "./machine/mesotherapy-machine/skin-cool-electroporation-device.html"
         },
@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Electric Derma chair",
             category: "clinical-furnitures",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/electric-derma-chair/electric-derma-chair-1.webp",
             description: "Electric Derma Bed offers ultimate precision and comfort, featuring independent motorized",
             link: "./machine/clinical-furnitures/electric-derma-chair.html"
         },
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Fibered Hydraulic chair",
             category: "clinical-furnitures",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/fibered-hydraulic-chair/fibered-hydraulic-chair-1.webp",
             description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
             link: "./machine/clinical-furnitures/fibered-hydraulic-chair.html"
         },
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Dermascope",
             category: "hair-skin-analyzer",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/dermascope/dermascope-1.webp",
             description: "Ideal for skin inspection, portable device can be used to analyze hair and skin issues",
             link: "./machine/hair-skin-analyzer/dermascope.html"
         },
@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Skin Dermascope Report",
             category: "hair-skin-analyzer",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/no-image/image.webp",
             description: "Portable device to check skin condition like moisturizer, fine line, sebum level, skin pore analysis",
             link: "./machine/hair-skin-analyzer/skin-dermascope.html"
         },
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Scalp Analyzer Reports",
             category: "hair-skin-analyzer",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/no-image/image.webp",
             description: "Portable device to check skin condition like scalp condition, moisture level, oil and sebum level",
             link: "./machine/hair-skin-analyzer/scalp-analyzer-reports.html"
         },
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Dermascope with LCD",
             category: "hair-skin-analyzer",
             price: "mid-range",
-            image: "./assets/image/product/ultralift/ultralift.webp",
+            image: "./assets/image/product/dermascope-with-lcd/dermascope-with-lcd-1.webp",
             description: "Ideal for skin inspection, portable device can be used to analyze hair and skin issues",
             link: "./machine/hair-skin-analyzer/dermascope-with-lcd.html"
         },

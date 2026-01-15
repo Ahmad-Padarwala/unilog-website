@@ -1,0 +1,420 @@
+:root {
+  --primary-glow: #38bdf8;
+  --bg-dark: #070b14;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+}
+
+.circle-solution-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-image: linear-gradient(rgba(8, 12, 30, 0.85), rgba(8, 12, 30, 0.95)),
+    url("https://png.pngtree.com/thumb_back/fh260/background/20240528/pngtree-background-of-operation-room-in-hospital-health-care-concept-image_15733972.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;   /* Title upar, content niche */
+  align-items: center;
+  padding: 8vh 4vw;
+  box-sizing: border-box;
+}
+
+
+
+
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Make sure content is above canvas/bg */
+.circle-solution-section>* {
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------
+   TITLE (Top, Full Width)
+--------------------------------------------------------- */
+.circle-title {
+  width: 100%;
+  /* Force new row at top */
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300;
+  margin: 0;
+  padding-bottom: 10px;
+  /* Space below title */
+  color: var(--primary-glow);
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+  flex: 0 0 auto;
+  /* Don't grow/shrink, just take size */
+}
+
+
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  flex: 1;
+}
+
+/* ---------------------------------------------------------
+   LEFT SIDE: CIRCLE WRAPPER
+--------------------------------------------------------- */
+.circle-wrapper {
+  position: relative;
+  /* Fixed sizing logic */
+  width: min(40vw, 40vh);
+  height: min(40vw, 40vh);
+  /* Ensure it stays square and doesn't get squashed by flex */
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* RINGS */
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ring-1 {
+  width: 140%;
+  height: 140%;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  animation: spin 60s linear infinite;
+}
+
+.ring-2 {
+  width: 110%;
+  height: 110%;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.1);
+}
+
+/* CENTER CIRCLE */
+.center-circle {
+  position: relative;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #1e293b 0%, #0f172a 100%);
+  border: 2px solid var(--primary-glow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 50px rgba(56, 189, 248, 0.3);
+  z-index: 10;
+}
+
+.center-circle span {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.inner-glow {
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ORBIT ITEMS */
+.orbit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.orbit-item {
+  position: absolute;
+  width: 28%;
+  height: 28%;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+  overflow: hidden;
+  padding: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.orbit-item .icon-box {
+  font-size: clamp(0.7rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  line-height: 1.1;
+  width: 100%;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--text-main);
+  border: #fff;
+}
+
+/* Positioning */
+.orbit-item:nth-child(1) {
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orbit-item:nth-child(2) {
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%);
+}
+
+.orbit-item:nth-child(3) {
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orbit-item:nth-child(4) {
+  top: 50%;
+  left: -10%;
+  transform: translateY(-50%);
+}
+
+/* Active State */
+.orbit-item.active {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: var(--primary-glow);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+  transform: scale(1.15);
+}
+
+.orbit-item.active:nth-child(1) {
+  transform: translateX(-50%) scale(1.15);
+}
+
+.orbit-item.active:nth-child(2) {
+  transform: translateY(-50%) scale(1.15);
+}
+
+.orbit-item.active:nth-child(3) {
+  transform: translateX(-50%) scale(1.15);
+}
+
+.orbit-item.active:nth-child(4) {
+  transform: translateY(-50%) scale(1.15);
+}
+
+.orbit-item::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: var(--glass-border);
+  transition: 0.3s;
+}
+
+/* ---------------------------------------------------------
+   RIGHT SIDE: CARDS (2x2 Grid)
+--------------------------------------------------------- */
+.solution-cards {
+  flex: 1;
+  /* Take remaining space */
+  max-width: 50%;
+  /* Limit width */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 Columns */
+  grid-template-rows: repeat(2, 1fr);
+  /* 2 Rows */
+  gap: 20px;
+  padding: 20px;
+  align-content: center;
+  /* Center grid in container */
+}
+
+.solution-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 140px;
+  /* Ensure logical height */
+}
+
+.solution-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.solution-card.active {
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.1), transparent);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-5px);
+}
+
+.solution-card.active::before {
+  background: var(--primary-glow);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.card-num {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 5px;
+}
+
+.solution-card.active .card-num {
+  color: var(--primary-glow);
+}
+
+.solution-card h3 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.solution-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+ .stats-badge {
+  display: inline-block;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(20px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid rgba(71, 85, 105, 0.5);
+}
+
+ .stats-badge p {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+ .stats-number {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE: MOBILE (Stack Everything)
+--------------------------------------------------------- */
+@media (max-width: 768px) {
+  .circle-solution-section {
+    flex-direction: column;
+    /* Stack vertically */
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+    justify-content: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap;
+  }
+
+  .circle-title {
+    font-size: 2rem;
+    padding-bottom: 0;
+    flex: initial;
+  }
+
+  /* Reset Widths for Stack */
+  .circle-wrapper,
+  .solution-cards {
+    max-width: 100%;
+    width: 100%;
+    flex: initial;
+  }
+
+  .circle-wrapper {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+  }
+
+  .solution-cards {
+    grid-template-columns: 1fr;
+    /* 1 Column on Mobile */
+    gap: 15px;
+    padding: 0 0 40px 0;
+  }
+
+  .solution-card {
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .orbit-item {
+    width: 75px;
+    height: 75px;
+  }
+
+  .orbit-item .icon-box {
+    font-size: 0.7rem;
+  }
+}
