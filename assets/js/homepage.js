@@ -858,15 +858,21 @@ init();
 
 // consult now modal
 
-  function openConsultModal() {
-    document.querySelector('.consult-now-sec').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
+ function openConsultModal() {
+  document.querySelector('.consult-now-sec').classList.add('active');
+  document.body.style.overflow = 'hidden';
 
-  function closeConsultModal() {
-    document.querySelector('.consult-now-sec').classList.remove('active');
-    document.body.style.overflow = '';
-  }
+  // Reset to first step every time modal opens
+  currentStep = 1;
+  renderStepIndicators();
+  renderFormStep();
+  updateNavigation();
+}
+
+function closeConsultModal() {
+  document.querySelector('.consult-now-sec').classList.remove('active');
+  document.body.style.overflow = '';
+}
 
 
 
