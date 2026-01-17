@@ -26,7 +26,7 @@
   box-sizing: border-box;
 }
 
-#particleCanvas {
+.circle-solution-section #particleCanvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -44,16 +44,16 @@
 /* ---------------------------------------------------------
    TITLE (Top, Full Width)
 --------------------------------------------------------- */
-.circle-title {
-  width: 100%;
+.circle-solution-section .circle-title {
   text-align: center;
-  font-size: 35px;
-  font-weight: 700;
   margin-bottom: 100px;
   color: var(--white);
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
 }
 
-.content-wrapper {
+.circle-solution-section .content-wrapper {
   width: 100%;
   max-width: 1200px;
   margin-bottom: 100px;
@@ -61,20 +61,15 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-
   flex: 1;
 }
 
-/* ---------------------------------------------------------
+/*  ---------------------------------------------------------
    LEFT SIDE: CIRCLE WRAPPER
-/* ---------------------------------------------------------
-  
 --------------------------------------------------------- */
 
-.circle-wrapper {
+.circle-solution-section .circle-wrapper {
   position: relative;
-  /* width: min(50vw, 50vh);
-  height: min(50vw, 50vh); */
   width: 350px;
   height: 350px;
   flex-shrink: 0;
@@ -86,7 +81,7 @@
 }
 
 /* CENTER CIRCLE - Dark with UNILOG and 3 RING LAYERS */
-.center-circle {
+.circle-solution-section .center-circle {
   position: relative;
   width: 45%;
   height: 45%;
@@ -103,14 +98,14 @@
   z-index: 30;
 }
 
-.center-circle img {
-  width: 70%;
+.circle-solution-section .center-circle img {
+  width: 70%; /* Slightly larger for visibility */
   height: 70%;
   object-fit: contain;
   display: block;
 }
 
-.inner-glow {
+.circle-solution-section .inner-glow {
   position: absolute;
   inset: 0;
   border-radius: 50%;
@@ -124,7 +119,7 @@
 }
 
 /* OUTER DECORATIVE DASHED RING */
-.ring-1 {
+.circle-solution-section .ring-1 {
   position: absolute;
   border-radius: 50%;
   top: 50%;
@@ -139,7 +134,7 @@
 }
 
 /* MAIN ORBITAL RING - Clean single white ring */
-.ring-2 {
+.circle-solution-section .ring-2 {
   position: absolute;
   border-radius: 50%;
   top: 50%;
@@ -154,7 +149,7 @@
 }
 
 /* ORBIT CONTAINER */
-.orbit {
+.circle-solution-section .orbit {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -164,12 +159,12 @@
 }
 
 /* WHITE CIRCULAR ORBIT ITEMS - Premium Style */
-.orbit-item {
+.circle-solution-section .orbit-item {
   position: absolute;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--white);
 
   /* Clean border with subtle shadow */
   border: 2px solid rgba(220, 225, 235, 0.8);
@@ -187,7 +182,7 @@
   padding: 12px;
 }
 
-.orbit-item img {
+.circle-solution-section .orbit-item img {
   width: 40px;
   height: 40px;
   margin-bottom: 6px;
@@ -197,7 +192,7 @@
     hue-rotate(200deg) brightness(0.9);
 }
 
-.orbit-item .icon-box {
+.circle-solution-section .orbit-item .icon-box {
   font-size: 8.5px;
   font-weight: 700;
   color: #1e3a5f;
@@ -207,38 +202,36 @@
   letter-spacing: 0.2px;
 }
 
-/* DIAGONAL POSITIONING - Premium placement */
-
 /* TOP-LEFT circle */
-.orbit-item:nth-child(1) {
+.circle-solution-section .orbit-item:nth-child(1) {
   top: 5%;
   left: 10%;
   transform: translate(-50%, -50%);
 }
 
 /* TOP-RIGHT circle */
-.orbit-item:nth-child(2) {
+.circle-solution-section .orbit-item:nth-child(2) {
   top: 5%;
   right: 10%;
   transform: translate(50%, -50%);
 }
 
 /* BOTTOM-RIGHT circle */
-.orbit-item:nth-child(3) {
+.circle-solution-section .orbit-item:nth-child(3) {
   bottom: 5%;
   right: 10%;
   transform: translate(50%, 50%);
 }
 
 /* BOTTOM-LEFT circle */
-.orbit-item:nth-child(4) {
+.circle-solution-section .orbit-item:nth-child(4) {
   bottom: 5%;
   left: 10%;
   transform: translate(-50%, 50%);
 }
 
 /* Line to TOP-LEFT circle - diagonal */
-.orbit-item:nth-child(1)::before {
+.circle-solution-section .orbit-item:nth-child(1)::before {
   height: 65px;
   bottom: 50%;
   left: 50%;
@@ -247,7 +240,7 @@
 }
 
 /* Line to TOP-RIGHT circle - diagonal */
-.orbit-item:nth-child(2)::before {
+.circle-solution-section .orbit-item:nth-child(2)::before {
   height: 65px;
   bottom: 50%;
   right: 50%;
@@ -256,7 +249,7 @@
 }
 
 /* Line to BOTTOM-RIGHT circle - diagonal */
-.orbit-item:nth-child(3)::before {
+.circle-solution-section .orbit-item:nth-child(3)::before {
   height: 65px;
   top: 50%;
   right: 50%;
@@ -265,7 +258,7 @@
 }
 
 /* Line to BOTTOM-LEFT circle - diagonal */
-.orbit-item:nth-child(4)::before {
+.circle-solution-section .orbit-item:nth-child(4)::before {
   height: 65px;
   top: 50%;
   left: 50%;
@@ -274,7 +267,7 @@
 }
 
 /* CONNECTION DOTS on the ring - Premium style */
-.orbit-item::after {
+.circle-solution-section .orbit-item::after {
   content: "";
   position: absolute;
   width: 7px;
@@ -287,34 +280,34 @@
 }
 
 /* Position dots at diagonal angles on the ring */
-.orbit-item:nth-child(1)::after {
+.circle-solution-section .orbit-item:nth-child(1)::after {
   bottom: -22px;
   right: -22px;
 }
 
-.orbit-item:nth-child(2)::after {
+.circle-solution-section .orbit-item:nth-child(2)::after {
   bottom: -22px;
   left: -22px;
 }
 
-.orbit-item:nth-child(3)::after {
+.circle-solution-section .orbit-item:nth-child(3)::after {
   top: -22px;
   left: -22px;
 }
 
-.orbit-item:nth-child(4)::after {
+.circle-solution-section .orbit-item:nth-child(4)::after {
   top: -22px;
   right: -22px;
 }
 
 /* ACTIVE STATE - Premium blue glow */
-.orbit-item.active {
+.circle-solution-section .orbit-item.active {
   border-color: rgba(96, 165, 250, 0.6);
   box-shadow: 0 0 25px rgba(96, 165, 250, 0.5), 0 4px 20px rgba(0, 0, 0, 0.12);
   transform: scale(1.08);
 }
 
-.orbit-item.active::before {
+.circle-solution-section .orbit-item.active::before {
   background: linear-gradient(
     to bottom,
     rgba(96, 165, 250, 0.7),
@@ -324,37 +317,37 @@
   width: 2px;
 }
 
-.orbit-item.active::after {
+.circle-solution-section .orbit-item.active::after {
   background: rgba(96, 165, 250, 1);
   border-color: rgba(96, 165, 250, 0.7);
   box-shadow: 0 0 15px rgba(96, 165, 250, 1), 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* Maintain positioning when active */
-.orbit-item.active:nth-child(1) {
+.circle-solution-section .orbit-item.active:nth-child(1) {
   transform: translate(-50%, -50%) scale(1.08);
 }
 
-.orbit-item.active:nth-child(2) {
+.circle-solution-section .orbit-item.active:nth-child(2) {
   transform: translate(50%, -50%) scale(1.08);
 }
 
-.orbit-item.active:nth-child(3) {
+.circle-solution-section .orbit-item.active:nth-child(3) {
   transform: translate(50%, 50%) scale(1.08);
 }
 
-.orbit-item.active:nth-child(4) {
+.circle-solution-section .orbit-item.active:nth-child(4) {
   transform: translate(-50%, 50%) scale(1.08);
 }
 
 /* HOVER EFFECT - Subtle and premium */
-.orbit-item:hover:not(.active) {
+.circle-solution-section .orbit-item:hover:not(.active) {
   transform: scale(1.05);
   border-color: rgba(96, 165, 250, 0.3);
   box-shadow: 0 0 15px rgba(96, 165, 250, 0.25), 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-.orbit-item:hover:not(.active)::before {
+.circle-solution-section .orbit-item:hover:not(.active)::before {
   background: linear-gradient(
     to bottom,
     rgba(96, 165, 250, 0.4),
@@ -363,19 +356,19 @@
   box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
 }
 
-.orbit-item:hover:not(.active):nth-child(1) {
+.circle-solution-section .orbit-item:hover:not(.active):nth-child(1) {
   transform: translate(-50%, -50%) scale(1.05);
 }
 
-.orbit-item:hover:not(.active):nth-child(2) {
+.circle-solution-section .orbit-item:hover:not(.active):nth-child(2) {
   transform: translate(50%, -50%) scale(1.05);
 }
 
-.orbit-item:hover:not(.active):nth-child(3) {
+.circle-solution-section .orbit-item:hover:not(.active):nth-child(3) {
   transform: translate(50%, 50%) scale(1.05);
 }
 
-.orbit-item:hover:not(.active):nth-child(4) {
+.circle-solution-section .orbit-item:hover:not(.active):nth-child(4) {
   transform: translate(-50%, 50%) scale(1.05);
 }
 
@@ -391,43 +384,43 @@
 
 /* Responsive design */
 @media (max-width: 1024px) {
-  .orbit-item {
+  .circle-solution-section .orbit-item {
     width: 75px;
     height: 75px;
     padding: 10px;
   }
 
-  .orbit-item img {
+  .circle-solution-section .orbit-item img {
     width: 28px;
     height: 28px;
   }
 
-  .orbit-item .icon-box {
+  .circle-solution-section .orbit-item .icon-box {
     font-size: 8px;
   }
 
-  .orbit-item::before {
+  .circle-solution-section .orbit-item::before {
     height: 58px !important;
   }
 }
 
 @media (max-width: 768px) {
-  .orbit-item {
+  .circle-solution-section .orbit-item {
     width: 65px;
     height: 65px;
     padding: 8px;
   }
 
-  .orbit-item img {
+  .circle-solution-section .orbit-item img {
     width: 24px;
     height: 24px;
   }
 
-  .orbit-item .icon-box {
+  .circle-solution-section .orbit-item .icon-box {
     font-size: 7px;
   }
 
-  .orbit-item::before {
+  .circle-solution-section .orbit-item::before {
     height: 50px !important;
   }
 }
@@ -458,7 +451,7 @@
 /* ---------------------------------------------------------
    RIGHT SIDE: CARDS (2x2 Grid)
 --------------------------------------------------------- */
-.solution-cards {
+.circle-solution-section .solution-cards {
   flex: 1;
   max-width: 50%;
   display: grid;
@@ -469,7 +462,7 @@
   align-content: center;
 }
 
-.solution-card {
+.circle-solution-section .solution-card {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
@@ -485,7 +478,7 @@
   min-height: 130px;
 }
 
-.solution-card::before {
+.circle-solution-section .solution-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -496,35 +489,31 @@
   transition: 0.3s;
 }
 
-.solution-card.active {
+.circle-solution-section .solution-card.active {
   background: linear-gradient(180deg, rgba(56, 189, 248, 0.1), transparent);
   border-color: rgba(56, 189, 248, 0.4);
   transform: translateY(-5px);
 }
 
-.solution-card.active::before {
+.circle-solution-section .solution-card.active::before {
   background: var(--primary-glow);
   box-shadow: 0 0 15px var(--primary-glow);
 }
 
-
-
-
-
-.solution-card h3 {
+.circle-solution-section .solution-card h3 {
   font-size: 1.1rem;
   margin: 5px 0;
   color: #fff;
 }
 
-.solution-card p {
+.circle-solution-section .solution-card p {
   font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.4;
   margin: 0;
 }
 
-.stats-badge {
+.circle-solution-section .stats-badge {
   display: inline-block;
   background: rgba(30, 41, 59, 0.7);
   backdrop-filter: blur(20px);
@@ -533,13 +522,13 @@
   border: 1px solid rgba(71, 85, 105, 0.5);
 }
 
-.stats-badge p {
+.circle-solution-section .stats-badge p {
   color: var(--white);
   font-size: 1rem;
   font-weight: 600;
 }
 
-.stats-number {
+.circle-solution-section .stats-number {
   color: var(--primary);
   font-weight: 700;
 }
@@ -557,19 +546,19 @@
    RESPONSIVE: TABLET & MOBILE
 --------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .content-wrapper {
+  .circle-solution-section .content-wrapper {
     flex-direction: column; /* Stack circle on top of cards */
     gap: 80px; /* Space for orbit items to bleed out */
     padding-top: 40px;
   }
 
-  .solution-cards {
+  .circle-solution-section .solution-cards {
     max-width: 100%;
     width: 100%;
     grid-template-columns: repeat(2, 1fr); /* Keep 2 cols for tablets */
   }
 
-  .circle-wrapper {
+  .circle-solution-section .circle-wrapper {
     width: 320px; /* Controlled size for tablets */
     height: 320px;
   }
@@ -582,54 +571,54 @@
     min-height: 100vh;
   }
 
-  .circle-title {
+  .circle-solution-section .circle-title {
     font-size: 1.6rem;
     margin-bottom: 30px;
   }
 
-  .content-wrapper {
+  .circle-solution-section .content-wrapper {
     gap: 60px;
   }
 
   /* Shrink the circle for small screens */
-  .circle-wrapper {
+  .circle-solution-section .circle-wrapper {
     width: 240px;
     height: 240px;
   }
 
   /* Small circles (orbit items) adjustment */
-  .orbit-item {
+  .circle-solution-section .orbit-item {
     width: 85px;
     height: 85px;
   }
 
-  .orbit-item img {
+  .circle-solution-section .orbit-item img {
     width: 25px;
     height: 25px;
   }
 
-  .orbit-item .icon-box {
+  .circle-solution-section .orbit-item .icon-box {
     font-size: 9px;
   }
 
   /* Stack cards in 1 column for mobile */
-  .solution-cards {
+  .circle-solution-section .solution-cards {
     grid-template-columns: 1fr;
     gap: 15px;
     padding: 0;
   }
 
-  .solution-card {
+  .circle-solution-section .solution-card {
     min-height: auto;
     padding: 15px;
     text-align: center;
   }
 
-  .solution-card h3 {
+  .circle-solution-section .solution-card h3 {
     font-size: 1rem;
   }
 
-  .stats-badge {
+  .circle-solution-section .stats-badge {
     width: 90%;
     text-align: center;
     margin-top: 20px;
@@ -638,12 +627,12 @@
 
 /* Fix for very small devices (iPhone SE etc) */
 @media (max-width: 380px) {
-  .circle-wrapper {
+  .circle-solution-section .circle-wrapper {
     width: 200px;
     height: 200px;
   }
 
-  .orbit-item {
+  .circle-solution-section .orbit-item {
     width: 70px;
     height: 70px;
   }
