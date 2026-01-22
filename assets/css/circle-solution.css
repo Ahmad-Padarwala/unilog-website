@@ -86,7 +86,7 @@
   width: 45%;
   height: 45%;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   /* FIRST RING - 2px white border */
   border: 2px solid var(--white);
   /* SECOND RING - 10px gap + THIRD RING - 1px border */
@@ -111,7 +111,7 @@
   border-radius: 50%;
   background: radial-gradient(
     circle at center,
-    rgba(147, 167, 203, 0.12) 0%,
+    rgba(255, 255, 255, 0.12) 0%,
     transparent 70%
   );
   pointer-events: none;
