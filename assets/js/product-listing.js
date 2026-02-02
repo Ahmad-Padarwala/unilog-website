@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Folilase prime hair regrowth system",
             category: "low-level-laser-therapy",
             price: "mid-range",
-            image: "./assets/image/product/no-image/image.webp",
+            image: "./assets/image/product/folilase-prime-hair-regrowth-system/folilase-prime-hair-regrowth-system.webp",
             description: "Folilase hair regrowth system utilizes Low-Level Laser Therapy (LLLT) with 650nm diode lasers",
             link: "./machine/low-level-laser-therapy/folilase-prime-hair-regrowth-system.html"
         },
