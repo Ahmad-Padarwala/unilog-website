@@ -146,6 +146,24 @@ header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar {
     border-radius: 0 0 0 10px;
 }
 
+header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar .view-btn {
+    display: flex;
+    justify-content: end;
+    margin: 7px 7px;
+}
+
+header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar .view-btn a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar .view-btn a:hover {
+    text-decoration: underline;
+}
+
 header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar::-webkit-scrollbar-track {
     background-color: transparent;
 }

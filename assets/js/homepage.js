@@ -78,7 +78,13 @@ const productsData = {
       imageDesc: "Doublo New HIFU utilize stimulating natural collagen production.",
       link: "machine/hifu/doublo-new-hifu.html"
     },
-
+    {
+      img: "./assets/image/product/Epiglow-Diode/epiglow-1.webp",
+      title: "Epiglow Diode + pico laser",
+      desc: "most advance combination laser system of diode and picosecond laser.",
+      imageDesc: "Doublo New HIFU utilize stimulating natural collagen production.",
+      link: "machine/laser-platform/epiglow_diode_pico_laser.html"
+    },
 
   ],
   product: [

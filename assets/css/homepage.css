@@ -29,6 +29,13 @@
   background: linear-gradient(135deg, #a397a7, #f4e6f7);
 }
 
+.home-hero-section .hero-content .hero-card.bg-img {
+  background-image: url('../image/360-banner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .home-hero-section .hero-content .hero-card.active .hero-left {
   flex: 1;
   display: flex;
@@ -43,11 +50,7 @@
   padding: 30px;
 }
 
-.home-hero-section
-  .hero-content
-  .hero-card:not(.active)
-  .hero-left
-  > *:not(.badge),
+.home-hero-section .hero-content .hero-card:not(.active) .hero-left>*:not(.badge),
 .home-hero-section .hero-content .hero-card:not(.active) .hero-right {
   display: none;
 }
@@ -365,20 +368,8 @@
   bottom: -100%;
 }
 
-.blog-section
-  .news-list-wrap
-  .news-list
-  .news-item:hover
-  .content
-  .news-info
-  h3,
-.blog-section
-  .news-list-wrap
-  .news-list
-  .news-item:hover
-  .content
-  .news-info
-  span {
+.blog-section .news-list-wrap .news-list .news-item:hover .content .news-info h3,
+.blog-section .news-list-wrap .news-list .news-item:hover .content .news-info span {
   color: var(--white);
 }
 
@@ -496,12 +487,7 @@
   border-radius: 5px;
 }
 
-.blog-section
-  .news-list-wrap
-  .news-list
-  .news-item
-  .view-article-block:hover
-  i {
+.blog-section .news-list-wrap .news-list .news-item .view-article-block:hover i {
   transform: rotate(0deg);
 }
 
@@ -716,20 +702,14 @@
   transform: scale(0.9) rotate(-5deg);
 }
 
-.review-section
-  .review-container
-  .testimonial-slider
-  .swiper-slide.swiper-slide-active {
+.review-section .review-container .testimonial-slider .swiper-slide.swiper-slide-active {
   z-index: 10;
   filter: blur(0);
   opacity: 1;
   transform: scale(1) rotate(0deg);
 }
 
-.review-section
-  .review-container
-  .testimonial-slider
-  .swiper-slide.swiper-slide-next {
+.review-section .review-container .testimonial-slider .swiper-slide.swiper-slide-next {
   filter: blur(2px);
   opacity: 0.5;
   transform: scale(0.9) rotate(5deg);
@@ -748,23 +728,19 @@
   justify-content: space-between;
   user-select: none;
 }
+.review-section .review-container .testimonial-slider .testimonial-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-.review-section
-  .review-container
-  .testimonial-slider
-  .testimonial-card
-  .quote-icon
-  i {
+.review-section .review-container .testimonial-slider .testimonial-card .quote-icon i {
   color: var(--secondary);
   font-weight: 700;
   font-size: 3.5rem;
 }
 
-.review-section
-  .review-container
-  .testimonial-slider
-  .testimonial-card
-  .review-text {
+.review-section .review-container .testimonial-slider .testimonial-card .review-text {
   font-size: 1.2rem;
   margin-bottom: 15px;
   line-height: 1.4;
@@ -866,15 +842,13 @@
 /* contact section */
 
 .contact-section {
-  background: conic-gradient(
-    from 47.52deg at 37.47% 47.5%,
-    #f7d0ff 0deg,
-    #9f51af 93.46deg,
-    #6a287f 186.92deg,
-    #a166b7 254.42deg,
-    #d685e8 299.42deg,
-    #470069 360deg
-  );
+  background: conic-gradient(from 47.52deg at 37.47% 47.5%,
+      #f7d0ff 0deg,
+      #9f51af 93.46deg,
+      #6a287f 186.92deg,
+      #a166b7 254.42deg,
+      #d685e8 299.42deg,
+      #470069 360deg);
   padding: 50px 0;
   color: var(--white);
 }
@@ -1005,6 +979,7 @@
 }
 
 @media screen and (max-width: 1280px) {
+
   /* hero section */
   .home-hero-section .hero-content .hero-card.active .hero-right img.machine {
     max-width: 350px;
@@ -1250,14 +1225,10 @@
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.86),
-        rgba(255, 255, 255, 0.76)
-      )
-      padding-box,
-    conic-gradient(from 140deg, var(--accent), var(--secondary), var(--accent))
-      border-box;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.86),
+      rgba(255, 255, 255, 0.76)) padding-box,
+    conic-gradient(from 140deg, var(--accent), var(--secondary), var(--accent)) border-box;
   border: 2px solid transparent;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(8px);
@@ -1330,12 +1301,10 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(
-    105deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.35) 35%,
-    rgba(255, 255, 255, 0) 60%
-  );
+  background: linear-gradient(105deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.35) 35%,
+      rgba(255, 255, 255, 0) 60%);
   mix-blend-mode: screen;
   transform: translateX(-120%) rotate(2deg);
   transition: transform 0.6s ease;
@@ -1452,11 +1421,9 @@
 .interactive-circle-section .sphere-2 {
   width: 45vw;
   height: 45vw;
-  background: linear-gradient(
-    240deg,
-    rgba(72, 0, 255, 0.8),
-    rgba(0, 183, 255, 0.4)
-  );
+  background: linear-gradient(240deg,
+      rgba(72, 0, 255, 0.8),
+      rgba(0, 183, 255, 0.4));
   bottom: -20%;
   right: -10%;
   animation: float-2 18s ease-in-out infinite alternate;
@@ -1465,11 +1432,9 @@
 .interactive-circle-section .sphere-3 {
   width: 30vw;
   height: 30vw;
-  background: linear-gradient(
-    120deg,
-    rgba(133, 89, 255, 0.5),
-    rgba(98, 216, 249, 0.3)
-  );
+  background: linear-gradient(120deg,
+      rgba(133, 89, 255, 0.5),
+      rgba(98, 216, 249, 0.3));
   top: 60%;
   left: 20%;
   animation: float-3 20s ease-in-out infinite alternate;
@@ -1525,11 +1490,9 @@
   width: 100%;
   height: 100%;
   background-size: 40px 40px;
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px
-    ),
+      transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   z-index: 1;
 }
@@ -1584,16 +1547,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-      circle at 30% 20%,
+  background: radial-gradient(circle at 30% 20%,
       rgba(76, 40, 150, 0.05) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 70% 80%,
+      transparent 50%),
+    radial-gradient(circle at 70% 80%,
       rgba(128, 56, 162, 0.05) 0%,
-      transparent 50%
-    );
+      transparent 50%);
   pointer-events: none;
 }
 
@@ -1732,12 +1691,10 @@
   left: -100%;
   right: 100%;
   height: 5px;
-  background: linear-gradient(
-    90deg,
-    var(--primary) 0%,
-    #8b5cf6 50%,
-    var(--secondary) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--primary) 0%,
+      #8b5cf6 50%,
+      var(--secondary) 100%);
   border-radius: 0 0 24px 24px;
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
@@ -1749,13 +1706,11 @@
   left: -50%;
   right: -50%;
   bottom: -50%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    rgba(76, 40, 150, 0.03) 90deg,
-    rgba(128, 56, 162, 0.03) 180deg,
-    transparent 270deg
-  );
+  background: conic-gradient(from 0deg,
+      transparent 0deg,
+      rgba(76, 40, 150, 0.03) 90deg,
+      rgba(128, 56, 162, 0.03) 180deg,
+      transparent 270deg);
   animation: rotate 15s linear infinite;
   z-index: -1;
   border-radius: 50%;
@@ -1885,7 +1840,7 @@
   transform: translateY(-5px) scale(1.05);
 }
 
-.circle-container:hover + .description-panel {
+.circle-container:hover+.description-panel {
   opacity: 1;
   transform: translateX(0);
 }
@@ -1933,63 +1888,53 @@
 /* Enhanced gradient animation for the circle */
 @keyframes gradientShift {
   0% {
-    background: conic-gradient(
-      from 0deg,
-      var(--primary) 0deg,
-      #8b5cf6 72deg,
-      var(--secondary) 144deg,
-      #06b6d4 216deg,
-      #10b981 288deg,
-      var(--primary) 360deg
-    );
+    background: conic-gradient(from 0deg,
+        var(--primary) 0deg,
+        #8b5cf6 72deg,
+        var(--secondary) 144deg,
+        #06b6d4 216deg,
+        #10b981 288deg,
+        var(--primary) 360deg);
   }
 
   25% {
-    background: conic-gradient(
-      from 90deg,
-      var(--primary) 0deg,
-      #8b5cf6 72deg,
-      var(--secondary) 144deg,
-      #06b6d4 216deg,
-      #10b981 288deg,
-      var(--primary) 360deg
-    );
+    background: conic-gradient(from 90deg,
+        var(--primary) 0deg,
+        #8b5cf6 72deg,
+        var(--secondary) 144deg,
+        #06b6d4 216deg,
+        #10b981 288deg,
+        var(--primary) 360deg);
   }
 
   50% {
-    background: conic-gradient(
-      from 180deg,
-      var(--primary) 0deg,
-      #8b5cf6 72deg,
-      var(--secondary) 144deg,
-      #06b6d4 216deg,
-      #10b981 288deg,
-      var(--primary) 360deg
-    );
+    background: conic-gradient(from 180deg,
+        var(--primary) 0deg,
+        #8b5cf6 72deg,
+        var(--secondary) 144deg,
+        #06b6d4 216deg,
+        #10b981 288deg,
+        var(--primary) 360deg);
   }
 
   75% {
-    background: conic-gradient(
-      from 270deg,
-      var(--primary) 0deg,
-      #8b5cf6 72deg,
-      var(--secondary) 144deg,
-      #06b6d4 216deg,
-      #10b981 288deg,
-      var(--primary) 360deg
-    );
+    background: conic-gradient(from 270deg,
+        var(--primary) 0deg,
+        #8b5cf6 72deg,
+        var(--secondary) 144deg,
+        #06b6d4 216deg,
+        #10b981 288deg,
+        var(--primary) 360deg);
   }
 
   100% {
-    background: conic-gradient(
-      from 360deg,
-      var(--primary) 0deg,
-      #8b5cf6 72deg,
-      var(--secondary) 144deg,
-      #06b6d4 216deg,
-      #10b981 288deg,
-      var(--primary) 360deg
-    );
+    background: conic-gradient(from 360deg,
+        var(--primary) 0deg,
+        #8b5cf6 72deg,
+        var(--secondary) 144deg,
+        #06b6d4 216deg,
+        #10b981 288deg,
+        var(--primary) 360deg);
   }
 }
 
