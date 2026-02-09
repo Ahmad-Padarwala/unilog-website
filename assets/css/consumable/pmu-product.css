@@ -139,12 +139,13 @@
 .pmu-product-section {
   width: 100%;
   height: auto;
+  margin-top: 130px;
 }
 
 .pmu-product-container {
   width: 100%;
-  height: calc(100vh - 130px);
-  overflow: hidden;
+  /* height: calc(100vh - 130px); */
+  /* overflow: hidden; */
 }
 
 .pmu-product-container img {
