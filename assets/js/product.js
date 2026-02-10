@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
             yPercent: 50,
         },
     ];
-    
+
     //old size
     const imgStates = [
         { width: 600 },
