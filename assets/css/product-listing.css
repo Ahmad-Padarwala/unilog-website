@@ -32,7 +32,7 @@
     min-height: 100vh;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== main product section ===== */
 .products-hero {
     min-height: 60vh;
     background-image: url("../image/product-banner.webp");
@@ -49,10 +49,7 @@
     inset: 0;
 }
 
-
 /* ==== Skin Care Section ==== */
-
-/* ===== HERO SECTION ===== */
 .skin-hero {
     min-height: 60vh;
     background-image: url("../image/consumable-product-banner.webp");
@@ -65,6 +62,23 @@
 }
 
 .skin-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+/* ==== Furniture Section ==== */
+.furniture-hero {
+    min-height: 60vh;
+    background-image: url("../image/furniture-product-banner.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.furniture-hero .hero-overlay {
     position: absolute;
     inset: 0;
 }
