@@ -134,6 +134,11 @@ header nav#navbar .dropdown:hover .dropdown-menu.clinical-consumable {
     transform: translate(-33%, 0);
 }
 
+header nav#navbar .dropdown:hover .dropdown-menu.professional-range {
+    transform: translate(-69%, 0);
+}
+
+
 /* Sidebar */
 header nav#navbar .dropdown .dropdown-menu .dropdown-sidebar {
     background: var(--primary);
