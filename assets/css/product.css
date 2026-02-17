@@ -802,6 +802,17 @@ main {
   }
 }
 
+@media screen and (max-width: 1000px) {
+
+  .image-container img {
+    display: none;
+  }
+
+  .product-container>img {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .hero-section .hero-title {
     font-size: 2.4rem;
@@ -1085,6 +1096,7 @@ main {
   .updates-section .content-container .col-1 .feature-card,
   .updates-section .content-container .col-2 .feature-card {
     max-width: 90%;
+    width: 100%;
   }
 
   .product-container {
@@ -1232,7 +1244,7 @@ main {
   margin-top: 0;
   font-style: italic;
   font-weight: 500;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   line-height: 1.55;
 }
 
@@ -1244,6 +1256,7 @@ main {
   border-radius: 50px;
   color: var(--white);
   font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
