@@ -67,6 +67,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="../assets/css/product.css" />
 
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
   <!-- Structured Data: Product -->
   <script type="application/ld+json">
   {
@@ -973,35 +977,10 @@
       <h2 class="brochure-title">Dow<span>nload</span> Now</h2>
       <p class="brochure-text">Lasermach</p>
       <p class="brochure-text2">Brochure</p>
-      <button class="btn-primary" id="openBrochureModal">
+      <a style="text-decoration: none;" href="../assets/image/unilog-exclusive/acnepeel-exo/acnepeel-exo.pdf"
+        target="_blank" class="btn-primary">
         Download Brochure
-      </button>
-    </div>
-
-    <!-- Modal -->
-    <div class="brochure-modal" id="brochureModal">
-      <div class="brochure-modal-content">
-        <span class="close-modal" id="closeBrochureModal">&times;</span>
-        <h3>Fill in your details</h3>
-        <form id="brochureForm">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" id="fullName" name="fullName" required />
-          </div>
-
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-
-          <div class="form-group">
-            <label>Contact No.</label>
-            <input type="tel" id="contact" name="contact" required />
-          </div>
-
-          <button type="submit" class="btn-primary">Submit & Download</button>
-        </form>
-      </div>
+      </a>
     </div>
   </section>
 
