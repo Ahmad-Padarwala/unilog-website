@@ -93,6 +93,11 @@ header nav#navbar .nav-links li {
     align-items: center;
 }
 
+@media screen and (max-width:1024px) {
+    header nav#navbar .nav-links li {
+       height: 40px;
+    }
+}
 
 header nav#navbar .nav-links li a {
     text-decoration: none;
