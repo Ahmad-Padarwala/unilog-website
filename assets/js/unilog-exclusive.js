@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             searchInput.addEventListener('focus', showSearchSuggestions);
             searchInput.addEventListener('blur', hideSearchSuggestions);
         }
-        
+
         if (searchBtn) {
             searchBtn.addEventListener('click', performSearch);
         }
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Hide search suggestions
         hideSearchSuggestions();
-        
+
         // Render all products
         renderProducts(products);
         updateResultsCount(products.length);
