@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function startAutoSlide() {
-    slideInterval = setInterval(() => {
-      let nextIndex = (activeIndex + 1) % cards.length;
-      setActiveCard(nextIndex);
-    }, 5000); // 5 seconds
+    // slideInterval = setInterval(() => {
+    //   let nextIndex = (activeIndex + 1) % cards.length;
+    //   setActiveCard(nextIndex);
+    // }, 5000); // 5 seconds
   }
 
   function resetAutoSlide() {

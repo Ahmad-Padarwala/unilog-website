@@ -984,7 +984,7 @@
 
   /* hero section */
   .home-hero-section .hero-content .hero-card.active .hero-right img.machine {
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
   }
 
@@ -995,11 +995,31 @@
   .home-hero-section .hero-content .hero-card .badge {
     font-size: 12px;
   }
+
+  .home-hero-section .hero-content .hero-card.active .hero-buttons {
+    gap: 9px;
+  }
+}
+
+@media screen and (max-width: 1474px) {
+  .home-hero-section .hero-content .hero-card.active .hero-right img.machine {
+    max-width: 320px;
+    height: auto;
+  }
+
+  .home-hero-section .hero-content .hero-card.active .hero-buttons {
+    gap: 9px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .contact-section .contact-wrapper {
     flex-direction: column;
+  }
+
+  .home-hero-section .hero-content .hero-card.active .hero-right img.machine {
+    max-width: 300px;
+    height: auto;
   }
 
   .contact-section .contact-wrapper .contact-form {
