@@ -291,24 +291,6 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/mesotherapy-machine/skin-cool-electroporation-device.html"
         },
         {
-            id: 33,
-            name: "Electric Derma chair",
-            category: "clinical-furnitures",
-            price: "mid-range",
-            image: "./assets/image/product/electric-derma-chair/electric-derma-chair-1.webp",
-            description: "Electric Derma Bed offers ultimate precision and comfort, featuring independent motorized",
-            link: "./machine/clinical-furnitures/electric-derma-chair.html"
-        },
-        {
-            id: 34,
-            name: "Fibered Hydraulic chair",
-            category: "clinical-furnitures",
-            price: "mid-range",
-            image: "./assets/image/product/fibered-hydraulic-chair/fibered-hydraulic-chair-1.webp",
-            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
-            link: "./machine/clinical-furnitures/fibered-hydraulic-chair.html"
-        },
-        {
             id: 35,
             name: "Dermascope",
             category: "hair-skin-analyzer",

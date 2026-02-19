@@ -4,40 +4,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const products = [
         {
             id: 1,
-            name: "Acnepeel Exo",
-            category: "chemical-peels",
-            price: "premium",
-            image: "./assets/image/skincare-product/acnepeel.webp",
-            description: "India's first black peel with triple exosomes in highly stable gel form for Grade I-IV acne management.",
-            link: "./skincare/Acnepeelexo.html"
+            name: "Electric Derma chair",
+            category: "clinical-furnitures",
+            price: "mid-range",
+            image: "./assets/image/product/electric-derma-chair/electric-derma-chair-1.webp",
+            description: "Electric Derma Bed offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/clinical-furnitures/electric-derma-chair.html"
         },
         {
             id: 2,
-            name: "AA Complex",
-            category: "skin-boosters",
-            price: "premium",
-            image: "./assets/image/skincare-product/aa-complex.webp",
-            description: "Innovative repairing, brightening & age reversing complex for comprehensive skin care and anti-aging treatments.",
-            link: "./AAComplex.html"
+            name: "Fibered Hydraulic chair",
+            category: "clinical-furnitures",
+            price: "mid-range",
+            image: "./assets/image/product/fibered-hydraulic-chair/fibered-hydraulic-chair-1.webp",
+            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/clinical-furnitures/fibered-hydraulic-chair.html"
         },
         {
             id: 3,
-            name: "Epidew",
-            category: "skin-boosters",
+            name: "Derma Chair Rest",
+            category: "premium-derma-chair",
             price: "mid-range",
-            image: "./assets/image/skincare-product/epidew.webp",
-            description: "Intense Hydrating Biomimic Skin Booster for deep hydration and skin rejuvenation with advanced technology.",
-            link: "./Epidew.html"
+            image: "./assets/image/product/derma-rest-chair/derma-rest-chair-1.webp",
+            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/premium-derma-chair/derma-chair-rest.html"
         },
         {
             id: 4,
-            name: "Scalpon",
-            category: "hair-growth",
-            price: "premium",
-            image: "./assets/image/skincare-product/scalpon.webp",
-            description: "Advanced Liposomal Hair Growth Modulator for effective hair restoration therapy and scalp treatment.",
-            link: "./Scalpon.html"
-        }
+            name: "Derma Chair Elite",
+            category: "premium-derma-chair",
+            price: "mid-range",
+             image: "./assets/image/product/derma-elite-chair/derma-elite-chair-1.webp",
+            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/premium-derma-chair/derma-chair-elite.html"
+        },
     ];
 
     // Initialize the page
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             searchInput.addEventListener('focus', showSearchSuggestions);
             searchInput.addEventListener('blur', hideSearchSuggestions);
         }
-        
+
         if (searchBtn) {
             searchBtn.addEventListener('click', performSearch);
         }
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Hide search suggestions
         hideSearchSuggestions();
-        
+
         // Render all products
         renderProducts(products);
         updateResultsCount(products.length);

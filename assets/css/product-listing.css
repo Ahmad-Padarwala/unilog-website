@@ -83,6 +83,24 @@
     inset: 0;
 }
 
+/* ==== unilog Exclusive Section ==== */
+.exclusive-hero {
+    min-height: 60vh;
+    background-image: url("../image/exclusive-banner.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.exclusive-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+
 /* ===== REFINED FILTER SECTION ===== */
 .filter-section {
     background: var(--white);
