@@ -34,9 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Derma Chair Elite",
             category: "premium-derma-chair",
             price: "mid-range",
-             image: "./assets/image/product/derma-elite-chair/derma-elite-chair-1.webp",
+            image: "./assets/image/product/derma-elite-chair/derma-elite-chair-1.webp",
             description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
             link: "./machine/premium-derma-chair/derma-chair-elite.html"
+        },
+        {
+            id: 5,
+            name: "Single Dome OT Light",
+            category: "ot-light",
+            price: "mid-range",
+            image: "./assets/image/product/single-dome-ot-light/ot-light-1.webp",
+            description: "High powered light used for hair transplant with white and yellow light for précised work for accuracy.",
+            link: "./machine/ot-light/single-dome-ot-light.html"
         },
     ];
 
