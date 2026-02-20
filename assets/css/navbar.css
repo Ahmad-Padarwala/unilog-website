@@ -142,6 +142,9 @@ header nav#navbar .dropdown:hover .dropdown-menu.clinical-consumable {
 header nav#navbar .dropdown:hover .dropdown-menu.professional-range {
     transform: translate(-69%, 0);
 }
+header nav#navbar .dropdown:hover .dropdown-menu.clinical-furniture {
+    transform: translate(-53%, 0);
+}
 
 
 /* Sidebar */
