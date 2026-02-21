@@ -68,7 +68,7 @@
 }
 
 .welcome-content h2 {
-    color: var(--black);
+    color: var(--secondary);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.5px;
