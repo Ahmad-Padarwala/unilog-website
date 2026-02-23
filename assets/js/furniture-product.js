@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 1,
             name: "Electric Derma chair",
-            category: "clinical-furnitures",
+            category: "electric-derma-chair",
             price: "mid-range",
             image: "./assets/image/product/electric-derma-chair/electric-derma-chair-1.webp",
             description: "Electric Derma Bed offers ultimate precision and comfort, featuring independent motorized",
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 2,
             name: "Fibered Hydraulic chair",
-            category: "clinical-furnitures",
+            category: "electric-derma-chair",
             price: "mid-range",
             image: "./assets/image/product/fibered-hydraulic-chair/fibered-hydraulic-chair-1.webp",
             description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 3,
             name: "Derma Chair Rest",
-            category: "premium-derma-chair",
+            category: "premium-electric-derma-chair",
             price: "mid-range",
             image: "./assets/image/product/derma-rest-chair/derma-rest-chair-1.webp",
             description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 4,
             name: "Derma Chair Elite",
-            category: "premium-derma-chair",
+            category: "premium-electric-derma-chair",
             price: "mid-range",
             image: "./assets/image/product/derma-elite-chair/derma-elite-chair-1.webp",
             description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",

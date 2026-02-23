@@ -349,6 +349,43 @@
     color: var(--gray-600);
 }
 
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #f8fafc, #eef2f7);
+    border: 1px dashed #dbe2ea;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.empty-state:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.empty-state i {
+    font-size: 48px;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    font-size: 15px;
+    color: #6b7280;
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 /* ===== PRODUCTS SECTION ===== */
 .products-section {
     padding: 1.5rem 0;
