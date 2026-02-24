@@ -4,21 +4,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const products = [
         {
             id: 1,
-            name: "Electric Derma chair",
+            name: "Electric Derma Chair",
             category: "electric-derma-chair",
             price: "mid-range",
             image: "./assets/image/product/electric-derma-chair/electric-derma-chair-1.webp",
             description: "Electric Derma Bed offers ultimate precision and comfort, featuring independent motorized",
-            link: "./machine/clinical-furnitures/electric-derma-chair.html"
+            link: "./machine/electric-derma-chair/electric-derma-chair.html"
         },
         {
             id: 2,
-            name: "Fibered Hydraulic chair",
+            name: "Electric Derma Chair With Pillow",
             category: "electric-derma-chair",
             price: "mid-range",
-            image: "./assets/image/product/fibered-hydraulic-chair/fibered-hydraulic-chair-1.webp",
-            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
-            link: "./machine/clinical-furnitures/fibered-hydraulic-chair.html"
+            image: "./assets/image/product/electric-derma-chair-with-pillow/electric-derma-chair-with-pillow-1.webp",
+            description: "Electric Derma Bed With Pillow offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/electric-derma-chair/electric-derma-chair-with-pillow.html"
         },
         {
             id: 3,
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "premium-electric-derma-chair",
             price: "mid-range",
             image: "./assets/image/product/derma-rest-chair/derma-rest-chair-1.webp",
-            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
+            description: "Derma chair rest is designed with a variety of adjustable functions, including height, tilt angle, and the position of the legs & head.",
             link: "./machine/premium-derma-chair/derma-chair-rest.html"
         },
         {
@@ -35,16 +35,34 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "premium-electric-derma-chair",
             price: "mid-range",
             image: "./assets/image/product/derma-elite-chair/derma-elite-chair-1.webp",
-            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
+            description: "Derma chair rest is designed with a variety of adjustable functions, including height, tilt angle, and the position of the legs & head.",
             link: "./machine/premium-derma-chair/derma-chair-elite.html"
         },
         {
             id: 5,
+            name: "Fibered Hydraulic chair",
+            category: "hydraulic-chair",
+            price: "mid-range",
+            image: "./assets/image/product/fibered-hydraulic-chair/fibered-hydraulic-chair-1.webp",
+            description: "Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/hydraulic-chair/fibered-hydraulic-chair.html"
+        },
+        {
+            id: 6,
+            name: "Non Fibered Hydraulic chair",
+            category: "hydraulic-chair",
+            price: "mid-range",
+            image: "./assets/image/product/non-fibered-hydraulic-chair/non-fibered-hydraulic-chair-1.webp",
+            description: "Non Fibered hydraulic chair offers ultimate precision and comfort, featuring independent motorized",
+            link: "./machine/hydraulic-chair/non-fibered-hydraulic-chair.html"
+        },
+        {
+            id: 7,
             name: "Single Dome OT Light",
             category: "ot-light",
             price: "mid-range",
             image: "./assets/image/product/single-dome-ot-light/ot-light-1.webp",
-            description: "High powered light used for hair transplant with white and yellow light for précised work for accuracy.",
+            description: "High powered light used for hair transplant with white and yellow light for precised work for accuracy.",
             link: "./machine/ot-light/single-dome-ot-light.html"
         },
     ];
