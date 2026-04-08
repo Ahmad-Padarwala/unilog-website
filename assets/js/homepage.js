@@ -1,0 +1,900 @@
+// slider hero section
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".hero-card");
+  let activeIndex = 0;
+  let slideInterval;
+  emailjs.init("U5ui0Upht32LZMbfY");
+  function setActiveCard(index) {
+    cards.forEach(c => c.classList.remove("active"));
+    cards[index].classList.add("active");
+    activeIndex = index;
+  }
+
+  function startAutoSlide() {
+    slideInterval = setInterval(() => {
+      let nextIndex = (activeIndex + 1) % cards.length;
+      setActiveCard(nextIndex);
+    }, 5000); // 5 seconds
+  }
+
+  function resetAutoSlide() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+  }
+
+  // Initialize
+  setActiveCard(0);
+  startAutoSlide();
+
+  // Handle manual hover/click
+  cards.forEach((card, index) => {
+    card.addEventListener("mouseenter", () => {
+      if (index === activeIndex) {
+        return;
+      }
+      setActiveCard(index);
+      resetAutoSlide();
+    });
+
+    card.addEventListener("click", () => {
+      setActiveCard(index);
+      resetAutoSlide();
+    });
+  });
+});
+
+
+// product section
+const tabs = document.querySelectorAll(".tab");
+const productWrapper = document.querySelector(".product-swiper .swiper-wrapper");
+const indicator = document.querySelector(".tab-indicator");
+const productsData = {
+  machine: [
+    {
+      img: "./assets/image/product/HydraluxeAquastar/hydralux-1.webp",
+      title: "Hydraluxe Aquastar",
+      desc: "Advanced analyzer and probes for a radiant, healthy glow.",
+      imageDesc: "Best Pico + diode laser, Pico + diode supplier, best combination laser device, pico + diode machine with best results, best tattoo removal, carbon facial, hair removal device.",
+      link: "machine/medi-facial/HydraluxeAquastar.html"
+    },
+    {
+      img: "./assets/image/product/luma2000/luma-2000.webp",
+      title: "LUMA 2000",
+      desc: "LUMA 2000- High quality android-based Diode laser system.",
+      imageDesc: "LUMA 2000 has 4 wavelengths (755nm+810nm+ 980nm+ 1064nm ) that works together for safe & comfortable hair reduction system. LUMA 2000 has multiple attachement, perfect choice for full body hair reduction treatment.",
+      link: "machine/hair-reduction/luma2000.html"
+    },
+    {
+      img: "./assets/image/product/lumaspot/lumaspot.webp",
+      title: "LUMASPOT",
+      desc: "Picosecond laser works on 4 operational modes for better results.",
+      imageDesc: " LUMASPOT is active Q switch Nd:Yag laser system with most advance technology with very short pulse width and high power. LUMASPOT is best Picosecond laser works on 4 operational modes for better results.",
+      link: "machine/yag-laser/lumaspot.html"
+    },
+    {
+      img: "./assets/image/product/doublo-new-hifu/doublo-new-hifu.webp",
+      title: "Doublo New HIFU",
+      desc: "Doublo New HIFU utilize stimulating natural collagen production.",
+      imageDesc: "Doublo New HIFU utilize stimulating natural collagen production.",
+      link: "machine/hifu/doublo-new-hifu.html"
+    },
+    {
+      img: "./assets/image/product/Epiglow-Diode/epiglow-1.webp",
+      title: "Epiglow Diode + pico laser",
+      desc: "most advance combination laser system of diode and picosecond laser.",
+      imageDesc: "Doublo New HIFU utilize stimulating natural collagen production.",
+      link: "machine/laser-platform/epiglow_diode_pico_laser.html"
+    },
+
+  ],
+  product: [
+    {
+      img: "./assets/image/unilog-exclusive/aa-complex/aa-complex-bottel.webp",
+      title: "AA Complex",
+      desc: "Exosomes powered black peel for the management of Grade I-IV Acne.",
+      imageDesc: " AA Complex™ is an advanced anti-aging formula powered by 1% PDRN + 1% NAD to support DNA repair, boost cellular energy, and restore youthful skin vitality.",
+      link: "/unilog-exclusive/aa-complex.html"
+    },
+    {
+      img: "./assets/image/unilog-exclusive/acnepeel-exo/acnepeel-bottel.webp",
+      title: "Acnepeel Exo",
+      desc: "Exosomes powered black peel for the management of Grade I-IV Acne.",
+      imageDesc: " India’s best Encapsulated Triple Base Exosome based Black Peel with 100% pure ingredients for effective management of Acne and its complications.",
+      link: "/unilog-exclusive/acnepeel-exo.html"
+    },
+    {
+      img: "./assets/image/unilog-exclusive/epidew/epidew-tube.webp",
+      title: "Epidew",
+      desc: "Intense Hydrating Biomimic Skin Booster.",
+      imageDesc: "An advanced epidermal hydration and barrier-repair formulation designed to reduce transepidermal water loss (TEWL), restore moisture balance, and strengthen the stratum corneum for healthier, resilient skin.",
+      link: "/unilog-exclusive/epidew.html"
+    },
+    {
+      img: "./assets/image/unilog-exclusive/scalpon/scalpon-bottel.webp",
+      title: "Scalpon",
+      desc: "Advanced Liposomal Hair Growth Modulator.",
+      imageDesc: " SCALPON is an advanced liposomal hair growth serum designed to reduce hair fall and stimulate stronger, thicker hair. It targets weakened follicles and supports regrowth of hair.",
+      link: "/unilog-exclusive/scalpon.html"
+    }
+  ]
+};
+function renderProducts(items) {
+  productWrapper.innerHTML = "";
+  items.forEach(item => {
+    const slide = document.createElement("div");
+    slide.className = "swiper-slide";
+    slide.innerHTML = `
+            <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                <a href="${item.link}" class="product-link" aria-label="View ${item.title} details">
+                    <div class="product-image">
+                    <img src="${item.img}" 
+                        alt="${item.title} - ${item.desc}" 
+                        width="300" height="300"
+                        loading="lazy"
+                        itemprop="image">
+                    </div>
+                    </div>
+                    <div class="product-info">
+                    <h3 itemprop="name">${item.title}</h3>
+                    <p>${item.desc}</p>
+                    </div>
+                </a>
+            </article>
+        `;
+    productWrapper.appendChild(slide);
+  });
+
+  swiper.update();
+}
+
+const swiper = new Swiper(".product-swiper", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  loop: false,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+    1441: { slidesPerView: 5 },
+  }
+});
+renderProducts(productsData.machine);
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    document.querySelector(".tab.active")?.classList.remove("active");
+    tab.classList.add("active");
+    indicator.style.transform = `translateX(${index * 100}%)`;
+    if (index === 0) {
+      renderProducts(productsData.machine);
+    } else {
+      renderProducts(productsData.product);
+    }
+  });
+});
+
+const Contactswiper = new Swiper(".testimonial-swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: false,
+  grabCursor: true,
+  loopedSlides: 3
+});
+
+// faq section
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  const btn = item.querySelector(".faq-question");
+
+  btn.addEventListener("click", () => {
+    // close other items
+    faqItems.forEach(i => {
+      if (i !== item) {
+        i.classList.remove("active");
+        i.querySelector(".icon").textContent = "+";
+      }
+    });
+
+    // toggle current item
+    item.classList.toggle("active");
+
+    const icon = item.querySelector(".icon");
+    icon.textContent = item.classList.contains("active") ? "–" : "+";
+  });
+});
+
+// Interactive Product Circle JavaScript
+
+const particlesContainer = document.getElementById('particles-container');
+const particleCount = 80;
+
+for (let i = 0; i < particleCount; i++) {
+  createParticle();
+}
+
+function createParticle() {
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  const size = Math.random() * 3 + 1;
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+  resetParticle(particle);
+  particlesContainer.appendChild(particle);
+  animateParticle(particle);
+}
+
+function resetParticle(particle) {
+  const posX = Math.random() * 100;
+  const posY = Math.random() * 100;
+  particle.style.left = `${posX}%`;
+  particle.style.top = `${posY}%`;
+  particle.style.opacity = '0';
+  return { x: posX, y: posY };
+}
+
+function animateParticle(particle) {
+  const pos = resetParticle(particle);
+  const duration = Math.random() * 10 + 10;
+  const delay = Math.random() * 5;
+  setTimeout(() => {
+    particle.style.transition = `all ${duration}s linear`;
+    particle.style.opacity = Math.random() * 0.3 + 0.1;
+    const moveX = pos.x + (Math.random() * 20 - 10);
+    const moveY = pos.y - Math.random() * 30;
+    particle.style.left = `${moveX}%`;
+    particle.style.top = `${moveY}%`;
+    setTimeout(() => animateParticle(particle), duration * 1000);
+  }, delay * 1000);
+}
+
+document.addEventListener('mousemove', (e) => {
+  const mouseX = (e.clientX / window.innerWidth) * 100;
+  const mouseY = (e.clientY / window.innerHeight) * 100;
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  const size = Math.random() * 4 + 2;
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+  particle.style.left = `${mouseX}%`;
+  particle.style.top = `${mouseY}%`;
+  particle.style.opacity = '0.6';
+  particlesContainer.appendChild(particle);
+  setTimeout(() => {
+    particle.style.transition = 'all 2s ease-out';
+    particle.style.left = `${mouseX + (Math.random() * 10 - 5)}%`;
+    particle.style.top = `${mouseY + (Math.random() * 10 - 5)}%`;
+    particle.style.opacity = '0';
+    setTimeout(() => particle.remove(), 2000);
+  }, 10);
+});
+
+
+class InteractiveCircle {
+  constructor() {
+    this.circleContainer = document.querySelector(".circle-container");
+    this.descriptionPanel = document.querySelector(".description-panel");
+    this.segments = document.querySelectorAll(".segment");
+    this.shapes = document.querySelectorAll(".shape");
+    this.descriptionContents = document.querySelectorAll(".description-content");
+    this.isAnimating = false;
+    this.currentProduct = null;
+    this.isHovering = false;
+    this.hoverTimeout = null;
+    this.leaveTimeout = null;
+  }
+
+  init() {
+    if (!this.circleContainer || !this.descriptionPanel || !this.segments.length) {
+      return;
+    }
+    this.bindEvents();
+    this.setupResponsive();
+    this.createHoverAreas();
+  }
+
+  createHoverAreas() {
+    // Create invisible hover areas that are larger than the segments for better UX
+    this.segments.forEach((segment, index) => {
+      const hoverArea = document.createElement('div');
+      hoverArea.className = `hover-area hover-area-${index + 1}`;
+      hoverArea.style.cssText = `
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        z-index: 10;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      `;
+
+      // Position hover areas based on segment positions
+      const positions = [
+        { top: '15%', left: '65%' }, // segment-1
+        { top: '45%', right: '15%' }, // segment-2  
+        { top: '70%', left: '40%' },  // segment-3
+        { top: '45%', left: '15%' },  // segment-4
+        { top: '15%', left: '25%' }   // segment-5
+      ];
+
+      const pos = positions[index];
+      Object.assign(hoverArea.style, pos);
+      hoverArea.style.transform = 'translate(-50%, -50%)';
+
+      this.circleContainer.appendChild(hoverArea);
+
+      // Add hover events to the larger areas
+      hoverArea.addEventListener('mouseenter', (e) => {
+        e.stopPropagation();
+        this.handleHover(index + 1);
+      });
+
+      hoverArea.addEventListener('mouseleave', (e) => {
+        e.stopPropagation();
+        this.handleHoverLeave();
+      });
+    });
+  }
+
+  bindEvents() {
+    // Enhanced hover events for SVG segments
+    this.segments.forEach((segment, index) => {
+      segment.style.cursor = 'pointer';
+
+      segment.addEventListener("mouseenter", (e) => {
+        e.stopPropagation();
+        this.handleHover(index + 1);
+      });
+
+      segment.addEventListener("mouseleave", (e) => {
+        e.stopPropagation();
+        this.handleHoverLeave();
+      });
+    });
+
+    // Add hover events to shape labels as well
+    this.shapes.forEach((shape, index) => {
+      shape.style.cursor = 'pointer';
+      shape.style.zIndex = '15';
+
+      shape.addEventListener("mouseenter", (e) => {
+        e.stopPropagation();
+        this.handleHover(index + 1);
+      });
+
+      shape.addEventListener("mouseleave", (e) => {
+        e.stopPropagation();
+        this.handleHoverLeave();
+      });
+    });
+
+    // Add hover events to the entire circle container
+    this.circleContainer.addEventListener("mouseleave", () => {
+      this.handleShowcaseLeave();
+    });
+
+    // Add hover events to description panel to keep it visible
+    this.descriptionPanel.addEventListener("mouseenter", () => {
+      this.clearTimeouts();
+      this.isHovering = true;
+    });
+
+    this.descriptionPanel.addEventListener("mouseleave", () => {
+      this.handleShowcaseLeave();
+    });
+
+    // Add click events for mobile/touch devices
+    this.segments.forEach((segment, index) => {
+      segment.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.handleHover(index + 1);
+      });
+    });
+
+    this.shapes.forEach((shape, index) => {
+      shape.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.handleHover(index + 1);
+      });
+    });
+  }
+
+  clearTimeouts() {
+    if (this.hoverTimeout) {
+      clearTimeout(this.hoverTimeout);
+      this.hoverTimeout = null;
+    }
+    if (this.leaveTimeout) {
+      clearTimeout(this.leaveTimeout);
+      this.leaveTimeout = null;
+    }
+  }
+
+  handleHover(productId) {
+    this.clearTimeouts();
+
+    // Debounce rapid hover events
+    this.hoverTimeout = setTimeout(() => {
+      if (this.currentProduct === productId && this.isHovering) {
+        return; // Already showing this product
+      }
+
+      this.isHovering = true;
+      this.currentProduct = productId;
+
+      // Add visual feedback to the hovered segment
+      this.segments.forEach((segment, index) => {
+        segment.classList.toggle('segment-hovered', index + 1 === productId);
+      });
+
+      this.shapes.forEach((shape, index) => {
+        shape.classList.toggle('shape-hovered', index + 1 === productId);
+      });
+
+      // Show the corresponding description
+      this.showDescription(productId);
+      this.circleContainer.classList.add("hovered");
+      this.descriptionPanel.classList.add("visible");
+    }, 50); // Small debounce delay
+  }
+
+  handleHoverLeave() {
+    this.clearTimeouts();
+
+    // Add a small delay before hiding to prevent flickering
+    this.leaveTimeout = setTimeout(() => {
+      if (!this.isHovering) return;
+      this.handleShowcaseLeave();
+    }, 100);
+  }
+
+  handleShowcaseLeave() {
+    this.clearTimeouts();
+
+    this.isHovering = false;
+    this.currentProduct = null;
+
+    // Remove visual feedback from all segments
+    this.segments.forEach(segment => {
+      segment.classList.remove('segment-hovered');
+    });
+
+    this.shapes.forEach(shape => {
+      shape.classList.remove('shape-hovered');
+    });
+
+    // Hide description panel with delay
+    this.leaveTimeout = setTimeout(() => {
+      this.circleContainer.classList.remove("hovered");
+      this.descriptionPanel.classList.remove("visible");
+
+      // Reset to first description after hiding
+      setTimeout(() => {
+        if (!this.isHovering) {
+          this.showDescription(1);
+        }
+      }, 300);
+    }, 200);
+  }
+
+  showDescription(productId) {
+    if (this.isAnimating) return;
+
+    this.isAnimating = true;
+
+    // Find current active description
+    const currentActive = document.querySelector(".description-content.active");
+
+    // Find target description
+    const targetDescription = document.querySelector(
+      `.description-content[data-product="${productId}"]`
+    );
+
+    if (targetDescription && targetDescription !== currentActive) {
+      // If there's a current active description, fade it out first
+      if (currentActive) {
+        currentActive.classList.add("fade-out");
+
+        // After fade out completes, switch to new description
+        setTimeout(() => {
+          // Remove active and fade-out from all descriptions
+          this.descriptionContents.forEach((content) => {
+            content.classList.remove("active", "fade-out");
+          });
+
+          targetDescription.classList.add("active");
+
+          // Reset animation flag
+          setTimeout(() => {
+            this.isAnimating = false;
+          }, 100);
+        }, 200);
+      } else {
+        // No current active, show immediately
+        this.descriptionContents.forEach((content) => {
+          content.classList.remove("active", "fade-out");
+        });
+        targetDescription.classList.add("active");
+
+        setTimeout(() => {
+          this.isAnimating = false;
+        }, 100);
+      }
+    } else {
+      this.isAnimating = false;
+    }
+  }
+
+  setupResponsive() {
+    // Ensure all descriptions are hidden first
+    this.descriptionContents.forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    // Show first description by default after a small delay
+    setTimeout(() => {
+      if (this.descriptionContents[0]) {
+        this.descriptionContents[0].classList.add("active");
+      }
+    }, 100);
+
+    // Handle responsive behavior with throttling
+    let resizeTimeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const isMobile = window.innerWidth <= 1200;
+
+        // On mobile, always show description panel
+        if (isMobile) {
+          this.descriptionPanel.classList.add("visible");
+        } else {
+          // Reset hover state on desktop
+          if (!this.isHovering) {
+            this.descriptionPanel.classList.remove("visible");
+          }
+        }
+      }, 100);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once on init
+  }
+
+  // Method to programmatically show a product (for future enhancements)
+  showProduct(productId) {
+    this.handleHover(productId);
+  }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  const interactiveCircle = new InteractiveCircle();
+  interactiveCircle.init();
+});
+
+// Export for potential future use
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = InteractiveCircle;
+}
+
+
+// consult now section
+// Data
+const consultTabs = [
+  { id: 'technology', title: '01. Cutting-Edge Technology', desc: 'Redirect to machine part' },
+  { id: 'consumables', title: '02. Clinical Consumables', desc: 'Redirect to consumables tab' },
+  { id: 'infrastructure', title: '03. Infrastructure', desc: 'Redirect to clinical furnitures & OT setup' },
+  { id: 'brands', title: '04. Professional Range', desc: 'Redirect to professional range' }
+];
+
+const formSteps = [
+  {
+    title: 'Step 1: Select Your Primary Goals',
+    description: 'Choose multiple options that apply',
+    type: 'multiple',
+    options: [
+      'Skin Rejuvenation & Anti-Aging',
+      'Permanent Hair Reduction',
+      'Body Contouring & Fat Loss',
+      'Pigmentation & Tattoo Removal',
+      'Acne & Scar Management'
+    ]
+  },
+  {
+    title: 'Step 2: Technology Interest',
+    description: 'Select the technologies you\'re interested in',
+    type: 'multiple',
+    grid: 'three-col',
+    options: [
+      'Q-Switched Nd:YAG',
+      'Diode Laser',
+      'Hydra facial Systems',
+      'MNRF',
+      'CO2 Fractional',
+      'Intensed Pulse Light',
+      'Hair and Skin Analyser',
+      'Meso Therapy Devices',
+      'Cautery Devices',
+      'Micro Dermabrasion Device',
+      'Hair Regrowth Devices',
+      'Slimming Devices'
+    ]
+  },
+  {
+    title: 'Step 3: Clinical Setup Budget',
+    description: 'Choose your budget range',
+    type: 'single',
+    options: [
+      'Entry Setup',
+      'Professional Growth (Mid-Range / Multi-platform)',
+      'Luxury/Premium Clinic (High-End / Latest Innovations)'
+    ]
+  },
+  {
+    title: 'Step 4: Infrastructure Needs',
+    description: 'Select your infrastructure requirements',
+    type: 'multiple',
+    options: [
+      'Device Only',
+      'Device + Consumables Package',
+      'Full Turnkey (Tech + Furniture + Training)'
+    ]
+  }
+];
+
+// State
+let activeTab = 'technology';
+let currentStep = 1;
+let formData = {
+  goals: [],
+  technologies: [],
+  budget: '',
+  infrastructure: []
+};
+
+// Initialize
+function init() {
+  renderTabs();
+  renderStepIndicators();
+  renderFormStep();
+  updateNavigation();
+}
+
+// Render Tabs
+function renderTabs() {
+  const container = document.getElementById('tabsContainer');
+  if (!container) return;
+  container.innerHTML = consultTabs.map(tab => `
+                <div class="tab ${tab.id === activeTab ? 'active' : ''}" onclick="setActiveTab('${tab.id}')">
+                    <h3>${tab.title}</h3>
+                    <p>${tab.desc}</p>
+                </div>
+            `).join('');
+}
+
+function setActiveTab(tabId) {
+  activeTab = tabId;
+  renderTabs();
+}
+
+// Render Step Indicators
+function renderStepIndicators() {
+  const container = document.getElementById('stepIndicators');
+  if (!container) return;
+  container.innerHTML = [1, 2, 3, 4].map(step => `
+                <div class="step-indicator ${step <= currentStep ? 'active' : ''}">${step}</div>
+            `).join('');
+}
+
+// Render Form Step
+function renderFormStep() {
+  const step = formSteps[currentStep - 1];
+  const container = document.getElementById('formContent');
+  if (!container) return;
+
+  const gridClass = step.grid || 'two-col';
+  const isMultiple = step.type === 'multiple';
+  const isSingle = step.type === 'single';
+
+  const selectedData = getSelectedData(currentStep);
+
+  container.innerHTML = `
+                <div class="step-content active">
+                    <h3 class="step-title">${step.title}</h3>
+                    <p class="step-description">${step.description}</p>
+                    <div class="options-grid ${isSingle ? '' : gridClass}">
+                        ${step.options.map((option, index) => {
+    const isSelected = selectedData.includes(option);
+    return `
+                                <div class="option-btn ${isSingle ? 'single-choice-btn' : ''} ${isSelected ? 'selected' : ''}" 
+                                     onclick="toggleOption(${currentStep}, '${option.replace(/'/g, "\\'")}')">
+                                    ${isMultiple ? `
+                                        <div class="checkbox">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                        </div>
+                                    ` : `
+                                        <div class="radio">
+                                            <div class="radio-dot"></div>
+                                        </div>
+                                    `}
+                                    <span class="option-text">${option}</span>
+                                </div>
+                            `;
+  }).join('')}
+                    </div>
+                </div>
+            `;
+}
+
+// Get Selected Data
+function getSelectedData(step) {
+  switch (step) {
+    case 1: return formData.goals;
+    case 2: return formData.technologies;
+    case 3: return formData.budget ? [formData.budget] : [];
+    case 4: return formData.infrastructure;
+    default: return [];
+  }
+}
+
+// Toggle Option
+function toggleOption(step, option) {
+  const stepData = formSteps[step - 1];
+
+  if (stepData.type === 'single') {
+    // Single selection
+    switch (step) {
+      case 3: formData.budget = option; break;
+    }
+  } else {
+    // Multiple selection
+    let dataArray;
+    switch (step) {
+      case 1: dataArray = formData.goals; break;
+      case 2: dataArray = formData.technologies; break;
+      case 4: dataArray = formData.infrastructure; break;
+    }
+
+    const index = dataArray.indexOf(option);
+    if (index > -1) {
+      dataArray.splice(index, 1);
+    } else {
+      dataArray.push(option);
+    }
+  }
+
+  renderFormStep();
+}
+
+// Navigation
+function nextStep() {
+  if (currentStep < 4) {
+    currentStep++;
+    renderStepIndicators();
+    renderFormStep();
+    updateNavigation();
+  } else {
+    submitForm();
+  }
+}
+
+function previousStep() {
+  if (currentStep > 1) {
+    currentStep--;
+    renderStepIndicators();
+    renderFormStep();
+    updateNavigation();
+  }
+}
+
+function updateNavigation() {
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const nextBtnText = document.getElementById('nextBtnText');
+
+  if (!prevBtn || !nextBtn || !nextBtnText) return;
+
+  prevBtn.disabled = currentStep === 1;
+  nextBtnText.textContent = currentStep === 4 ? 'Submit Consultation' : 'Next Step';
+}
+
+// Submit Form
+function submitForm() {
+
+  const nextBtn = document.getElementById("nextBtn");
+  const nextBtnText = document.getElementById("nextBtnText");
+  const loader = document.getElementById("btnLoader");
+
+  // 🔹 Show loading state
+  nextBtn.disabled = true;
+  nextBtnText.textContent = "Sending...";
+  loader.style.display = "inline-block";
+
+  const templateParams = {
+    goals: formData.goals.length ? formData.goals.join('\n• ') : 'Not selected',
+    technologies: formData.technologies.length ? formData.technologies.join('\n• ') : 'Not selected',
+    budget: formData.budget || 'Not selected',
+    infrastructure: formData.infrastructure.length ? formData.infrastructure.join('\n• ') : 'Not selected',
+    date: new Date().toLocaleString()
+  };
+
+  emailjs.send("service_kxrl0qn", "template_nf525dy", templateParams)
+    .then(function (response) {
+
+      // ✅ Success UI
+      nextBtnText.textContent = "Sent ✓";
+
+      setTimeout(() => {
+        // Reset button
+        nextBtn.disabled = false;
+        nextBtnText.textContent = "Next Step";
+        loader.style.display = "none";
+
+        // Reset form
+        formData = {
+          goals: [],
+          technologies: [],
+          budget: '',
+          infrastructure: []
+        };
+
+        currentStep = 1;
+        renderStepIndicators();
+        renderFormStep();
+        updateNavigation();
+
+        closeConsultModal();
+      }, 1200);
+
+    }, function (error) {
+
+      console.error("FAILED...", error);
+
+      // ❌ Error UI
+      nextBtnText.textContent = "Try Again";
+      loader.style.display = "none";
+      nextBtn.disabled = false;
+
+      alert("❌ Failed to send. Please try again.");
+    });
+}
+
+
+// Initialize on load
+init();
+
+// consult now modal
+
+function openConsultModal() {
+  document.querySelector('.consult-now-sec').classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Reset to first step every time modal opens
+  currentStep = 1;
+  renderStepIndicators();
+  renderFormStep();
+  updateNavigation();
+}
+
+function closeConsultModal() {
+  document.querySelector('.consult-now-sec').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+
+
+
+
+
+
+
+

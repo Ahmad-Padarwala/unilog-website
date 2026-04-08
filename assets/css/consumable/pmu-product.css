@@ -1,0 +1,155 @@
+/* hero section */
+.consumable-hero-section {
+  position: relative;
+  background-image: url("https://shorturl.at/7VRTY");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 130px;
+  height: 400px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.consumable-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.consumable-hero-section .consumable-hero-content {
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.consumable-hero-section .consumable-hero-content h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.consumable-hero-section .consumable-hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* === Brochure Section === */
+.brochure-section {
+  position: relative;
+  text-align: center;
+  color: var(--black);
+  padding: 70px 0;
+  background: url('https://www.wingderm.com/wp-content/themes/wingderm/images-products/inner-bownload-bg.jpg') center/cover no-repeat;
+}
+
+.brochure-section .brochure-title {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.brochure-section .brochure-title span {
+  border-bottom: 2px solid var(--primary);
+}
+
+.brochure-section .bg-text {
+  position: absolute;
+  top: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  pointer-events: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+  font-weight: 800 !important;
+  line-height: 1 !important;
+}
+
+.brochure-section .brochure-text {
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 30px;
+  size: 18px;
+  margin-bottom: 0;
+}
+
+.brochure-section .brochure-text2 {
+  font-size: 2rem;
+  margin-top: 0;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.55;
+}
+
+.brochure-section .btn-primary {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 12px 30px;
+  margin-top: 20px;
+  border-radius: 50px;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.brochure-section .btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brochure-section .brochure-title {
+    font-size: 1.8rem;
+  }
+
+  .brochure-section .bg-text {
+    font-size: 2.5rem;
+  }
+
+  .brochure-section .bg-text {
+    top: 20px;
+    font-size: 40px;
+  }
+
+  .brochure-section .brochure-text2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* PMU Product Section */
+
+.pmu-product-section {
+  width: 100%;
+  height: auto;
+  margin-top: 130px;
+}
+
+.pmu-product-container {
+  width: 100%;
+  /* height: calc(100vh - 130px); */
+  /* overflow: hidden; */
+}
+
+.pmu-product-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

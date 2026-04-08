@@ -1,0 +1,84 @@
+# Robots.txt for Unilog Skincare Website
+# https://unilogderma.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Allow all major search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /node_modules/
+
+# Allow CSS and JS files for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /image/
+Allow: /favicon/
+Allow: /video/
+
+# Disallow specific file types
+Disallow: *.log
+Disallow: *.tmp
+Disallow: *.bak
+
+# Crawl delay (optional - be careful with this)
+# Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://unilogderma.com/sitemap.xml
+
+# Additional sitemaps (if you have them)
+# Sitemap: https://unilogderma.com/sitemap-products.xml
+# Sitemap: https://unilogderma.com/sitemap-images.xml
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Host directive (specify your preferred domain)
+Host: https://unilogderma.com/

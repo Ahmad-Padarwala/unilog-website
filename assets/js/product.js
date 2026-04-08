@@ -1,0 +1,401 @@
+window.addEventListener("load", () => {
+    // write me code to make opacity 0 to 1 on the image container
+    const imageContainer = document.querySelector(".image-container");
+    imageContainer.style.opacity = "1";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const containerStates = [
+        {
+            bottom: "-70%",
+            right: "-30%",
+            position: "fixed",
+            xPercent: 0,
+            yPercent: 0,
+        },
+        {
+            bottom: "-42%",
+            right: "0%",
+            position: "fixed",
+            xPercent: 0,
+            yPercent: 0,
+        },
+        // {
+        //   bottom: "8%",
+        //   right: "0%",
+        //   position: "fixed",
+        //   xPercent: 0,
+        //   yPercent: 0,
+        // },
+        {
+            bottom: "45%",
+            right: "50%",
+            position: "fixed",
+            xPercent: 50,
+            yPercent: 50,
+        },
+    ];
+
+    //old size
+    const imgStates = [
+        { width: 600 },
+        { width: 400 },
+        { width: 250 }
+    ];
+    //new size
+    // const imgStates = [
+    //     { width: 450 },
+    //     { width: 300 },
+    //     { width: 230 }
+    // ];
+
+    const sections = document.querySelectorAll(".product-container");
+
+    sections.forEach((sec, i) => {
+        if (i === 0) return;
+
+        gsap.fromTo(".image-container", containerStates[i - 1], {
+            ...containerStates[i],
+            scrollTrigger: {
+                trigger: sec,
+                start: "top bottom",
+                end: "top top",
+                scrub: true,
+                pin: false,
+                snap: {
+                    snapTo: 1,
+                    duration: 1,
+                    ease: "power1.inOut",
+                },
+            },
+        });
+
+        gsap.fromTo(
+            ".image-container img",
+            { width: imgStates[i - 1].width + "px" },
+            {
+                width: imgStates[i].width + "px",
+                scrollTrigger: {
+                    trigger: sec,
+                    start: "top bottom",
+                    end: "top top",
+                    scrub: true,
+                },
+            }
+        );
+    });
+
+    ScrollTrigger.create({
+        trigger: ".showcase-section",
+        start: "bottom bottom",
+        onEnter: () => activeStyle(true),
+        onLeaveBack: () => activeStyle(false),
+    });
+
+    function activeStyle(active) {
+        const el = document.querySelector(".image-container");
+        if (active) {
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active");
+        }
+    }
+
+    gsap.fromTo(
+        ".container-1 .title,.container-1 .sub-title, .container-1 .desc",
+        {
+            opacity: 0,
+            x: -2000,
+        },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 2,
+            ease: "power2.out",
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: ".container-1",
+                start: "top 56%",
+                toggleActions: "play none none none",
+                once: true,
+            },
+        }
+    );
+
+    // animate title + desc
+    gsap.fromTo(
+        ".container-2 .title, .container-2 .desc",
+        { opacity: 0, y: 50 },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power3.out",
+            stagger: 0.15,
+            scrollTrigger: {
+                trigger: ".container-2",
+                start: "top 75%",
+                toggleActions: "play none none none",
+            },
+        }
+    );
+
+    // animate stats one by one
+    gsap.fromTo(
+        ".container-2 .stat",
+        { opacity: 0, y: 20 },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: ".container-2 .stats",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            },
+        }
+    );
+
+    gsap.registerPlugin();
+
+    window.scrollBy(0, 1);
+    ScrollTrigger.refresh();
+});
+
+
+// Instantly set image max-height when section 3 is visible (no animation)
+ScrollTrigger.create({
+    trigger: ".container-3",
+    start: "top center",
+    onEnter: () => {
+        document.querySelector(".image-container img").style.maxHeight = "600px";
+    },
+    onLeaveBack: () => {
+        document.querySelector(".image-container img").style.maxHeight = "none";
+    },
+});
+
+
+
+window.addEventListener("resize", ScrollTrigger.refresh);
+
+// Ripple Effect
+
+document.addEventListener("DOMContentLoaded", function () {
+    const rippleContainer = document.querySelector(".ripple-container");
+
+    function createRipple() {
+        const ripple = document.createElement("div");
+        ripple.classList.add("ripple");
+        rippleContainer.appendChild(ripple);
+
+        ripple.addEventListener("animationend", () => {
+            ripple.remove();
+        });
+    }
+
+    // Create a ripple every 1 second
+    setInterval(createRipple, 1000);
+
+
+    //for send the broucher email
+    const openModalBtn = document.getElementById("openBrochureModal");
+    const modal = document.getElementById("brochureModal");
+    const closeModalBtn = document.getElementById("closeBrochureModal");
+    const form = document.getElementById("brochureForm");
+    const toastContainer = document.getElementById("toastContainer");
+
+    // Initialize EmailJS with Homepage Public Key
+    (function () {
+        emailjs.init("U5ui0Upht32LZMbfY");
+    })();
+
+    // === Helper: Show Toast ===
+    function showToast(message, type = "success") {
+        const toast = document.createElement("div");
+        toast.classList.add("toast", type);
+        toast.textContent = message;
+
+        toastContainer.appendChild(toast);
+        setTimeout(() => toast.classList.add("show"), 50);
+
+        // Auto remove after 3s
+        setTimeout(() => {
+            toast.classList.remove("show");
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
+    // === Open Modal ===
+    openModalBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    // === Close Modal ===
+    closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
+    });
+
+    // === Form Submit ===
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const fullName = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const contact = document.getElementById("contact").value.trim();
+        const submitBtn = form.querySelector("button[type='submit']");
+
+        // Basic Validation
+        if (!fullName || !email || !contact) {
+            showToast("Please fill all the required fields.", "error");
+            return;
+        }
+
+        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        const phonePattern = /^[0-9]{10}$/;
+
+        if (!emailPattern.test(email)) {
+            showToast("Please enter a valid email address.", "error");
+            return;
+        }
+
+        if (!phonePattern.test(contact)) {
+            showToast("Please enter a valid 10-digit contact number.", "error");
+            return;
+        }
+
+        // Add Loading
+        submitBtn.classList.add("loading");
+
+        try {
+            // Send email using Homepage Service and Template
+            await emailjs.send("service_kxrl0qn", "template_0yz1arv", {
+                fullName: fullName,
+                email: email,
+                contact: contact,
+                city: "N/A",
+                country: "N/A",
+                company: "N/A",
+                message: `Brochure Download Request for: ${document.title}`,
+                terms: "Yes"
+            });
+
+            showToast("Form submitted successfully! Download will start shortly.", "success");
+
+            // Close modal & reset form
+            modal.style.display = "none";
+            form.reset();
+
+            // Trigger brochure download if path is provided
+            const brochurePath = form.getAttribute("data-brochure");
+            if (brochurePath) {
+                const link = document.createElement("a");
+                link.href = brochurePath;
+                link.download = brochurePath.split("/").pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+        } catch (error) {
+            console.error("Error sending email:", error);
+            showToast("Something went wrong while sending. Try again.", "error");
+        } finally {
+            submitBtn.classList.remove("loading");
+        }
+    });
+
+});
+
+// after before slider
+const sliderHandle = document.querySelector("#sliderHandle");
+const sliderLine = document.querySelector(".slider-line");
+const beforeImage = document.querySelector(".before-image");
+const afterImage = document.querySelector(".after-image");
+const sliderContainer = document.querySelector(".slider-container");
+
+let isDragging = false;
+
+// Function to initialize the slider at the center position
+const initializeSlider = () => {
+    const containerWidth = sliderContainer.offsetWidth;
+
+    // Set slider handle and line at center with a transition for initialization
+    sliderHandle.style.transition = "left 0.3s ease";
+    sliderLine.style.transition = "left 0.3s ease";
+
+    sliderHandle.style.left = "50%";
+    sliderLine.style.left = "50%";
+
+    // Set both images' clip-path to 50% (center)
+    beforeImage.style.clipPath = `inset(0 50% 0 0)`;
+    afterImage.style.clipPath = `inset(0 0 0 50%)`;
+};
+
+// Function to move the slider based on user interaction
+const moveSlider = (clientX) => {
+    const containerRect = sliderContainer.getBoundingClientRect();
+    let offsetX = clientX - containerRect.left;
+
+    // Limit the slider movement within the full container width (0% to 100%)
+    if (offsetX < 0) offsetX = 0; // Prevent overflow on the left
+    if (offsetX > containerRect.width) offsetX = containerRect.width; // Prevent overflow on the right
+
+    const percentage = Math.round((offsetX / containerRect.width) * 100);
+
+    // Update the slider handle position and image clipping
+    sliderHandle.style.left = `${percentage}%`;
+    sliderLine.style.left = `${percentage}%`;
+
+    // Adjust the clip-path for both images
+    beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+};
+
+// Add event listeners for both the handle and the line (including the SVG)
+const startDragging = () => {
+    isDragging = true;
+
+    // Remove transitions while dragging for instant feedback
+    sliderHandle.style.transition = "none";
+    sliderLine.style.transition = "none";
+};
+
+const stopDragging = () => {
+    isDragging = false;
+
+    // Reapply transitions after dragging ends
+    sliderHandle.style.transition = "left 0.3s ease";
+    sliderLine.style.transition = "left 0.3s ease";
+};
+
+sliderHandle.addEventListener("mousedown", startDragging);
+sliderLine.addEventListener("mousedown", startDragging); // Make SVG and line draggable
+
+window.addEventListener("mousemove", (event) => {
+    if (isDragging) {
+        moveSlider(event.clientX);
+    }
+});
+
+window.addEventListener("mouseup", stopDragging);
+
+// For touch events on mobile
+sliderHandle.addEventListener("touchstart", startDragging);
+sliderLine.addEventListener("touchstart", startDragging); // Make SVG and line draggable
+
+window.addEventListener("touchmove", (event) => {
+    if (isDragging) {
+        moveSlider(event.touches[0].clientX);
+    }
+});
+
+window.addEventListener("touchend", stopDragging);
+
+// Initialize the slider on page load
+window.addEventListener("load", initializeSlider);

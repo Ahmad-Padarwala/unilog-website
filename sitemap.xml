@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://unilogderma.com/</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://unilogderma.com/image/clinic-preview.webp</image:loc>
+      <image:title>Unilog Skincare - Advanced Laser Equipment</image:title>
+      <image:caption>Leading provider of professional skincare and laser equipment</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://unilogderma.com/about.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://unilogderma.com/image/about-unilog-preview.webp</image:loc>
+      <image:title>About Unilog Skincare</image:title>
+      <image:caption>15+ years of excellence in laser equipment manufacturing</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Products Catalog -->
+  <url>
+    <loc>https://unilogderma.com/product.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://unilogderma.com/image/products-catalog-preview.webp</image:loc>
+      <image:title>Professional Skincare Equipment Catalog</image:title>
+      <image:caption>Complete range of laser and aesthetic devices</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://unilogderma.com/contact.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://unilogderma.com/image/contact-unilog-preview.webp</image:loc>
+      <image:title>Contact Unilog Skincare</image:title>
+      <image:caption>Get in touch for quotes and technical support</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Terms and Conditions -->
+  <url>
+    <loc>https://unilogderma.com/terms_and_conditions.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Individual Product Pages -->
+
+  <!-- Hydraluxe Aquastar -->
+  <url>
+    <loc>https://unilogderma.com/machine/medi-facial/HydraluxeAquastar.html</loc>
+    <lastmod>2024-01-15T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://unilogderma.com/image/hydraluxe-aquastar-preview.webp</image:loc>
+      <image:title>Hydraluxe Aquastar - Advanced Hydra Facial System</image:title>
+      <image:caption>Professional hydra facial system with real-time skin analysis</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Luma2000 -->
+  <url>
+    <loc>https://unilogderma.com/machine/hair-reduction/luma2000.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/product/luma2000/luma-2000.webp</image:loc>
+      <image:title>LUMA 2000 - 4 Wavelength Diode Laser Hair Removal System | Unilog Skincare</image:title>
+      <image:caption>Premium Diode Laser Hair Removal System</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Lumaspot -->
+  <url>
+    <loc>https://unilogderma.com/machine/yag-laser/lumaspot.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/product/lumaspot/lumaspot.webp</image:loc>
+      <image:title>LUMASPOT - Q-Switch Nd:YAG Picosecond Laser for Pigmentation &amp; Tattoo Removal | Unilog</image:title>
+      <image:caption>Q-Switch Nd:YAG Picosecond Laser system</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Epiglow Diode + Pico Laser -->
+  <url>
+    <loc>https://unilogderma.com/machine/laser-platform/epiglow_diode_pico_laser.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/product/Epiglow-Diode/epiglow-1.webp</image:loc>
+      <image:title>Epiglow Diode Pico Laser - Premium Combination Laser System | Unilog</image:title>
+      <image:caption>Premium Combination Laser System</image:caption>
+    </image:image>
+  </url>
+
+  <!-- UltraFlexe CO2 Fractional Laser -->
+  <url>
+    <loc>https://unilogderma.com/machine/co2-fractional/ultraflexe_co2.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/product/ultraflex-co2/ultraflex.webp</image:loc>
+      <image:title>UltraFlexe CO2 Laser - Ultra Fractional Skin Resurfacing System | Unilog</image:title>
+      <image:caption>Ultra Fractional Skin Resurfacing System</image:caption>
+    </image:image>
+  </url>
+
+  <!-- New Doublo HIFU -->
+  <url>
+    <loc>https://unilogderma.com/machine/hifu/doublo-new-hifu.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/product/doublo-new-hifu/part1.webp</image:loc>
+      <image:title>New Doublo HIFU System | Unilog Skincare</image:title>
+      <image:caption>Advanced High-Intensity Focused Ultrasound machine</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Crystalline Depth 8 MNRF -->
+  <url>
+    <loc>https://unilogderma.com/machine/mnrf/crystalline-depth.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/product/crystalline-depth/part1.webp</image:loc>
+      <image:title>Crystalline Depth 8 MNRF | Unilog Skincare</image:title>
+      <image:caption>Advanced Microneedling Radio Frequency System</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Folilase Hair Regrowth System -->
+  <url>
+    <loc>https://unilogderma.com/machine/low-level-laser-therapy/folilase-hair-regrowth-system.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://unilogderma.com/assets/image/product/folilase/folilase.webp</image:loc>
+      <image:title>Folilase Hair Regrowth System | Unilog</image:title>
+      <image:caption>Low Level Laser Therapy Hair Regrowth System</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Dr. Pen A6S Ultima -->
+  <url>
+    <loc>https://unilogderma.com/machine/micro-needling-portable-devices/Dr.Pen-A6S-ultima.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://unilogderma.com/assets/image/product/dr-pen-a6s/dr-pen-a6s.webp</image:loc>
+      <image:title>Dr. Pen A6S Ultima Microneedling Device | Unilog</image:title>
+      <image:caption>Professional Microneedling Portable Device</image:caption>
+    </image:image>
+  </url>
+
+  <!-- PRP & GFC -->
+  <url>
+    <loc>https://unilogderma.com/consumable/prp-gfc.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/consumable/prp-gfc/part1.webp</image:loc>
+      <image:title>PRP &amp; GFC Tubes | Unilog Skincare</image:title>
+      <image:caption>Premium consumable for Platelet-Rich Plasma and Growth Factor Concentrate treatments</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Skin Booster -->
+  <url>
+    <loc>https://unilogderma.com/consumable/skin-booster.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/consumable/skin-booster/part1.webp</image:loc>
+      <image:title>Skin Boosters | Unilog Skincare</image:title>
+      <image:caption>High-quality skin booster hydration treatments</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Electric Derma Chair -->
+  <url>
+    <loc>https://unilogderma.com/machine/electric-derma-chair/electric-derma-chair.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://unilogderma.com/assets/image/product/electric-derma-chair/electric-derma-chair.webp</image:loc>
+      <image:title>Electric Derma Chair | Unilog Skincare</image:title>
+      <image:caption>Fully adjustable premium electric derma chair</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Meso Solution -->
+  <url>
+    <loc>https://unilogderma.com/consumable/meso-solution.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/consumable/meso-solution/part1.webp</image:loc>
+      <image:title>Meso Solution Therapies | Unilog Skincare</image:title>
+      <image:caption>Advanced mesotherapy solutions for skin revitalization</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Retipeel Exo -->
+  <url>
+    <loc>https://unilogderma.com/unilog-exclusive/retipeel-exo.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/exclusive/retipeel-exo/retipeel-exo.webp</image:loc>
+      <image:title>Retipeel Exo - Yellow Peel | Unilog Exclusive</image:title>
+      <image:caption>Exosome powered professional skin lightening peel</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Acnepeel -->
+  <url>
+    <loc>https://unilogderma.com/unilog-exclusive/acnepeel-exo.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/exclusive/acnepeel-exo/acnepeel-exo.webp</image:loc>
+      <image:title>Acnepeel Exo - Black Peel | Unilog Exclusive</image:title>
+      <image:caption>Professional exosome powered acne acnepeel management</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Chemical Peels -->
+  <url>
+    <loc>https://unilogderma.com/unilog-exclusive.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/chemical-peels/dark-circle-peel/dark-circle.webp</image:loc>
+      <image:title>Unilog Exclusive - Chemical Peels and Skincare Products</image:title>
+      <image:caption>Premium skincare products including chemical peels and skin boosters</image:caption>
+    </image:image>
+  </url>
+
+  <!-- BB Glow Treatment -->
+  <url>
+    <loc>https://unilogderma.com/consumable/bb-glow.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/consumable/bb-glow/part1.webp</image:loc>
+      <image:title>BB Glow Treatment | Unilog Skincare</image:title>
+      <image:caption>Professional BB Glow ampoules and treatments</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Microneedling Therapy -->
+  <url>
+    <loc>https://unilogderma.com/consumable/microneedling-therapy.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/consumable/microneedling/microneedling.webp</image:loc>
+      <image:title>Microneedling Therapy Products | Unilog Skincare</image:title>
+      <image:caption>Comprehensive microneedling solutions and consumables</image:caption>
+    </image:image>
+  </url>
+
+  <!-- AA Complex -->
+  <url>
+    <loc>https://unilogderma.com/unilog-exclusive/aa-complex.html</loc>
+    <lastmod>2024-03-24T10:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.unilogderma.com/assets/image/exclusive/aa-complex/aa-complex.webp</image:loc>
+      <image:title>AA Complex Skin Treatment | Unilog Exclusive</image:title>
+      <image:caption>Premium AA Complex formulation for advanced skincare</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
