@@ -379,6 +379,34 @@
                 $('#loader-wrapper').fadeOut(1000);
             }, 3000);
         });
+        window.addEventListener("load", function () {
+            setTimeout(() => {
+                const firstbtn = document.querySelector('.df-ui-start');
+
+                if (firstbtn) {
+                    // change tooltip
+                    firstbtn.setAttribute("title", "Go to First Page");
+
+                    // change visible text
+                    const span = firstbtn.querySelector("span");
+                    if (span) {
+                        span.textContent = "Go to First Page";
+                    }
+                }
+
+                // change tooltip
+                const lastbtn = document.querySelector('.df-ui-end');
+                if (lastbtn) {
+                    lastbtn.setAttribute("title", "Go to Last Page");
+
+                    // change visible text
+                    const span = lastbtn.querySelector("span");
+                    if (span) {
+                        span.textContent = "Go to Last Page";
+                    }
+                }
+            }, 1000); // wait for dFlip to render UI
+        });
     </script>
 </body>
 

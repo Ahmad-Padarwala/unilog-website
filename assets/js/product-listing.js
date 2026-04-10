@@ -328,12 +328,12 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 39,
-            name: "360 Cyro",
+            name: "360 Cryo",
             category: "body-contouring",
             price: "mid-range",
-            image: "./assets/image/product/360-cyro/360-cyro.webp",
+            image: "./assets/image/product/360-cryo/360-cryo.webp",
             description: "Cryolipolysis, commonly known as fat freezing, is a non-invasive cosmetic procedure that",
-            link: "./machine/body-contouring/360-cyro.html"
+            link: "./machine/body-contouring/360-cryo.html"
         },
         {
             id: 40,
