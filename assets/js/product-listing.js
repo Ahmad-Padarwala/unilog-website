@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "Scalp Analyzer Reports",
             category: "hair-skin-analyzer",
             price: "mid-range",
-            image: "./assets/image/product/scalp-analyzer-reports/scalp-analyzer-reports-big.webp",
+            image: "./assets/image/product/scalp-analyzer-reports/scalp-analyzer-reports.webp",
             description: "Portable device to check skin condition like scalp condition, moisture level, oil and sebum level",
             link: "./machine/hair-skin-analyzer/scalp-analyzer-reports.html"
         },
