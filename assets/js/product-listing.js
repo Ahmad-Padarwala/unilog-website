@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 39,
-            name: "360 Cryo",
+            name: "360° Cryo",
             category: "body-contouring",
             price: "mid-range",
             image: "./assets/image/product/360-cryo/360-cryo.webp",
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 40,
-            name: "Cool 360",
+            name: "Cool 360°",
             category: "body-contouring",
             price: "mid-range",
             image: "./assets/image/product/cool-360/cool-360.webp",
