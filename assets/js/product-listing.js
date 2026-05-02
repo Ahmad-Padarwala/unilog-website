@@ -49,6 +49,24 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 6,
+            name: "LUMA 2000 Elight",
+            category: "laser-hair",
+            price: "mid-range",
+            image: "./assets/image/product/luma2000-elight/luma-2000.webp",
+            description: "an advanced high-performance diode laser engineered with powerful output, intelligent",
+            link: "./machine/hair-reduction/luma2000-elight.html"
+        },
+        {
+            id: 6,
+            name: "LUMA 2000 Prime",
+            category: "laser-hair",
+            price: "mid-range",
+            image: "./assets/image/product/luma2000-prime/luma-2000.webp",
+            description: "an advanced high-performance diode laser engineered with powerful output, intelligent",
+            link: "./machine/hair-reduction/luma2000-prime.html"
+        },
+        {
+            id: 7,
             name: "4DTECLASER",
             category: "laser-hair",
             price: "luxury",
