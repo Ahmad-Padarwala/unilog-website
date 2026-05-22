@@ -890,11 +890,55 @@ function closeConsultModal() {
   document.body.style.overflow = '';
 }
 
+// Product Highlight Modal Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const modalOverlay = document.getElementById("productHighlightModal");
+  if (!modalOverlay) return;
 
+  const closeButton = modalOverlay.querySelector(".highlight-modal-close");
+  const dismissButton = document.getElementById("closeHighlightModalBtn");
 
+  function showHighlightModal() {
+    modalOverlay.classList.add("active");
+    modalOverlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+  }
 
+  function closeHighlightModal() {
+    modalOverlay.classList.remove("active");
+    modalOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = ""; // Restore scrolling
+  }
 
+  // Check sessionStorage to show once per tab session
+  const hasShown = sessionStorage.getItem("productHighlightModalShown");
+  if (!hasShown) {
+    // Show modal after a brief premium entrance delay (e.g., 1.5 seconds)
+    setTimeout(() => {
+      showHighlightModal();
+      sessionStorage.setItem("productHighlightModalShown", "true");
+    }, 1500);
+  }
 
+  // Event Listeners for closing
+  if (closeButton) {
+    closeButton.addEventListener("click", closeHighlightModal);
+  }
+  if (dismissButton) {
+    dismissButton.addEventListener("click", closeHighlightModal);
+  }
 
+  // Close on clicking overlay background
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) {
+      closeHighlightModal();
+    }
+  });
 
-
+  // Close on pressing Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
+      closeHighlightModal();
+    }
+  });
+});

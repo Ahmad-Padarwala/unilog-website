@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-reduction/luma2000-elight.html"
         },
         {
-            id: 6,
+            id: 7,
             name: "LUMA 2000 Prime",
             category: "laser-hair",
             price: "mid-range",
@@ -66,7 +66,25 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-reduction/luma2000-prime.html"
         },
         {
-            id: 7,
+            id: 8,
+            name: "LUMA 1200 Stellar ",
+            category: "laser-hair",
+            price: "mid-range",
+            image: "./assets/image/product/luma1200-stellar/luma-1200.webp",
+            description: "an advanced high-performance diode laser engineered with powerful output, intelligent",
+            link: "./machine/hair-reduction/luma1200-stellar.html"
+        },
+        {
+            id: 9,
+            name: "LUMA 1200 ",
+            category: "laser-hair",
+            price: "mid-range",
+            image: "./assets/image/product/luma1200/luma1200.webp",
+            description: "an advanced high-performance diode laser engineered with powerful output, intelligent",
+            link: "./machine/hair-reduction/luma1200.html"
+        },
+        {
+            id: 10,
             name: "4DTECLASER",
             category: "laser-hair",
             price: "luxury",
@@ -75,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-reduction/4Dteclaserdevice.html"
         },
         {
-            id: 7,
+            id: 11,
             name: "ICE 1200",
             category: "laser-hair",
             price: "premium",
@@ -84,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-reduction/Ice1200diodelaserdevice.html"
         },
         {
-            id: 8,
+            id: 12,
             name: "EPILITE HP",
             category: "laser-hair",
             price: "mid-range",
@@ -93,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-reduction/EpiliteHP.html"
         },
         {
-            id: 9,
+            id: 13,
             name: "LUMASPOT",
             category: "yag-laser",
             price: "mid-range",
@@ -102,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/yag-laser/lumaspot.html"
         },
         {
-            id: 10,
+            id: 14,
             name: "PICOFOCUS",
             category: "yag-laser",
             price: "mid-range",
@@ -111,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/yag-laser/picofocus.html"
         },
         {
-            id: 11,
+            id: 15,
             name: "RUIKD GENELUX LASER",
             category: "yag-laser",
             price: "mid-range",
@@ -120,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/yag-laser/ruikd_genelux.html"
         },
         {
-            id: 12,
+            id: 16,
             name: "Epiglow Diode + pico laser",
             category: "laser-platform",
             price: "mid-range",
@@ -129,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/laser-platform/epiglow_diode_pico_laser.html"
         },
         {
-            id: 13,
+            id: 17,
             name: "Elite Diode + pico laser",
             category: "laser-platform",
             price: "mid-range",
@@ -138,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/laser-platform/elite_diode_pico_laser.html"
         },
         {
-            id: 14,
+            id: 18,
             name: "Epiglow FDA Diode + Pico",
             category: "laser-platform",
             price: "mid-range",
@@ -147,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/laser-platform/epiglow_fda_pico_laser.html"
         },
         {
-            id: 15,
+            id: 19,
             name: "IPL Q switch laser system",
             category: "laser-platform",
             price: "mid-range",
@@ -156,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/laser-platform/ipl_switch_laser_system.html"
         },
         {
-            id: 16,
+            id: 20,
             name: "Ematrix CO2 fractional laser",
             category: "co2-fractional",
             price: "mid-range",
@@ -165,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/co2-fractional/ematrix_co2.html"
         },
         {
-            id: 17,
+            id: 21,
             name: "UltraFlexe CO2 fractional laser",
             category: "co2-fractional",
             price: "mid-range",
@@ -174,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/co2-fractional/ultraflexe_co2.html"
         },
         {
-            id: 18,
+            id: 22,
             name: "Super CO2 fractional laser",
             category: "co2-fractional",
             price: "mid-range",
@@ -183,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/co2-fractional/super_co2.html"
         },
         {
-            id: 19,
+            id: 23,
             name: "OPT hair removal system",
             category: "intensed-pulse-light",
             price: "mid-range",
@@ -192,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/intensed-pulse-light/opt_hair_removal.html"
         },
         {
-            id: 20,
+            id: 24,
             name: "Doublo New HIFU",
             category: "hifu",
             price: "mid-range",
@@ -201,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hifu/doublo-new-hifu.html"
         },
         {
-            id: 21,
+            id: 25,
             name: "Ultralift",
             category: "hifu",
             price: "mid-range",
@@ -210,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hifu/ultralift.html"
         },
         {
-            id: 22,
+            id: 26,
             name: "8D HIFU",
             category: "hifu",
             price: "mid-range",
@@ -219,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hifu/8d-hifu.html"
         },
         {
-            id: 23,
+            id: 27,
             name: "Crystalline Depth 8 MNRF",
             category: "mnrf",
             price: "mid-range",
@@ -228,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/mnrf/crystalline-depth.html"
         },
         {
-            id: 24,
+            id: 28,
             name: "Folilase Hair regrowth system",
             category: "low-level-laser-therapy",
             price: "mid-range",
@@ -237,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/low-level-laser-therapy/folilase-hair-regrowth-system.html"
         },
         {
-            id: 25,
+            id: 29,
             name: "Folilase prime hair regrowth system",
             category: "low-level-laser-therapy",
             price: "mid-range",
@@ -246,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/low-level-laser-therapy/folilase-prime-hair-regrowth-system.html"
         },
         {
-            id: 26,
+            id: 30,
             name: "Laser Helmet",
             category: "low-level-laser-therapy",
             price: "mid-range",
@@ -255,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/low-level-laser-therapy/laser-helmet.html"
         },
         {
-            id: 27,
+            id: 31,
             name: "Dr. Pen A11 ultima",
             category: "micro-needling-portable-devices",
             price: "mid-range",
@@ -264,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/micro-needling-portable-devices/Dr.Pen-A11-ultima.html"
         },
         {
-            id: 28,
+            id: 32,
             name: "Dr. Pen A6S ultima",
             category: "micro-needling-portable-devices",
             price: "mid-range",
@@ -273,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/micro-needling-portable-devices/Dr.Pen-A6S-ultima.html"
         },
         {
-            id: 29,
+            id: 33,
             name: "Dr. Pen M8",
             category: "micro-needling-portable-devices",
             price: "mid-range",
@@ -282,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/micro-needling-portable-devices/Dr.Pen-M8.html"
         },
         {
-            id: 30,
+            id: 34,
             name: "Dr. Pen A6 ultima",
             category: "micro-needling-portable-devices",
             price: "mid-range",
@@ -291,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/micro-needling-portable-devices/Dr.Pen-A6-ultima.html"
         },
         {
-            id: 31,
+            id: 35,
             name: "Meso therapy Injectable device",
             category: "mesotherapy-machine",
             price: "mid-range",
@@ -300,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/mesotherapy-machine/meso-therapy-injectable-device.html"
         },
         {
-            id: 32,
+            id: 36,
             name: "Skin Cool electroporation",
             category: "mesotherapy-machine",
             price: "mid-range",
@@ -309,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/mesotherapy-machine/skin-cool-electroporation-device.html"
         },
         {
-            id: 35,
+            id: 37,
             name: "Dermascope",
             category: "hair-skin-analyzer",
             price: "mid-range",
@@ -318,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-skin-analyzer/dermascope.html"
         },
         {
-            id: 36,
+            id: 38,
             name: "Skin Dermascope Report",
             category: "hair-skin-analyzer",
             price: "mid-range",
@@ -327,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-skin-analyzer/skin-dermascope.html"
         },
         {
-            id: 37,
+            id: 39,
             name: "Scalp Analyzer Reports",
             category: "hair-skin-analyzer",
             price: "mid-range",
@@ -336,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-skin-analyzer/scalp-analyzer-reports.html"
         },
         {
-            id: 38,
+            id: 40,
             name: "Dermascope with LCD",
             category: "hair-skin-analyzer",
             price: "mid-range",
@@ -345,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/hair-skin-analyzer/dermascope-with-lcd.html"
         },
         {
-            id: 39,
+            id: 41,
             name: "360° Cryo",
             category: "body-contouring",
             price: "mid-range",
@@ -354,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/body-contouring/360-cryo.html"
         },
         {
-            id: 40,
+            id: 42,
             name: "Cool 360°",
             category: "body-contouring",
             price: "mid-range",
@@ -363,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/body-contouring/cool-360.html"
         },
         {
-            id: 41,
+            id: 43,
             name: "80K Lipocavitation",
             category: "body-contouring",
             price: "mid-range",
