@@ -30,15 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
             link: "./machine/medi-facial/OxyrichPDT.html"
         },
         {
-            id: 4,
-            name: "LUMA 3000",
-            category: "laser-hair",
-            price: "mid-range",
-            image: "./assets/image/product/luma3000/luma-3000.webp",
-            description: "Unleash powerful, permanent results; this is next-level diode laser technology",
-            link: "./machine/hair-reduction/luma3000.html"
-        },
-        {
             id: 5,
             name: "LUMA 2000",
             category: "laser-hair",
